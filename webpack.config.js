@@ -1,17 +1,13 @@
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { HtmlWebpackSkipAssetsPlugin } = require("html-webpack-skip-assets-plugin");
 const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 	entry: {
 		main: "./resources/js/main.js",
 		vendor: "./resources/js/vendor.js",
-	},
-	output: {
-		filename: "[name].[contenthash].js",
-		path: __dirname + "/public"
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -48,9 +44,6 @@ module.exports = {
 			publicPath: "",
 		}),
 
-		new MiniCssExtractPlugin({
-			filename: "[name].[contenthash].css"
-		}),
 		new HtmlWebpackPugPlugin({
 			adjustIndent: true
 		}),
