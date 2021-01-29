@@ -1,0 +1,43 @@
+footer {
+	@extend .py-1;
+	@extend .px-3;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100vw;
+	background-color: $sitePrimary;
+
+	.footer-text {
+		font-size: 17.5px;
+		min-height: 48px;
+		line-height: 48px;
+	}
+
+	.footer-social-media {
+		display: flex;
+		flex-direction: row;
+		@extend .px-md-3;
+
+		a {
+			margin: 4px 6px;
+			background-color: darken($sitePrimary, 10%);
+			border-radius: 5px;
+			color: white;
+			font-size: 30px;
+			height: 40px;
+			width: 40px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+
+			&:hover {
+				margin: 0 2px;
+				width: 48px;
+				height: 48px;
+				transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+			}
+		}
+	}
+}

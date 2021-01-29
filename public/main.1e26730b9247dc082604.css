@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css2?family=Inter&display=swap);
 /*!
  * Bootstrap v4.6.0 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -5725,7 +5726,8 @@ button.bg-dark:focus {
   padding: 0.25rem !important; }
 
 .pt-1,
-.py-1 {
+.py-1,
+footer {
   padding-top: 0.25rem !important; }
 
 .pr-1,
@@ -5733,7 +5735,8 @@ button.bg-dark:focus {
   padding-right: 0.25rem !important; }
 
 .pb-1,
-.py-1 {
+.py-1,
+footer {
   padding-bottom: 0.25rem !important; }
 
 .pl-1,
@@ -5767,7 +5770,8 @@ button.bg-dark:focus {
   padding-top: 1rem !important; }
 
 .pr-3,
-.px-3 {
+.px-3,
+footer {
   padding-right: 1rem !important; }
 
 .pb-3,
@@ -5775,7 +5779,8 @@ button.bg-dark:focus {
   padding-bottom: 1rem !important; }
 
 .pl-3,
-.px-3 {
+.px-3,
+footer {
   padding-left: 1rem !important; }
 
 .p-4 {
@@ -6317,13 +6322,15 @@ button.bg-dark:focus {
   .py-md-3 {
     padding-top: 1rem !important; }
   .pr-md-3,
-  .px-md-3 {
+  .px-md-3,
+  footer .footer-social-media {
     padding-right: 1rem !important; }
   .pb-md-3,
   .py-md-3 {
     padding-bottom: 1rem !important; }
   .pl-md-3,
-  .px-md-3 {
+  .px-md-3,
+  footer .footer-social-media {
     padding-left: 1rem !important; }
   .p-md-4 {
     padding: 1.5rem !important; }
@@ -7185,4 +7192,38 @@ a.text-dark:hover, a.text-dark:focus {
   .table .thead-dark th {
     color: inherit;
     border-color: #dee2e6; } }
+
+body {
+  font-family: 'Inter', sans-serif; }
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  background-color: #cc3333; }
+  footer .footer-text {
+    font-size: 17.5px;
+    min-height: 48px;
+    line-height: 48px; }
+  footer .footer-social-media {
+    display: flex;
+    flex-direction: row; }
+    footer .footer-social-media a {
+      margin: 4px 6px;
+      background-color: #a32929;
+      border-radius: 5px;
+      color: white;
+      font-size: 30px;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; }
+      footer .footer-social-media a:hover {
+        margin: 0 2px;
+        width: 48px;
+        height: 48px;
+        transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; }
 

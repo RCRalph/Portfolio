@@ -1,1 +1,2 @@
-import "../scss/_main.scss";
+import "../scss/main.scss";
+import "../img/favico.ico";

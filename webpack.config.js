@@ -14,35 +14,50 @@ module.exports = {
 		path: __dirname + "/public"
 	},
 	plugins: [
+		new HtmlWebpackPlugin({
+			filename: "../views/header.pug",
+			template: "./resources/pug/header.pug",
+			publicPath: "./public",
+			inject: false
+		}),
+		new HtmlWebpackPlugin({
+			filename: "../views/footer.pug",
+			template: "./resources/pug/footer.pug",
+			publicPath: "./public",
+			inject: false
+		}),
+
+		new HtmlWebpackPlugin({
+			filename: "../views/index.pug",
+			template: "./resources/pug/index.pug",
+			publicPath: ""
+		}),
+		new HtmlWebpackPlugin({
+			filename: "../views/projects.pug",
+			template: "./resources/pug/projects.pug",
+			publicPath: ""
+		}),
+		new HtmlWebpackPlugin({
+			filename: "../views/project-view.pug",
+			template: "./resources/pug/project-view.pug",
+			publicPath: "",
+		}),
+		new HtmlWebpackPlugin({
+			filename: "../views/contact-me.pug",
+			template: "./resources/pug/contact-me.pug",
+			publicPath: "",
+		}),
+
 		new MiniCssExtractPlugin({
 			filename: "[name].[contenthash].css"
 		}),
 		new HtmlWebpackPugPlugin({
 			adjustIndent: true
 		}),
-
-		new HtmlWebpackPlugin({
-			filename: "../views/index.pug",
-			template: "./resources/pug/index.pug",
-			title: "Main page"
+		new CleanWebpackPlugin({
+			cleanAfterEveryBuildPatterns: ['./public/*', './views/*']
 		}),
-		new HtmlWebpackPlugin({
-			filename: "../views/projects.pug",
-			template: "./resources/pug/projects.pug",
-			title: "My projects"
-		}),
-		new HtmlWebpackPlugin({
-			filename: "../views/project-view.pug",
-			template: "./resources/pug/project-view.pug",
-		}),
-		new HtmlWebpackPlugin({
-			filename: "../views/contact-me.pug",
-			template: "./resources/pug/contact-me.pug",
-			title: "Contact me"
-		}),
-
 		new HtmlWebpackSkipAssetsPlugin(),
-		new CleanWebpackPlugin()
 	],
 	module: {
 		rules: [
@@ -54,6 +69,15 @@ module.exports = {
 					"sass-loader"
 				]
 			},
+			{
+				test: /\.ico$/,
+				use: {
+					loader: "file-loader",
+					options: {
+						name: "[name].[ext]"
+					}
+				}
+			}
 		]
 	}
 }
