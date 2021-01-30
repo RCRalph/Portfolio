@@ -1,0 +1,42 @@
+nav {
+	@extend .py-2;
+	@extend .px-3;
+	@extend .col-12;
+	@extend .no-gutters;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $site-primary;
+
+	a {
+		img {
+			@extend .rounded-circle;
+			@extend .ml-4;
+			@extend .p-1;
+
+			width: 75px;
+			height: 75px;
+			background-color: white;
+		}
+	}
+
+	ul {
+		@extend .mb-0;
+		@extend .mr-4;
+
+		a {
+			font-size: 30px;
+			font-weight: bolder;
+			margin: 4px 12px;
+			text-decoration: none;
+			color: $site-primary-text;
+			transition: color 0.25s ease-in-out;
+
+			&:hover {
+				text-decoration: none;
+				color: white;
+				transition: color 0.25s ease-in-out;
+			}
+		}
+	}
+}

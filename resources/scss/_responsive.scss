@@ -1,17 +1,23 @@
+@mixin media-xs {
+    @media screen and (max-width: 280px) {
+        @content;
+    }
+}
+
 @mixin media-sm {
-    @media screen and (min-width: 280px) {
+    @media screen and (max-width: 768px) {
         @content;
     }
 }
 
 @mixin media-md {
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 992px) {
         @content;
     }
 }
 
 @mixin media-lg {
-    @media screen and (min-width: 992px) {
+    @media screen and (max-width: 1200px) {
         @content;
     }
 }
@@ -22,6 +28,11 @@
     }
 }
 
+@include media-xs {
+	
+}
+
+
 @include media-sm {
 	footer {
 		.footer-text {
@@ -31,10 +42,8 @@
 }
 
 @include media-md {
-	footer {
-		.footer-text {
-			font-size: 17.5px;
-		}
+	nav {
+		display: none;
 	}
 }
 

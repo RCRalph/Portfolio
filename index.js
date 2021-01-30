@@ -3,7 +3,7 @@ const express = require("express");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const app = express();
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "/dist/public"));
 
 // Add routes
 const portfolioRoutes = require("./routes/portfolio");
