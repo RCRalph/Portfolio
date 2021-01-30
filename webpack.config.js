@@ -14,6 +14,7 @@ module.exports = {
 		path: __dirname + "/dist"
 	},
 	plugins: [
+		// Pug components
 		new HtmlWebpackPlugin({
 			filename: "./views/head.pug",
 			template: "./resources/pug/head.pug",
@@ -32,7 +33,14 @@ module.exports = {
 			publicPath: "dist/public",
 			inject: false
 		}),
+		new HtmlWebpackPlugin({
+			filename: "./views/menu-drop.pug",
+			template: "./resources/pug/menu-drop.pug",
+			publicPath: "dist/public",
+			inject: false
+		}),
 
+		// Pug pages
 		new HtmlWebpackPlugin({
 			filename: "./views/index.pug",
 			template: "./resources/pug/index.pug",
@@ -54,10 +62,9 @@ module.exports = {
 			publicPath: "",
 		}),
 
+		// Additional plugins
 		new HtmlWebpackPugPlugin(),
 		new HtmlWebpackSkipAssetsPlugin(),
-		new CleanWebpackPlugin(),
-
 		new WebpackShellPluginNext({
 			onAfterDone: {
 				scripts: ["node move-files.js"]

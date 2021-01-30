@@ -45,6 +45,14 @@
 	nav {
 		display: none;
 	}
+
+	.dropdown-menu-bar {
+		display: flex;
+	}
+
+	#menu-drop {
+		display: block;
+	}
 }
 
 @include media-lg {

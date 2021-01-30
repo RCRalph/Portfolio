@@ -16,7 +16,7 @@
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/favico.ico\");\n\n//# sourceURL=webpack://portfolio/./resources/img/favico.ico?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/favico.ico\");\n\n//# sourceURL=webpack://portfolio/./resources/img/favico.ico?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => __WEBPACK_DEFAULT_EXPORT__\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/img/logo.png\");\n\n//# sourceURL=webpack://portfolio/./resources/img/logo.png?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/img/logo.png\");\n\n//# sourceURL=webpack://portfolio/./resources/img/logo.png?");
 
 /***/ }),
 
@@ -46,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favico_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favico.ico */ \"./resources/img/favico.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n\r\n\r\n\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favico_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favico.ico */ \"./resources/img/favico.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n\r\n\r\n\r\n\r\nconst bars = document.getElementById(\"burger-bars\");\r\nconst menu = document.getElementById(\"menu-drop\");\r\nlet showMenu = false;\r\n\r\nconst switchMenuDropOpenClosed = () => {\r\n\tif (showMenu) {\r\n\t\tmenu.classList.remove(\"open\");\r\n\t\tbars.classList.remove(\"open\");\r\n\t\tshowMenu = false;\r\n\t}\r\n\telse {\r\n\t\tmenu.classList.add(\"open\");\r\n\t\tbars.classList.add(\"open\");\r\n\t\tshowMenu = true;\r\n\t}\r\n}\r\n\r\ndocument.getElementById(\"burger\")\r\n\t.addEventListener(\"click\", switchMenuDropOpenClosed);\r\n\r\nif (window.location.pathname == \"/\") {\r\n\tdocument.getElementById(\"about-me-tab-click\")\r\n\t\t.addEventListener(\"click\", switchMenuDropOpenClosed);\r\n}\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
 
 /***/ })
 
@@ -80,7 +80,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /******/ 	
 /******/ 	// the startup function
 /******/ 	// It's empty as some runtime module handles the default behavior
-/******/ 	__webpack_require__.x = x => {}
+/******/ 	__webpack_require__.x = x => {};
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
@@ -108,7 +108,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => Object.prototype.hasOwnProperty.call(obj, prop)
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */

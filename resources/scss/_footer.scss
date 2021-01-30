@@ -13,7 +13,7 @@ footer {
 		font-size: 17.5px;
 		min-height: 48px;
 		line-height: 48px;
-		color: $site-primary-text;
+		color: $site-secondary;
 	}
 
 	.footer-social-media {
@@ -23,7 +23,7 @@ footer {
 
 		a {
 			margin: 4px 6px;
-			background-color: darken($site-primary, 10%);
+			background-color: $site-primary-darkened;
 			border-radius: 5px;
 			color: white;
 			font-size: 30px;

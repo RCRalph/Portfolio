@@ -10,6 +10,7 @@ module.exports = merge(config, {
 	plugins: [
 		new MiniCssExtractPlugin({
 			filename: "[name].[contenthash].css"
-		})
+		}),
+		new CleanWebpackPlugin()
 	],
 });
