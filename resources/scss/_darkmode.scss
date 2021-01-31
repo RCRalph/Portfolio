@@ -1,0 +1,53 @@
+.darkmode {
+	nav {
+		background-color: $site-secondary;
+		ul > a {
+			color: $site-primary;
+		}
+	}
+
+	.dropdown-menu-bar {
+		background-color: $site-secondary;
+
+		.burger-bars {
+			background-color: $site-primary;
+
+			&::before {
+				background-color: $site-primary;
+			}
+
+			&::after {
+				background-color: $site-primary;
+			}
+		}
+		
+		.open {
+			background-color: transparent;
+		}
+	}
+
+	#menu-drop {
+		background-color: $site-secondary;
+		
+		.list > a {
+			color: $site-primary;
+		}
+	}
+
+	footer {
+		background-color: $site-secondary;
+		
+		.footer-text {
+			color: $site-primary;
+		}
+	}
+
+	.welcome-page-screen { 
+		background: $site-tertiary;
+	}
+
+	#about-me {
+		background-color: $site-secondary;
+		color: $site-primary;
+	}
+}

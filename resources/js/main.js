@@ -1,6 +1,7 @@
 import "../scss/main.scss";
 import "../img/favico.ico";
 import "../img/logo.png";
+import "../json/particles.json";
 
 const bars = document.getElementById("burger-bars");
 const menu = document.getElementById("menu-drop");
@@ -26,3 +27,5 @@ if (window.location.pathname == "/") {
 	document.getElementById("about-me-tab-click")
 		.addEventListener("click", switchMenuDropOpenClosed);
 }
+
+particlesJS.load("particles-js", "particles.json");

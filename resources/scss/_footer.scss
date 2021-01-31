@@ -5,8 +5,8 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100vw;
-	height: 60px;
+	width: 100%;
+	height: $footer-height;
 	background-color: $site-primary;
 
 	.footer-text {

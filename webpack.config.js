@@ -4,11 +4,12 @@ const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: {
-		main: "./resources/js/main.js",
-		vendor: "./resources/js/vendor.js"
+		vendor: "./resources/js/vendor.js",
+		main: "./resources/js/main.js"
 	},
 	output: {
 		path: __dirname + "/dist"
@@ -16,25 +17,25 @@ module.exports = {
 	plugins: [
 		// Pug components
 		new HtmlWebpackPlugin({
-			filename: "./views/head.pug",
+			filename: "./resources/views/head.pug",
 			template: "./resources/pug/head.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./views/footer.pug",
+			filename: "./resources/views/footer.pug",
 			template: "./resources/pug/footer.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./views/navbar.pug",
+			filename: "./resources/views/navbar.pug",
 			template: "./resources/pug/navbar.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./views/menu-drop.pug",
+			filename: "./resources/views/menu-drop.pug",
 			template: "./resources/pug/menu-drop.pug",
 			publicPath: "dist/public",
 			inject: false
@@ -42,22 +43,22 @@ module.exports = {
 
 		// Pug pages
 		new HtmlWebpackPlugin({
-			filename: "./views/index.pug",
+			filename: "./resources/views/index.pug",
 			template: "./resources/pug/index.pug",
 			publicPath: ""
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./views/projects.pug",
+			filename: "./resources/views/projects.pug",
 			template: "./resources/pug/projects.pug",
 			publicPath: ""
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./views/project-view.pug",
+			filename: "./resources/views/project-view.pug",
 			template: "./resources/pug/project-view.pug",
 			publicPath: "",
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./views/contact-me.pug",
+			filename: "./resources/views/contact-me.pug",
 			template: "./resources/pug/contact-me.pug",
 			publicPath: "",
 		}),
@@ -69,6 +70,18 @@ module.exports = {
 			onAfterDone: {
 				scripts: ["node move-files.js"]
 			}
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: "resources/json",
+					to: "public"
+				},
+				{
+					from: "resources/markdown",
+					to: "resources/markdown"
+				}
+			]
 		})
 	],
 	module: {

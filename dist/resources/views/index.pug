@@ -4,6 +4,7 @@ doctype html
 html
 	head
 		include head.pug
+		link(href="style.css" rel="stylesheet")
 	body
 		include menu-drop.pug
 		
@@ -27,3 +28,5 @@ html
 						.col-md-8.offset-md-2 !{aboutMe}
 
 		include footer.pug
+		script(src="vendor.js")
+		script(src="main.js")

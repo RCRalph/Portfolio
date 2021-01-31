@@ -1,8 +1,8 @@
 nav {
-	@extend .py-2;
 	@extend .px-3;
 	@extend .col-12;
 	@extend .no-gutters;
+	height: $navbar-height;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,12 +42,13 @@ nav {
 }
 
 .dropdown-menu-bar {
+	@extend .px-3;
 	display: none;
 	top: 0;
 	left: 0;
 	align-items: center;
 	justify-content: space-between;
-	height: 85px;
+	height: $navbar-height;
 	z-index: 6;
 	background-color: $site-primary;
 
@@ -119,6 +120,7 @@ nav {
 }
 
 #menu-drop {
+	@extend .px-3;
 	display: none;
     position: fixed;
     top: 0;
@@ -137,7 +139,6 @@ nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        background-color: $site-primary;
 
         a > img {
 			@extend .rounded-circle;
@@ -155,19 +156,18 @@ nav {
 		justify-content: center;
 		align-items: center;
         flex-direction: column;
-        background-color: $site-primary;
 
         a {
-			font-size: 2rem;
+			font-size: 3rem;
 			font-weight: bold;
             color: $site-secondary;
-			margin: 0.5rem;
+			margin: 1rem;
             text-decoration: none;
 		}
 		
 		hr {
 			margin: 2px;
-			width: 250px;
+			width: 300px;
 			border-top-color: $site-secondary;
 		}
     }
@@ -178,7 +178,6 @@ nav {
 		justify-content: center;
         align-items: center;
         height: 15vh;
-        background-color: $site-primary;
 
 		a {
 			text-align: center;

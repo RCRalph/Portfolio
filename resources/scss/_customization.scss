@@ -1,5 +1,10 @@
 body {
 	font-family: 'Inter', sans-serif;
+	color: $site-tertiary;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 * {

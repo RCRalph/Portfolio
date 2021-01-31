@@ -1,3 +1,9 @@
 $site-primary: #00b8ff;
 $site-primary-darkened: darken($site-primary, 10%);
 $site-secondary: #0e0e0e;
+$site-tertiary: #000;
+
+$navbar-height: 85px;
+$footer-height: 60px;
+
+$primary: $site-primary;
