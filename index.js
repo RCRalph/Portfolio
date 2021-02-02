@@ -1,13 +1,18 @@
 // Require dependencies
 const express = require("express");
+const cookieParser = require("cookie-parser");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const app = express();
 app.use(express.static(__dirname + "/dist/public"));
+app.use(cookieParser());
 
 // Add routes
-const portfolioRoutes = require("./routes/portfolio");
-portfolioRoutes(app);
+const routes = require("./controllers/routes");
+const middleware = require("./controllers/middleware");
+
+middleware(app);
+routes(app);
 
 // Error 404
 app.use(function (req, res) {

@@ -3,6 +3,10 @@
 		background-color: $site-secondary;
 		ul > a {
 			color: $site-primary;
+
+			&:hover {
+				color: white;
+			}
 		}
 	}
 
@@ -29,8 +33,14 @@
 	#menu-drop {
 		background-color: $site-secondary;
 		
-		.list > a {
-			color: $site-primary;
+		.list {
+			a {
+				color: $site-primary;
+			}
+
+			hr {
+				border-top-color: $site-primary;
+			}
 		}
 	}
 
@@ -49,5 +59,24 @@
 	#about-me {
 		background-color: $site-secondary;
 		color: $site-primary;
+	}
+
+	.about-me-wrapper {
+		background-color: $site-tertiary;
+		color: white;
+
+		.container > .row > .about-me-content-wrapper > .about-me-content {
+			h1 {
+				color: $site-primary;
+			}
+
+			h2 {
+				color: $site-primary;
+			}
+
+			h3 {
+				color: $site-primary;
+			}
+		}
 	}
 }

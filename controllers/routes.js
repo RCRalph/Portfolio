@@ -27,7 +27,8 @@ module.exports = (app) => {
 			));
 
 		res.render("../dist/resources/views/index.pug", {
-			aboutMe: aboutMe
+			aboutMe: aboutMe,
+			darkmode: res.locals.darkmode
 		});
 	});
 

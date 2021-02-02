@@ -1,10 +1,14 @@
 nav
 	a( href="/" )
 		img( src="/img/logo.png" )
-	ul
-		a( href="/#about-me" ) About me
-		a( href="/projects" ) My projects
-		a( href="/contact-me" ) Contact me
+	.d-flex
+		ul
+			a( href="/#about-me" ) About me
+			a( href="/projects" ) My projects
+			a( href="/contact-me" ) Contact me
+
+		#darkmode-switcher(class=!darkmode && "light")
+			i.fas(class=darkmode ? "fa-sun" : "fa-moon")
 
 .dropdown-menu-bar
 	a( href="/" )

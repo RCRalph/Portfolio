@@ -40,6 +40,12 @@ module.exports = {
 			publicPath: "dist/public",
 			inject: false
 		}),
+		new HtmlWebpackPlugin({
+			filename: "./resources/views/social-media.pug",
+			template: "./resources/pug/social-media.pug",
+			publicPath: "dist/public",
+			inject: false
+		}),
 
 		// Pug pages
 		new HtmlWebpackPlugin({

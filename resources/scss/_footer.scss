@@ -6,7 +6,7 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: $footer-height;
+	min-height: $footer-height;
 	background-color: $site-primary;
 
 	.footer-text {

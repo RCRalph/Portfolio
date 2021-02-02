@@ -10,10 +10,9 @@
 		hr
 		a( href="/contact-me" ) Contact me
 	
+	.switcher 
+		#darkmode-switcher-dropdown(class=!darkmode && "light")
+			i.fas(class=darkmode ? "fa-sun" : "fa-moon")
+
 	.menu-icon-bar
-		a( href="https://www.linkedin.com/" target="_blank" )
-			i.fab.fa-linkedin-in
-		a( href="https://twitter.com/RCRalph72" target="_blank" )
-			i.fab.fa-twitter
-		a( href="https://www.facebook.com/RCRalph72/" target="_blank" )
-			i.fab.fa-facebook-f
+		include social-media.pug

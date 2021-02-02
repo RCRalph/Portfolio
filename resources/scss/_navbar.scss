@@ -22,7 +22,6 @@ nav {
 
 	ul {
 		@extend .mb-0;
-		@extend .mr-4;
 
 		a {
 			font-size: 30px;
@@ -39,6 +38,26 @@ nav {
 			}
 		}
 	}
+
+	#darkmode-switcher {
+		@extend .mx-4;
+		@extend .rounded-circle;
+
+		cursor: pointer;
+		color: $site-primary;
+		width: 45px;
+		height: 45px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 25px;
+		background: $site-tertiary;
+
+		&.light {
+			color: $site-tertiary;
+			background-color: white;
+		}
+	}
 }
 
 .dropdown-menu-bar {
@@ -51,6 +70,7 @@ nav {
 	height: $navbar-height;
 	z-index: 6;
 	background-color: $site-primary;
+	height: 95px;
 
 	img {
 		@extend .rounded-circle;
@@ -74,7 +94,7 @@ nav {
 			right: 0;
 			top: 50%;
 			transform: translateX(-50%);
-			width: 28px;
+			width: 24px;
 			height: 3px;
 			background-color: $site-secondary;
 			transition: transform 1s ease-in-out, background-color 1s ease-in-out;
@@ -135,7 +155,7 @@ nav {
 	transition: transform 1s ease-in-out;
 
     .menu-bar {
-        height: 85px;
+        height: 95px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -151,7 +171,7 @@ nav {
     }
 
     .list {
-		height: calc(85vh - 85px);
+		height: calc(85vh - 95px - 75px);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -170,7 +190,33 @@ nav {
 			width: 300px;
 			border-top-color: $site-secondary;
 		}
-    }
+	}
+	
+	.switcher {
+		height: 75px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		#darkmode-switcher-dropdown {
+			@extend .rounded-circle;
+
+			cursor: pointer;
+			color: $site-primary;
+			width: 70px;
+			height: 70px;
+			font-size: 40px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $site-tertiary;
+
+			&.light {
+				color: $site-tertiary;
+				background-color: white;
+			}
+		}
+	}
 
     .menu-icon-bar {
 		display: flex;

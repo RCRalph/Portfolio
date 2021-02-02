@@ -50,7 +50,7 @@
 		.welcome-bar {
 			.text {
 				&-first {
-					font-size: 45px;
+					font-size: 40px;
 				}
 
 				&-second {
@@ -72,6 +72,8 @@
 
 @include media-sm {
 	footer {
+		flex-direction: column-reverse;
+
 		.footer-text {
 			font-size: 12.5px;
 		}
