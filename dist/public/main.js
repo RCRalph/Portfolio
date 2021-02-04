@@ -7,7 +7,6 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./resources/img/favicon.ico":
@@ -16,6 +15,7 @@
   \***********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/favicon.ico\");\n\n//# sourceURL=webpack://portfolio/./resources/img/favicon.ico?");
 
 /***/ }),
@@ -26,6 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/img/logo.png\");\n\n//# sourceURL=webpack://portfolio/./resources/img/logo.png?");
 
 /***/ }),
@@ -36,7 +37,28 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+"use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://portfolio/./resources/scss/main.scss?");
+
+/***/ }),
+
+/***/ "./resources/js/functions/darkmode-switcher.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/functions/darkmode-switcher.js ***!
+  \*****************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("function darkmodeSwitcher() {\r\n\tconst switchDarkmode = () => {\r\n\t\tconst darkmodeSwitchers = [\r\n\t\t\tdocument.getElementById(\"darkmode-switcher\"),\r\n\t\t\tdocument.getElementById(\"darkmode-switcher-dropdown\")\r\n\t\t];\r\n\t\tdocument.body.classList.toggle(\"darkmode\");\r\n\r\n\t\tconst icon = darkmodeSwitchers[0].children[0]\r\n\t\t\t.attributes[\"data-icon\"].value == \"moon\" ? \"sun\" : \"moon\";\r\n\r\n\t\tdarkmodeSwitchers.forEach(item => {\r\n\t\t\titem.classList.toggle(\"light\");\r\n\t\t\titem.children[0].attributes[\"data-icon\"].value = icon;\r\n\t\t});\r\n\t\t\r\n\t\tconst expirationDate = new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000);\r\n\t\tconst value = !document.body.classList.contains(\"darkmode\");\r\n\t\tdocument.cookie = `lightmode=${value};expires=${expirationDate};SameSite=Strict`\r\n\t};\r\n\r\n\tdocument.getElementById(\"darkmode-switcher\")\r\n\t\t.addEventListener(\r\n\t\t\t\"click\",\r\n\t\t\tswitchDarkmode\r\n\t\t);\r\n\r\n\tdocument.getElementById(\"darkmode-switcher-dropdown\")\r\n\t\t.addEventListener(\r\n\t\t\t\"click\",\r\n\t\t\tswitchDarkmode\r\n\t);\r\n}\r\n\r\nexports.darkmodeSwitcher = darkmodeSwitcher;\n\n//# sourceURL=webpack://portfolio/./resources/js/functions/darkmode-switcher.js?");
+
+/***/ }),
+
+/***/ "./resources/js/functions/dropdown-menu.js":
+/*!*************************************************!*\
+  !*** ./resources/js/functions/dropdown-menu.js ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("function dropdownMenu() {\r\n\tconst bars = document.getElementById(\"burger-bars\");\r\n\tconst menu = document.getElementById(\"menu-drop\");\r\n\r\n\tconst switchMenuDropOpenClosed = () => {\r\n\t\tmenu.classList.toggle(\"open\");\r\n\t\tbars.classList.toggle(\"open\");\r\n\t}\r\n\r\n\tdocument.getElementById(\"burger\")\r\n\t\t.addEventListener(\"click\", switchMenuDropOpenClosed);\r\n\r\n\tif (window.location.pathname == \"/\") {\r\n\t\tdocument.getElementById(\"about-me-tab-click\")\r\n\t\t\t.addEventListener(\"click\", switchMenuDropOpenClosed);\r\n\t}\r\n}\r\n\r\nexports.dropdownMenu = dropdownMenu;\n\n//# sourceURL=webpack://portfolio/./resources/js/functions/dropdown-menu.js?");
 
 /***/ }),
 
@@ -46,7 +68,8 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
   \******************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favicon_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favicon.ico */ \"./resources/img/favicon.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n/* harmony import */ var _json_particles_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../json/particles.json */ \"./resources/json/particles.json\");\n\r\n\r\n\r\n\r\n\r\n// Dropdown menu\r\nconst bars = document.getElementById(\"burger-bars\");\r\nconst menu = document.getElementById(\"menu-drop\");\r\nconst pageContent = document.getElementById(\"page-content\");\r\nlet showMenu = false;\r\n\r\nconst switchMenuDropOpenClosed = () => {\r\n\tif (showMenu) {\r\n\t\tpageContent.classList.remove(\"d-none\", \"d-lg-block\");\r\n\t\tmenu.classList.remove(\"open\");\r\n\t\tbars.classList.remove(\"open\");\r\n\t\tshowMenu = false;\r\n\t}\r\n\telse {\r\n\t\tmenu.classList.add(\"open\");\r\n\t\tbars.classList.add(\"open\");\r\n\t\tshowMenu = true;\r\n\r\n\t\tsetTimeout(() => {\r\n\t\t\tpageContent.classList.add(\"d-none\", \"d-lg-block\");\r\n\t\t}, 1000)\r\n\t}\r\n}\r\n\r\ndocument.getElementById(\"burger\")\r\n\t.addEventListener(\"click\", switchMenuDropOpenClosed);\r\n\r\nif (window.location.pathname == \"/\") {\r\n\tdocument.getElementById(\"about-me-tab-click\")\r\n\t\t.addEventListener(\"click\", switchMenuDropOpenClosed);\r\n}\r\n\r\n// Darkmode switcher\r\n\r\nconst switchDarkmode = (id) => {\r\n\tconst darkmodeSwitcher = document.getElementById(id);\r\n\tdocument.body.classList.toggle(\"darkmode\");\r\n\r\n\tdarkmodeSwitcher.classList.toggle(\"light\");\r\n\tdarkmodeSwitcher.children[0].attributes[\"data-icon\"].value = \r\n\t\tdarkmodeSwitcher.children[0].attributes[\"data-icon\"].value == \"moon\" ? \"sun\" : \"moon\";\r\n\t\r\n\tconst expirationDate = new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000);\r\n\tconst value = !document.body.classList.contains(\"darkmode\");\r\n\tdocument.cookie = `lightmode=${value};expires=${expirationDate};SameSite=Strict`\r\n};\r\n\r\ndocument.getElementById(\"darkmode-switcher\")\r\n\t.addEventListener(\r\n\t\t\"click\",\r\n\t\t() => switchDarkmode(\"darkmode-switcher\")\r\n\t);\r\n\r\ndocument.getElementById(\"darkmode-switcher-dropdown\")\r\n\t.addEventListener(\r\n\t\t\"click\",\r\n\t\t() => switchDarkmode(\"darkmode-switcher-dropdown\")\r\n\t);\r\n\r\n// Particles.js\r\nparticlesJS.load(\"particles-js\", \"particles.json\");\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favicon_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favicon.ico */ \"./resources/img/favicon.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n/* harmony import */ var _json_particles_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../json/particles.json */ \"./resources/json/particles.json\");\n/* harmony import */ var _functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/dropdown-menu.js */ \"./resources/js/functions/dropdown-menu.js\");\n/* harmony import */ var _functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/darkmode-switcher.js */ \"./resources/js/functions/darkmode-switcher.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__.dropdownMenu)();\r\n(0,_functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__.darkmodeSwitcher)();\r\n\r\n// Particles.js\r\nif (document.getElementById(\"particles-js\")) {\r\n\tparticlesJS.load(\"particles-js\", \"particles.json\");\r\n}\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
 
 /***/ }),
 
@@ -56,6 +79,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \***************************************/
 /***/ ((module) => {
 
+"use strict";
 eval("module.exports = JSON.parse(\"{\\\"particles\\\":{\\\"number\\\":{\\\"value\\\":80,\\\"density\\\":{\\\"enable\\\":true,\\\"value_area\\\":800}},\\\"color\\\":{\\\"value\\\":\\\"#00b8ff\\\"},\\\"shape\\\":{\\\"type\\\":\\\"circle\\\",\\\"stroke\\\":{\\\"width\\\":0,\\\"color\\\":\\\"#000000\\\"},\\\"polygon\\\":{\\\"nb_sides\\\":5},\\\"image\\\":{\\\"src\\\":\\\"img/github.svg\\\",\\\"width\\\":100,\\\"height\\\":100}},\\\"opacity\\\":{\\\"value\\\":0.49717086105258135,\\\"random\\\":false,\\\"anim\\\":{\\\"enable\\\":false,\\\"speed\\\":1,\\\"opacity_min\\\":0.1,\\\"sync\\\":false}},\\\"size\\\":{\\\"value\\\":10,\\\"random\\\":true,\\\"anim\\\":{\\\"enable\\\":true,\\\"speed\\\":50,\\\"size_min\\\":1,\\\"sync\\\":false}},\\\"line_linked\\\":{\\\"enable\\\":false,\\\"distance\\\":150,\\\"color\\\":\\\"#ffffff\\\",\\\"opacity\\\":0.4,\\\"width\\\":1},\\\"move\\\":{\\\"enable\\\":true,\\\"speed\\\":10,\\\"direction\\\":\\\"none\\\",\\\"random\\\":true,\\\"straight\\\":false,\\\"out_mode\\\":\\\"out\\\",\\\"bounce\\\":false,\\\"attract\\\":{\\\"enable\\\":false,\\\"rotateX\\\":600,\\\"rotateY\\\":1200}}},\\\"interactivity\\\":{\\\"detect_on\\\":\\\"canvas\\\",\\\"events\\\":{\\\"onhover\\\":{\\\"enable\\\":true,\\\"mode\\\":\\\"repulse\\\"},\\\"onclick\\\":{\\\"enable\\\":true,\\\"mode\\\":\\\"push\\\"},\\\"resize\\\":true},\\\"modes\\\":{\\\"grab\\\":{\\\"distance\\\":400,\\\"line_linked\\\":{\\\"opacity\\\":1}},\\\"bubble\\\":{\\\"distance\\\":400,\\\"size\\\":40,\\\"duration\\\":2,\\\"opacity\\\":8,\\\"speed\\\":3},\\\"repulse\\\":{\\\"distance\\\":200,\\\"duration\\\":0.4},\\\"push\\\":{\\\"particles_nb\\\":4},\\\"remove\\\":{\\\"particles_nb\\\":2}}},\\\"retina_detect\\\":true}\");\n\n//# sourceURL=webpack://portfolio/./resources/json/particles.json?");
 
 /***/ })

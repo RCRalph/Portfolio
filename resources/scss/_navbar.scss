@@ -7,6 +7,8 @@ nav {
 	justify-content: space-between;
 	align-items: center;
 	background-color: $site-primary;
+	position: fixed;
+	z-index: 100;
 
 	a {
 		img {
@@ -67,10 +69,11 @@ nav {
 	left: 0;
 	align-items: center;
 	justify-content: space-between;
-	height: $navbar-height;
+	width: 100%;
 	z-index: 6;
 	background-color: $site-primary;
-	height: 95px;
+	height: $navbar-height;
+	position: fixed;
 
 	img {
 		@extend .rounded-circle;
@@ -155,7 +158,7 @@ nav {
 	transition: transform 1s ease-in-out;
 
     .menu-bar {
-        height: 95px;
+        height: $navbar-height;
         display: flex;
         justify-content: space-between;
         align-items: center;

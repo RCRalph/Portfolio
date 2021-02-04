@@ -1,0 +1,16 @@
+block js
+
+doctype html
+html
+	head
+		include head.pug
+	body(class=darkmode && "darkmode")
+		include menu-drop.pug
+		
+		.container-fluid
+			include navbar.pug
+
+			#page-content(class=noTop && "no-top")
+				block content
+
+			include footer.pug

@@ -48,6 +48,7 @@
 	font-weight: bold;
 	background-color: $site-primary;
 	color: $site-secondary;
+	scroll-margin-top: $navbar-height;
 }
 
 .about-me-wrapper {
@@ -57,7 +58,7 @@
 		justify-content: center;
 		align-items: center;
 
-		button {
+		a {
 			@extend .btn;
 			@extend .btn-lg;
 			@extend .btn-primary;
@@ -68,8 +69,10 @@
 	}
 
 	.container > .row > .about-me-content-wrapper {
-		@extend .col-md-8;
-		@extend .offset-md-2;
+		@extend .col-lg-8;
+		@extend .col-md-10;
+		@extend .offset-md-1;
+		@extend .offset-lg-2;
 
 		.about-me-content {
 			@extend .mx-2;
@@ -90,6 +93,13 @@
 
 			h3 {
 				font-weight: bold;
+			}
+
+			img {
+				@extend .my-2;
+
+				border-radius: 10px;
+				width: 100%;
 			}
 		}
 	}

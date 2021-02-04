@@ -18,3 +18,12 @@ html {
 	padding: 0;
 	min-height: calc(100vh - 60px);
 }
+
+#page-content {
+	padding-top: calc(#{$navbar-height} + 25px);
+	min-height: calc(100vh - #{$footer-height});
+
+	&.no-top {
+		padding-top: $navbar-height;
+	}
+}

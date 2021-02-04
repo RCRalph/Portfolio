@@ -1,34 +1,27 @@
-- const title = "Welcome";
+extends page-template.pug
 
-doctype html
-html
-	head
-		include head.pug
-		link(href="style.css" rel="stylesheet")
-	body(class=darkmode && "darkmode")
-		include menu-drop.pug
-		
-		.container-fluid
-			include navbar.pug
+block js
+	- const title = "Welcome";
+	- const noTop = true;
 
-			#page-content
-				.welcome-page-screen
-					#particles-js
-					.welcome-bar
-						.text-first Hi, I'm Ralph
-						hr
-						.text-second Software Developer
+block content
+	.welcome-page-screen
+		#particles-js
+		.welcome-bar
+			.text-first Hi, I'm Ralph
+			hr
+			.text-second Software Developer
 
-				#about-me Something about&nbsp;me...
+	#about-me Something about&nbsp;me...
 
-				.about-me-wrapper
-					.resume
-						button Download my resume
-					.container
-						.row
-							.about-me-content-wrapper
-								.about-me-content !{aboutMe}
-
-			include footer.pug
-		script(src="vendor.js")
-		script(src="main.js")
+	.about-me-wrapper
+		.resume
+			a(
+				role="button"
+				href="/content/resume.pdf"
+				target="_blank"
+			) Download my resume
+		.container
+			.row
+				.about-me-content-wrapper
+					.about-me-content !{aboutMe}
