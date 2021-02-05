@@ -1,15 +1,61 @@
 .contact-wrapper {
-	@extend .container;
+	@extend .col-lg-6;
+	@extend .offset-lg-3;
+	background-color: $site-primary;
+	border-radius: 10px;
 
 	.contact {
 		@extend .row;
 
 		.contact-text {
 			@extend .col;
-			@extend .display-3;
+			@extend .display-4;
+			@extend .my-4;
 
 			font-weight: bold;
 			text-align: center;
+		}
+	}
+
+	.form-wrapper {
+		@extend .row;
+		@extend .mb-3;
+
+		form {
+			@extend .col-md-8;
+			@extend .offset-md-2;
+			@extend .py-3;
+		
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			input, textarea {
+				@extend .my-2;
+				@extend .px-2;
+				@extend .py-1;
+
+				width: 100%;
+				background-color: transparent;
+				background-color: white;
+				border-style: none;
+				border-bottom: 2px solid $site-secondary;
+				border-radius: 5px;
+			}
+
+			input {
+				height: 32.5px;
+			}
+
+			button {
+				@extend .my-2;
+				@extend .btn;
+				@extend .btn-lg;
+				@extend .btn-primary-darkened;
+
+				font-weight: bold;
+				width: 75%;
+			}
 		}
 	}
 }

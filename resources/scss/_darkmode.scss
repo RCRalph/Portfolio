@@ -1,4 +1,6 @@
 .darkmode {
+	background-color: $site-tertiary;
+
 	nav {
 		background-color: $site-secondary;
 		ul > a {
@@ -82,5 +84,17 @@
 
 	#page-content {
 		background-color: $site-tertiary;
+	}
+
+	.contact-wrapper {
+		background-color: $site-secondary;
+
+		.contact > .contact-text {
+			color: $site-primary;
+		}
+
+		.form-wrapper > form > input, .form-wrapper > form > textarea {
+			border-bottom-color: $site-primary;
+		}
 	}
 }

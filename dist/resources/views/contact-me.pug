@@ -4,7 +4,54 @@ block js
 	- const title = "Contact me";
 
 block content
-	.contact-wrapper
-		.contact
-			.contact-text Get in touch!
-		
+	.container
+		.row
+			.contact-wrapper
+				.contact
+					.contact-text Get in touch!
+				
+				.form-wrapper
+					form(
+						action="/contact-me"
+						method="POST"
+					)
+						input(
+							name="_token"
+							type="hidden"
+							value=token
+						)
+
+						input(
+							name="name"
+							type="text"
+							placeholder="Your name..."
+							maxlength="32"
+							required
+						)
+
+						input(
+							name="email"
+							type="email"
+							placeholder="Your email..."
+							maxlength="64"
+							required
+						)
+
+						input(
+							name="topic"
+							type="text"
+							placeholder="Your topic..."
+							maxlength="128"
+							required
+						)
+
+						textarea(
+							name="body"
+							rows="5"
+							placeholder="Your message..."
+							required
+						)
+
+						button(
+							type="submit"
+						) Submit

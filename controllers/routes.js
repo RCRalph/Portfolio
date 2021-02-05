@@ -1,9 +1,11 @@
+const requireText = require("require-text");
+const { randomBytes } = require("crypto");
+
 const markdownIt = require("markdown-it")({
 	html: true,
 	linkify: true,
 	typographer: true
 });
-const requireText = require("require-text");
 
 module.exports = (app) => {
 	function addNoBreakSpaces(text) {
@@ -27,8 +29,7 @@ module.exports = (app) => {
 			));
 
 		res.render("../dist/resources/views/index.pug", {
-			aboutMe: aboutMe,
-			darkmode: res.locals.darkmode
+			aboutMe: aboutMe
 		});
 	});
 
@@ -47,7 +48,21 @@ module.exports = (app) => {
 	});
 
 	// Contact me
-	app.get("/contact-me", (req, res) => {
-		res.render("../dist/resources/views/contact-me.pug");
-	});
+	app.route("/contact-me")
+		.get((req, res) => {
+			if (req.session.csrf == undefined) {
+				req.session.csrf = randomBytes(100).toString('base64');
+			}
+
+			res.render("../dist/resources/views/contact-me.pug", {
+				token: req.session.csrf
+			});
+		})
+		.post((req, res) => {
+			if (req.body._token != req.session.csrf) {
+				return res.sendStatus(419);
+			}
+
+			return res.send("dupa")
+		});
 }

@@ -21,9 +21,13 @@ html {
 
 #page-content {
 	padding-top: calc(#{$navbar-height} + 25px);
-	min-height: calc(100vh - #{$footer-height});
+	min-height: calc(100vh - #{$footer-height} - 16px);
 
 	&.no-top {
 		padding-top: $navbar-height;
 	}
+}
+
+.btn-primary-darkened {
+	@include button-variant($site-primary-darkened, darken($site-primary-darkened, 3%));
 }
