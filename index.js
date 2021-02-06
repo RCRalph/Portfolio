@@ -2,12 +2,15 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const cookieSession = require("cookie-session");
+const requestIp = require("request-ip");
+
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/dist/public"));
+app.use(requestIp.mw());
 app.use(cookieParser());
 app.use(cookieSession({
 	name: "session",                              
@@ -21,9 +24,9 @@ app.use(cookieSession({
 
 // Add routes
 const routes = require("./controllers/routes");
-const middleware = require("./controllers/middleware");
+const darkmode = require("./controllers/darkmode");
 
-middleware(app);
+darkmode(app);
 routes(app);
 // Error 404
 app.use(function (req, res) {

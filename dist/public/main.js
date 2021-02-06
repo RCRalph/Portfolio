@@ -62,6 +62,16 @@ eval("function dropdownMenu() {\r\n\tconst bars = document.getElementById(\"burg
 
 /***/ }),
 
+/***/ "./resources/js/functions/modal.js":
+/*!*****************************************!*\
+  !*** ./resources/js/functions/modal.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, exports) => {
+
+eval("function modal() {\r\n\tconst popupDownbar = document.getElementsByClassName(\"popup-downbar\");\r\n\r\n\tif (popupDownbar.length) {\r\n\t\tconst popup = document.getElementsByClassName(\"popup\")[0];\r\n\r\n\t\tdocument.getElementById(\"modal-button\")\r\n\t\t\t.addEventListener(\"click\", () => {\r\n\t\t\t\tpopup.classList.add(\"hidden\");\r\n\r\n\t\t\t\tsetTimeout(() => {\r\n\t\t\t\t\tdocument\r\n\t\t\t\t\t\t.getElementById(\"modals\")\r\n\t\t\t\t\t\t.parentNode\r\n\t\t\t\t\t\t.removeChild(document.getElementById(\"modals\"));\r\n\t\t\t\t}, 1000)\r\n\t\t\t})\r\n\r\n\t\tpopupDownbar[0].classList.add(\"width-shrink\");\r\n\t\tsetTimeout(() => {\r\n\t\t\tif (document.getElementsByClassName(\"popup\").length && !popup.classList.contains(\"hidden\")) {\r\n\t\t\t\tpopup.classList.add(\"hidden\");\r\n\r\n\t\t\t\tsetTimeout(() => {\r\n\t\t\t\t\tpopup.parentNode.removeChild(popup);\r\n\t\t\t\t}, 1000);\r\n\t\t\t}\r\n\t\t}, 5000);\r\n\t}\r\n}\r\n\r\nexports.modal = modal;\n\n//# sourceURL=webpack://portfolio/./resources/js/functions/modal.js?");
+
+/***/ }),
+
 /***/ "./resources/js/main.js":
 /*!******************************!*\
   !*** ./resources/js/main.js ***!
@@ -69,7 +79,7 @@ eval("function dropdownMenu() {\r\n\tconst bars = document.getElementById(\"burg
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favicon_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favicon.ico */ \"./resources/img/favicon.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n/* harmony import */ var _json_particles_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../json/particles.json */ \"./resources/json/particles.json\");\n/* harmony import */ var _functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/dropdown-menu.js */ \"./resources/js/functions/dropdown-menu.js\");\n/* harmony import */ var _functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/darkmode-switcher.js */ \"./resources/js/functions/darkmode-switcher.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__.dropdownMenu)();\r\n(0,_functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__.darkmodeSwitcher)();\r\n\r\n// Particles.js\r\nif (document.getElementById(\"particles-js\")) {\r\n\tparticlesJS.load(\"particles-js\", \"particles.json\");\r\n}\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favicon_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favicon.ico */ \"./resources/img/favicon.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n/* harmony import */ var _json_particles_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../json/particles.json */ \"./resources/json/particles.json\");\n/* harmony import */ var _functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/dropdown-menu.js */ \"./resources/js/functions/dropdown-menu.js\");\n/* harmony import */ var _functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/darkmode-switcher.js */ \"./resources/js/functions/darkmode-switcher.js\");\n/* harmony import */ var _functions_modal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/modal.js */ \"./resources/js/functions/modal.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__.dropdownMenu)();\r\n(0,_functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__.darkmodeSwitcher)();\r\n\r\n// Particles.js\r\nif (document.getElementById(\"particles-js\")) {\r\n\tparticlesJS.load(\"particles-js\", \"particles.json\");\r\n}\r\n\r\n(0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_6__.modal)();\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
 
 /***/ }),
 

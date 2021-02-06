@@ -294,7 +294,7 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1, .h2, .h3, .modal-wrapper .popup-content .message, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2; }
@@ -305,7 +305,7 @@ h1, .h1 {
 h2, .h2 {
   font-size: 2rem; }
 
-h3, .h3 {
+h3, .h3, .modal-wrapper .popup-content .message {
   font-size: 1.75rem; }
 
 h4, .h4 {
@@ -1744,7 +1744,7 @@ textarea.form-control {
     .form-inline .custom-control-label {
       margin-bottom: 0; } }
 
-.btn, .about-me-wrapper .resume a, .contact-wrapper .form-wrapper form button {
+.btn, .about-me-wrapper .resume a, .contact-wrapper .form-wrapper form button, .modal-wrapper .popup-content button {
   display: inline-block;
   font-weight: 400;
   color: #212529;
@@ -1759,17 +1759,17 @@ textarea.form-control {
   border-radius: 0.25rem;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; }
   @media (prefers-reduced-motion: reduce) {
-    .btn, .about-me-wrapper .resume a, .contact-wrapper .form-wrapper form button {
+    .btn, .about-me-wrapper .resume a, .contact-wrapper .form-wrapper form button, .modal-wrapper .popup-content button {
       transition: none; } }
-  .btn:hover, .about-me-wrapper .resume a:hover, .contact-wrapper .form-wrapper form button:hover {
+  .btn:hover, .about-me-wrapper .resume a:hover, .contact-wrapper .form-wrapper form button:hover, .modal-wrapper .popup-content button:hover {
     color: #212529;
     text-decoration: none; }
-  .btn:focus, .about-me-wrapper .resume a:focus, .contact-wrapper .form-wrapper form button:focus, .btn.focus, .about-me-wrapper .resume a.focus, .contact-wrapper .form-wrapper form button.focus {
+  .btn:focus, .about-me-wrapper .resume a:focus, .contact-wrapper .form-wrapper form button:focus, .modal-wrapper .popup-content button:focus, .btn.focus, .about-me-wrapper .resume a.focus, .contact-wrapper .form-wrapper form button.focus, .modal-wrapper .popup-content button.focus {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 184, 255, 0.25); }
-  .btn.disabled, .about-me-wrapper .resume a.disabled, .contact-wrapper .form-wrapper form button.disabled, .btn:disabled, .about-me-wrapper .resume a:disabled, .contact-wrapper .form-wrapper form button:disabled {
+  .btn.disabled, .about-me-wrapper .resume a.disabled, .contact-wrapper .form-wrapper form button.disabled, .modal-wrapper .popup-content button.disabled, .btn:disabled, .about-me-wrapper .resume a:disabled, .contact-wrapper .form-wrapper form button:disabled, .modal-wrapper .popup-content button:disabled {
     opacity: 0.65; }
-  .btn:not(:disabled):not(.disabled), .about-me-wrapper .resume a:not(:disabled):not(.disabled), .contact-wrapper .form-wrapper form button:not(:disabled):not(.disabled) {
+  .btn:not(:disabled):not(.disabled), .about-me-wrapper .resume a:not(:disabled):not(.disabled), .contact-wrapper .form-wrapper form button:not(:disabled):not(.disabled), .modal-wrapper .popup-content button:not(:disabled):not(.disabled) {
     cursor: pointer; }
 
 a.btn.disabled, .about-me-wrapper .resume a.disabled,
@@ -1778,32 +1778,34 @@ fieldset:disabled .about-me-wrapper .resume a,
 .about-me-wrapper .resume fieldset:disabled a {
   pointer-events: none; }
 
-.btn-primary, .about-me-wrapper .resume a {
+.btn-primary, .about-me-wrapper .resume a, .modal-wrapper .popup-content button {
   color: #fff;
   background-color: #00b8ff;
   border-color: #00b8ff; }
-  .btn-primary:hover, .about-me-wrapper .resume a:hover {
+  .btn-primary:hover, .about-me-wrapper .resume a:hover, .modal-wrapper .popup-content button:hover {
     color: #fff;
     background-color: #009cd9;
     border-color: #0093cc; }
-  .btn-primary:focus, .about-me-wrapper .resume a:focus, .btn-primary.focus, .about-me-wrapper .resume a.focus {
+  .btn-primary:focus, .about-me-wrapper .resume a:focus, .modal-wrapper .popup-content button:focus, .btn-primary.focus, .about-me-wrapper .resume a.focus, .modal-wrapper .popup-content button.focus {
     color: #fff;
     background-color: #009cd9;
     border-color: #0093cc;
     box-shadow: 0 0 0 0.2rem rgba(38, 195, 255, 0.5); }
-  .btn-primary.disabled, .about-me-wrapper .resume a.disabled, .btn-primary:disabled, .about-me-wrapper .resume a:disabled {
+  .btn-primary.disabled, .about-me-wrapper .resume a.disabled, .modal-wrapper .popup-content button.disabled, .btn-primary:disabled, .about-me-wrapper .resume a:disabled, .modal-wrapper .popup-content button:disabled {
     color: #fff;
     background-color: #00b8ff;
     border-color: #00b8ff; }
-  .btn-primary:not(:disabled):not(.disabled):active, .about-me-wrapper .resume a:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .about-me-wrapper .resume a:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active, .about-me-wrapper .resume a:not(:disabled):not(.disabled):active, .modal-wrapper .popup-content button:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .about-me-wrapper .resume a:not(:disabled):not(.disabled).active, .modal-wrapper .popup-content button:not(:disabled):not(.disabled).active,
   .show > .btn-primary.dropdown-toggle,
-  .about-me-wrapper .resume .show > a.dropdown-toggle {
+  .about-me-wrapper .resume .show > a.dropdown-toggle,
+  .modal-wrapper .popup-content .show > button.dropdown-toggle {
     color: #fff;
     background-color: #0093cc;
     border-color: #008abf; }
-    .btn-primary:not(:disabled):not(.disabled):active:focus, .about-me-wrapper .resume a:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .about-me-wrapper .resume a:not(:disabled):not(.disabled).active:focus,
+    .btn-primary:not(:disabled):not(.disabled):active:focus, .about-me-wrapper .resume a:not(:disabled):not(.disabled):active:focus, .modal-wrapper .popup-content button:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus, .about-me-wrapper .resume a:not(:disabled):not(.disabled).active:focus, .modal-wrapper .popup-content button:not(:disabled):not(.disabled).active:focus,
     .show > .btn-primary.dropdown-toggle:focus,
-    .about-me-wrapper .resume .show > a.dropdown-toggle:focus {
+    .about-me-wrapper .resume .show > a.dropdown-toggle:focus,
+    .modal-wrapper .popup-content .show > button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(38, 195, 255, 0.5); }
 
 .btn-secondary {
@@ -2169,13 +2171,13 @@ fieldset:disabled .about-me-wrapper .resume a,
     color: #6c757d;
     pointer-events: none; }
 
-.btn-lg, .btn-group-lg > .btn, .about-me-wrapper .resume a, .contact-wrapper .form-wrapper form button {
+.btn-lg, .btn-group-lg > .btn, .contact-wrapper .form-wrapper form .btn-group-lg > button, .modal-wrapper .popup-content .btn-group-lg > button, .about-me-wrapper .resume a {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
   border-radius: 0.3rem; }
 
-.btn-sm, .btn-group-sm > .btn, .about-me-wrapper .resume .btn-group-sm > a, .contact-wrapper .form-wrapper form .btn-group-sm > button {
+.btn-sm, .btn-group-sm > .btn, .about-me-wrapper .resume .btn-group-sm > a, .contact-wrapper .form-wrapper form .btn-group-sm > button, .modal-wrapper .popup-content .btn-group-sm > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2419,27 +2421,32 @@ input[type="button"].btn-block {
   position: relative;
   display: inline-flex;
   vertical-align: middle; }
-  .btn-group > .btn, .about-me-wrapper .resume .btn-group > a, .contact-wrapper .form-wrapper form .btn-group > button,
+  .btn-group > .btn, .about-me-wrapper .resume .btn-group > a, .contact-wrapper .form-wrapper form .btn-group > button, .modal-wrapper .popup-content .btn-group > button,
   .btn-group-vertical > .btn,
   .about-me-wrapper .resume .btn-group-vertical > a,
-  .contact-wrapper .form-wrapper form .btn-group-vertical > button {
+  .contact-wrapper .form-wrapper form .btn-group-vertical > button,
+  .modal-wrapper .popup-content .btn-group-vertical > button {
     position: relative;
     flex: 1 1 auto; }
-    .btn-group > .btn:hover, .about-me-wrapper .resume .btn-group > a:hover, .contact-wrapper .form-wrapper form .btn-group > button:hover,
+    .btn-group > .btn:hover, .about-me-wrapper .resume .btn-group > a:hover, .contact-wrapper .form-wrapper form .btn-group > button:hover, .modal-wrapper .popup-content .btn-group > button:hover,
     .btn-group-vertical > .btn:hover,
     .about-me-wrapper .resume .btn-group-vertical > a:hover,
-    .contact-wrapper .form-wrapper form .btn-group-vertical > button:hover {
+    .contact-wrapper .form-wrapper form .btn-group-vertical > button:hover,
+    .modal-wrapper .popup-content .btn-group-vertical > button:hover {
       z-index: 1; }
-    .btn-group > .btn:focus, .about-me-wrapper .resume .btn-group > a:focus, .contact-wrapper .form-wrapper form .btn-group > button:focus, .btn-group > .btn:active, .about-me-wrapper .resume .btn-group > a:active, .contact-wrapper .form-wrapper form .btn-group > button:active, .btn-group > .btn.active, .about-me-wrapper .resume .btn-group > a.active, .contact-wrapper .form-wrapper form .btn-group > button.active,
+    .btn-group > .btn:focus, .about-me-wrapper .resume .btn-group > a:focus, .contact-wrapper .form-wrapper form .btn-group > button:focus, .modal-wrapper .popup-content .btn-group > button:focus, .btn-group > .btn:active, .about-me-wrapper .resume .btn-group > a:active, .contact-wrapper .form-wrapper form .btn-group > button:active, .modal-wrapper .popup-content .btn-group > button:active, .btn-group > .btn.active, .about-me-wrapper .resume .btn-group > a.active, .contact-wrapper .form-wrapper form .btn-group > button.active, .modal-wrapper .popup-content .btn-group > button.active,
     .btn-group-vertical > .btn:focus,
     .about-me-wrapper .resume .btn-group-vertical > a:focus,
     .contact-wrapper .form-wrapper form .btn-group-vertical > button:focus,
+    .modal-wrapper .popup-content .btn-group-vertical > button:focus,
     .btn-group-vertical > .btn:active,
     .about-me-wrapper .resume .btn-group-vertical > a:active,
     .contact-wrapper .form-wrapper form .btn-group-vertical > button:active,
+    .modal-wrapper .popup-content .btn-group-vertical > button:active,
     .btn-group-vertical > .btn.active,
     .about-me-wrapper .resume .btn-group-vertical > a.active,
-    .contact-wrapper .form-wrapper form .btn-group-vertical > button.active {
+    .contact-wrapper .form-wrapper form .btn-group-vertical > button.active,
+    .modal-wrapper .popup-content .btn-group-vertical > button.active {
       z-index: 1; }
 
 .btn-toolbar {
@@ -2449,21 +2456,23 @@ input[type="button"].btn-block {
   .btn-toolbar .input-group {
     width: auto; }
 
-.btn-group > .btn:not(:first-child), .about-me-wrapper .resume .btn-group > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group > button:not(:first-child),
+.btn-group > .btn:not(:first-child), .about-me-wrapper .resume .btn-group > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group > button:not(:first-child), .modal-wrapper .popup-content .btn-group > button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) {
   margin-left: -1px; }
 
-.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .about-me-wrapper .resume .btn-group > a:not(:last-child):not(.dropdown-toggle), .contact-wrapper .form-wrapper form .btn-group > button:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle), .about-me-wrapper .resume .btn-group > a:not(:last-child):not(.dropdown-toggle), .contact-wrapper .form-wrapper form .btn-group > button:not(:last-child):not(.dropdown-toggle), .modal-wrapper .popup-content .btn-group > button:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn,
 .about-me-wrapper .resume .btn-group > .btn-group:not(:last-child) > a,
-.contact-wrapper .form-wrapper form .btn-group > .btn-group:not(:last-child) > button {
+.contact-wrapper .form-wrapper form .btn-group > .btn-group:not(:last-child) > button,
+.modal-wrapper .popup-content .btn-group > .btn-group:not(:last-child) > button {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.btn-group > .btn:not(:first-child), .about-me-wrapper .resume .btn-group > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group > button:not(:first-child),
+.btn-group > .btn:not(:first-child), .about-me-wrapper .resume .btn-group > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group > button:not(:first-child), .modal-wrapper .popup-content .btn-group > button:not(:first-child),
 .btn-group > .btn-group:not(:first-child) > .btn,
 .about-me-wrapper .resume .btn-group > .btn-group:not(:first-child) > a,
-.contact-wrapper .form-wrapper form .btn-group > .btn-group:not(:first-child) > button {
+.contact-wrapper .form-wrapper form .btn-group > .btn-group:not(:first-child) > button,
+.modal-wrapper .popup-content .btn-group > .btn-group:not(:first-child) > button {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
@@ -2477,11 +2486,11 @@ input[type="button"].btn-block {
   .dropleft .dropdown-toggle-split::before {
     margin-right: 0; }
 
-.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .about-me-wrapper .resume .btn-group-sm > a + .dropdown-toggle-split, .contact-wrapper .form-wrapper form .btn-group-sm > button + .dropdown-toggle-split {
+.btn-sm + .dropdown-toggle-split, .btn-group-sm > .btn + .dropdown-toggle-split, .about-me-wrapper .resume .btn-group-sm > a + .dropdown-toggle-split, .contact-wrapper .form-wrapper form .btn-group-sm > button + .dropdown-toggle-split, .modal-wrapper .popup-content .btn-group-sm > button + .dropdown-toggle-split {
   padding-right: 0.375rem;
   padding-left: 0.375rem; }
 
-.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .about-me-wrapper .resume .btn-group-lg > a + .dropdown-toggle-split, .contact-wrapper .form-wrapper form .btn-group-lg > button + .dropdown-toggle-split, .about-me-wrapper .resume a + .dropdown-toggle-split, .contact-wrapper .form-wrapper form button + .dropdown-toggle-split {
+.btn-lg + .dropdown-toggle-split, .btn-group-lg > .btn + .dropdown-toggle-split, .about-me-wrapper .resume .btn-group-lg > a + .dropdown-toggle-split, .contact-wrapper .form-wrapper form .btn-group-lg > button + .dropdown-toggle-split, .modal-wrapper .popup-content .btn-group-lg > button + .dropdown-toggle-split, .about-me-wrapper .resume a + .dropdown-toggle-split {
   padding-right: 0.75rem;
   padding-left: 0.75rem; }
 
@@ -2493,39 +2502,46 @@ input[type="button"].btn-block {
   .btn-group-vertical > .btn,
   .about-me-wrapper .resume .btn-group-vertical > a,
   .contact-wrapper .form-wrapper form .btn-group-vertical > button,
+  .modal-wrapper .popup-content .btn-group-vertical > button,
   .btn-group-vertical > .btn-group {
     width: 100%; }
-  .btn-group-vertical > .btn:not(:first-child), .about-me-wrapper .resume .btn-group-vertical > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .about-me-wrapper .resume .btn-group-vertical > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group-vertical > button:not(:first-child), .modal-wrapper .popup-content .btn-group-vertical > button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) {
     margin-top: -1px; }
-  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .about-me-wrapper .resume .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .contact-wrapper .form-wrapper form .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
+  .btn-group-vertical > .btn:not(:last-child):not(.dropdown-toggle), .about-me-wrapper .resume .btn-group-vertical > a:not(:last-child):not(.dropdown-toggle), .contact-wrapper .form-wrapper form .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle), .modal-wrapper .popup-content .btn-group-vertical > button:not(:last-child):not(.dropdown-toggle),
   .btn-group-vertical > .btn-group:not(:last-child) > .btn,
   .about-me-wrapper .resume .btn-group-vertical > .btn-group:not(:last-child) > a,
-  .contact-wrapper .form-wrapper form .btn-group-vertical > .btn-group:not(:last-child) > button {
+  .contact-wrapper .form-wrapper form .btn-group-vertical > .btn-group:not(:last-child) > button,
+  .modal-wrapper .popup-content .btn-group-vertical > .btn-group:not(:last-child) > button {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0; }
-  .btn-group-vertical > .btn:not(:first-child), .about-me-wrapper .resume .btn-group-vertical > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group-vertical > button:not(:first-child),
+  .btn-group-vertical > .btn:not(:first-child), .about-me-wrapper .resume .btn-group-vertical > a:not(:first-child), .contact-wrapper .form-wrapper form .btn-group-vertical > button:not(:first-child), .modal-wrapper .popup-content .btn-group-vertical > button:not(:first-child),
   .btn-group-vertical > .btn-group:not(:first-child) > .btn,
   .about-me-wrapper .resume .btn-group-vertical > .btn-group:not(:first-child) > a,
-  .contact-wrapper .form-wrapper form .btn-group-vertical > .btn-group:not(:first-child) > button {
+  .contact-wrapper .form-wrapper form .btn-group-vertical > .btn-group:not(:first-child) > button,
+  .modal-wrapper .popup-content .btn-group-vertical > .btn-group:not(:first-child) > button {
     border-top-left-radius: 0;
     border-top-right-radius: 0; }
 
-.btn-group-toggle > .btn, .about-me-wrapper .resume .btn-group-toggle > a, .contact-wrapper .form-wrapper form .btn-group-toggle > button,
+.btn-group-toggle > .btn, .about-me-wrapper .resume .btn-group-toggle > a, .contact-wrapper .form-wrapper form .btn-group-toggle > button, .modal-wrapper .popup-content .btn-group-toggle > button,
 .btn-group-toggle > .btn-group > .btn,
 .about-me-wrapper .resume .btn-group-toggle > .btn-group > a,
-.contact-wrapper .form-wrapper form .btn-group-toggle > .btn-group > button {
+.contact-wrapper .form-wrapper form .btn-group-toggle > .btn-group > button,
+.modal-wrapper .popup-content .btn-group-toggle > .btn-group > button {
   margin-bottom: 0; }
-  .btn-group-toggle > .btn input[type="radio"], .about-me-wrapper .resume .btn-group-toggle > a input[type="radio"], .contact-wrapper .form-wrapper form .btn-group-toggle > button input[type="radio"],
+  .btn-group-toggle > .btn input[type="radio"], .about-me-wrapper .resume .btn-group-toggle > a input[type="radio"], .contact-wrapper .form-wrapper form .btn-group-toggle > button input[type="radio"], .modal-wrapper .popup-content .btn-group-toggle > button input[type="radio"],
   .btn-group-toggle > .btn input[type="checkbox"],
   .about-me-wrapper .resume .btn-group-toggle > a input[type="checkbox"],
   .contact-wrapper .form-wrapper form .btn-group-toggle > button input[type="checkbox"],
+  .modal-wrapper .popup-content .btn-group-toggle > button input[type="checkbox"],
   .btn-group-toggle > .btn-group > .btn input[type="radio"],
   .about-me-wrapper .resume .btn-group-toggle > .btn-group > a input[type="radio"],
   .contact-wrapper .form-wrapper form .btn-group-toggle > .btn-group > button input[type="radio"],
+  .modal-wrapper .popup-content .btn-group-toggle > .btn-group > button input[type="radio"],
   .btn-group-toggle > .btn-group > .btn input[type="checkbox"],
   .about-me-wrapper .resume .btn-group-toggle > .btn-group > a input[type="checkbox"],
-  .contact-wrapper .form-wrapper form .btn-group-toggle > .btn-group > button input[type="checkbox"] {
+  .contact-wrapper .form-wrapper form .btn-group-toggle > .btn-group > button input[type="checkbox"],
+  .modal-wrapper .popup-content .btn-group-toggle > .btn-group > button input[type="checkbox"] {
     position: absolute;
     clip: rect(0, 0, 0, 0);
     pointer-events: none; }
@@ -2589,38 +2605,48 @@ input[type="button"].btn-block {
 .input-group-prepend,
 .input-group-append {
   display: flex; }
-  .input-group-prepend .btn, .input-group-prepend .about-me-wrapper .resume a, .about-me-wrapper .resume .input-group-prepend a, .input-group-prepend .contact-wrapper .form-wrapper form button, .contact-wrapper .form-wrapper form .input-group-prepend button,
+  .input-group-prepend .btn, .input-group-prepend .about-me-wrapper .resume a, .about-me-wrapper .resume .input-group-prepend a, .input-group-prepend .contact-wrapper .form-wrapper form button, .contact-wrapper .form-wrapper form .input-group-prepend button, .input-group-prepend .modal-wrapper .popup-content button, .modal-wrapper .popup-content .input-group-prepend button,
   .input-group-append .btn,
   .input-group-append .about-me-wrapper .resume a,
   .about-me-wrapper .resume .input-group-append a,
   .input-group-append .contact-wrapper .form-wrapper form button,
-  .contact-wrapper .form-wrapper form .input-group-append button {
+  .contact-wrapper .form-wrapper form .input-group-append button,
+  .input-group-append .modal-wrapper .popup-content button,
+  .modal-wrapper .popup-content .input-group-append button {
     position: relative;
     z-index: 2; }
-    .input-group-prepend .btn:focus, .input-group-prepend .about-me-wrapper .resume a:focus, .about-me-wrapper .resume .input-group-prepend a:focus, .input-group-prepend .contact-wrapper .form-wrapper form button:focus, .contact-wrapper .form-wrapper form .input-group-prepend button:focus,
+    .input-group-prepend .btn:focus, .input-group-prepend .about-me-wrapper .resume a:focus, .about-me-wrapper .resume .input-group-prepend a:focus, .input-group-prepend .contact-wrapper .form-wrapper form button:focus, .contact-wrapper .form-wrapper form .input-group-prepend button:focus, .input-group-prepend .modal-wrapper .popup-content button:focus, .modal-wrapper .popup-content .input-group-prepend button:focus,
     .input-group-append .btn:focus,
     .input-group-append .about-me-wrapper .resume a:focus,
     .about-me-wrapper .resume .input-group-append a:focus,
     .input-group-append .contact-wrapper .form-wrapper form button:focus,
-    .contact-wrapper .form-wrapper form .input-group-append button:focus {
+    .contact-wrapper .form-wrapper form .input-group-append button:focus,
+    .input-group-append .modal-wrapper .popup-content button:focus,
+    .modal-wrapper .popup-content .input-group-append button:focus {
       z-index: 3; }
-  .input-group-prepend .btn + .btn, .input-group-prepend .about-me-wrapper .resume a + .btn, .about-me-wrapper .resume .input-group-prepend a + .btn, .input-group-prepend .contact-wrapper .form-wrapper form button + .btn, .contact-wrapper .form-wrapper form .input-group-prepend button + .btn, .input-group-prepend .about-me-wrapper .resume .btn + a, .about-me-wrapper .resume .input-group-prepend .btn + a, .input-group-prepend .about-me-wrapper .resume a + a, .about-me-wrapper .resume .input-group-prepend a + a, .input-group-prepend .contact-wrapper .form-wrapper form .about-me-wrapper .resume button + a, .about-me-wrapper .resume .input-group-prepend .contact-wrapper .form-wrapper form button + a, .contact-wrapper .form-wrapper form .input-group-prepend .about-me-wrapper .resume button + a, .about-me-wrapper .resume .contact-wrapper .form-wrapper form .input-group-prepend button + a, .input-group-prepend .contact-wrapper .form-wrapper form .btn + button, .contact-wrapper .form-wrapper form .input-group-prepend .btn + button, .input-group-prepend .about-me-wrapper .resume .contact-wrapper .form-wrapper form a + button, .contact-wrapper .form-wrapper form .input-group-prepend .about-me-wrapper .resume a + button, .about-me-wrapper .resume .input-group-prepend .contact-wrapper .form-wrapper form a + button, .contact-wrapper .form-wrapper form .about-me-wrapper .resume .input-group-prepend a + button, .input-group-prepend .contact-wrapper .form-wrapper form button + button, .contact-wrapper .form-wrapper form .input-group-prepend button + button,
+  .input-group-prepend .btn + .btn, .input-group-prepend .about-me-wrapper .resume a + .btn, .about-me-wrapper .resume .input-group-prepend a + .btn, .input-group-prepend .contact-wrapper .form-wrapper form button + .btn, .contact-wrapper .form-wrapper form .input-group-prepend button + .btn, .input-group-prepend .modal-wrapper .popup-content button + .btn, .modal-wrapper .popup-content .input-group-prepend button + .btn, .input-group-prepend .about-me-wrapper .resume .btn + a, .about-me-wrapper .resume .input-group-prepend .btn + a, .input-group-prepend .about-me-wrapper .resume a + a, .about-me-wrapper .resume .input-group-prepend a + a, .input-group-prepend .contact-wrapper .form-wrapper form .about-me-wrapper .resume button + a, .about-me-wrapper .resume .input-group-prepend .contact-wrapper .form-wrapper form button + a, .contact-wrapper .form-wrapper form .input-group-prepend .about-me-wrapper .resume button + a, .about-me-wrapper .resume .contact-wrapper .form-wrapper form .input-group-prepend button + a, .input-group-prepend .modal-wrapper .popup-content .about-me-wrapper .resume button + a, .about-me-wrapper .resume .input-group-prepend .modal-wrapper .popup-content button + a, .modal-wrapper .popup-content .input-group-prepend .about-me-wrapper .resume button + a, .about-me-wrapper .resume .modal-wrapper .popup-content .input-group-prepend button + a, .input-group-prepend .contact-wrapper .form-wrapper form .btn + button, .contact-wrapper .form-wrapper form .input-group-prepend .btn + button, .input-group-prepend .about-me-wrapper .resume .contact-wrapper .form-wrapper form a + button, .contact-wrapper .form-wrapper form .input-group-prepend .about-me-wrapper .resume a + button, .about-me-wrapper .resume .input-group-prepend .contact-wrapper .form-wrapper form a + button, .contact-wrapper .form-wrapper form .about-me-wrapper .resume .input-group-prepend a + button, .input-group-prepend .contact-wrapper .form-wrapper form button + button, .contact-wrapper .form-wrapper form .input-group-prepend button + button, .input-group-prepend .modal-wrapper .popup-content .btn + button, .modal-wrapper .popup-content .input-group-prepend .btn + button, .input-group-prepend .about-me-wrapper .resume .modal-wrapper .popup-content a + button, .modal-wrapper .popup-content .input-group-prepend .about-me-wrapper .resume a + button, .about-me-wrapper .resume .input-group-prepend .modal-wrapper .popup-content a + button, .modal-wrapper .popup-content .about-me-wrapper .resume .input-group-prepend a + button, .input-group-prepend .modal-wrapper .popup-content button + button, .modal-wrapper .popup-content .input-group-prepend button + button,
   .input-group-prepend .btn + .input-group-text,
   .input-group-prepend .about-me-wrapper .resume a + .input-group-text,
   .about-me-wrapper .resume .input-group-prepend a + .input-group-text,
   .input-group-prepend .contact-wrapper .form-wrapper form button + .input-group-text,
   .contact-wrapper .form-wrapper form .input-group-prepend button + .input-group-text,
+  .input-group-prepend .modal-wrapper .popup-content button + .input-group-text,
+  .modal-wrapper .popup-content .input-group-prepend button + .input-group-text,
   .input-group-prepend .input-group-text + .input-group-text,
   .input-group-prepend .input-group-text + .btn,
   .input-group-prepend .about-me-wrapper .resume .input-group-text + a,
   .about-me-wrapper .resume .input-group-prepend .input-group-text + a,
   .input-group-prepend .contact-wrapper .form-wrapper form .input-group-text + button,
   .contact-wrapper .form-wrapper form .input-group-prepend .input-group-text + button,
+  .input-group-prepend .modal-wrapper .popup-content .input-group-text + button,
+  .modal-wrapper .popup-content .input-group-prepend .input-group-text + button,
   .input-group-append .btn + .btn,
   .input-group-append .about-me-wrapper .resume a + .btn,
   .about-me-wrapper .resume .input-group-append a + .btn,
   .input-group-append .contact-wrapper .form-wrapper form button + .btn,
   .contact-wrapper .form-wrapper form .input-group-append button + .btn,
+  .input-group-append .modal-wrapper .popup-content button + .btn,
+  .modal-wrapper .popup-content .input-group-append button + .btn,
   .input-group-append .about-me-wrapper .resume .btn + a,
   .about-me-wrapper .resume .input-group-append .btn + a,
   .input-group-append .about-me-wrapper .resume a + a,
@@ -2629,6 +2655,10 @@ input[type="button"].btn-block {
   .about-me-wrapper .resume .input-group-append .contact-wrapper .form-wrapper form button + a,
   .contact-wrapper .form-wrapper form .input-group-append .about-me-wrapper .resume button + a,
   .about-me-wrapper .resume .contact-wrapper .form-wrapper form .input-group-append button + a,
+  .input-group-append .modal-wrapper .popup-content .about-me-wrapper .resume button + a,
+  .about-me-wrapper .resume .input-group-append .modal-wrapper .popup-content button + a,
+  .modal-wrapper .popup-content .input-group-append .about-me-wrapper .resume button + a,
+  .about-me-wrapper .resume .modal-wrapper .popup-content .input-group-append button + a,
   .input-group-append .contact-wrapper .form-wrapper form .btn + button,
   .contact-wrapper .form-wrapper form .input-group-append .btn + button,
   .input-group-append .about-me-wrapper .resume .contact-wrapper .form-wrapper form a + button,
@@ -2637,17 +2667,29 @@ input[type="button"].btn-block {
   .contact-wrapper .form-wrapper form .about-me-wrapper .resume .input-group-append a + button,
   .input-group-append .contact-wrapper .form-wrapper form button + button,
   .contact-wrapper .form-wrapper form .input-group-append button + button,
+  .input-group-append .modal-wrapper .popup-content .btn + button,
+  .modal-wrapper .popup-content .input-group-append .btn + button,
+  .input-group-append .about-me-wrapper .resume .modal-wrapper .popup-content a + button,
+  .modal-wrapper .popup-content .input-group-append .about-me-wrapper .resume a + button,
+  .about-me-wrapper .resume .input-group-append .modal-wrapper .popup-content a + button,
+  .modal-wrapper .popup-content .about-me-wrapper .resume .input-group-append a + button,
+  .input-group-append .modal-wrapper .popup-content button + button,
+  .modal-wrapper .popup-content .input-group-append button + button,
   .input-group-append .btn + .input-group-text,
   .input-group-append .about-me-wrapper .resume a + .input-group-text,
   .about-me-wrapper .resume .input-group-append a + .input-group-text,
   .input-group-append .contact-wrapper .form-wrapper form button + .input-group-text,
   .contact-wrapper .form-wrapper form .input-group-append button + .input-group-text,
+  .input-group-append .modal-wrapper .popup-content button + .input-group-text,
+  .modal-wrapper .popup-content .input-group-append button + .input-group-text,
   .input-group-append .input-group-text + .input-group-text,
   .input-group-append .input-group-text + .btn,
   .input-group-append .about-me-wrapper .resume .input-group-text + a,
   .about-me-wrapper .resume .input-group-append .input-group-text + a,
   .input-group-append .contact-wrapper .form-wrapper form .input-group-text + button,
-  .contact-wrapper .form-wrapper form .input-group-append .input-group-text + button {
+  .contact-wrapper .form-wrapper form .input-group-append .input-group-text + button,
+  .input-group-append .modal-wrapper .popup-content .input-group-text + button,
+  .modal-wrapper .popup-content .input-group-append .input-group-text + button {
     margin-left: -1px; }
 
 .input-group-prepend {
@@ -2685,9 +2727,11 @@ input[type="button"].btn-block {
 .input-group-lg > .input-group-prepend > .btn,
 .about-me-wrapper .resume .input-group-lg > .input-group-prepend > a,
 .contact-wrapper .form-wrapper form .input-group-lg > .input-group-prepend > button,
+.modal-wrapper .popup-content .input-group-lg > .input-group-prepend > button,
 .input-group-lg > .input-group-append > .btn,
 .about-me-wrapper .resume .input-group-lg > .input-group-append > a,
-.contact-wrapper .form-wrapper form .input-group-lg > .input-group-append > button {
+.contact-wrapper .form-wrapper form .input-group-lg > .input-group-append > button,
+.modal-wrapper .popup-content .input-group-lg > .input-group-append > button {
   padding: 0.5rem 1rem;
   font-size: 1.25rem;
   line-height: 1.5;
@@ -2704,9 +2748,11 @@ input[type="button"].btn-block {
 .input-group-sm > .input-group-prepend > .btn,
 .about-me-wrapper .resume .input-group-sm > .input-group-prepend > a,
 .contact-wrapper .form-wrapper form .input-group-sm > .input-group-prepend > button,
+.modal-wrapper .popup-content .input-group-sm > .input-group-prepend > button,
 .input-group-sm > .input-group-append > .btn,
 .about-me-wrapper .resume .input-group-sm > .input-group-append > a,
-.contact-wrapper .form-wrapper form .input-group-sm > .input-group-append > button {
+.contact-wrapper .form-wrapper form .input-group-sm > .input-group-append > button,
+.modal-wrapper .popup-content .input-group-sm > .input-group-append > button {
   padding: 0.25rem 0.5rem;
   font-size: 0.875rem;
   line-height: 1.5;
@@ -2716,32 +2762,37 @@ input[type="button"].btn-block {
 .input-group-sm > .custom-select {
   padding-right: 1.75rem; }
 
-.input-group > .input-group-prepend > .btn, .about-me-wrapper .resume .input-group > .input-group-prepend > a, .contact-wrapper .form-wrapper form .input-group > .input-group-prepend > button,
+.input-group > .input-group-prepend > .btn, .about-me-wrapper .resume .input-group > .input-group-prepend > a, .contact-wrapper .form-wrapper form .input-group > .input-group-prepend > button, .modal-wrapper .popup-content .input-group > .input-group-prepend > button,
 .input-group > .input-group-prepend > .input-group-text,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .btn,
 .about-me-wrapper .resume .input-group:not(.has-validation) > .input-group-append:not(:last-child) > a,
 .contact-wrapper .form-wrapper form .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button,
+.modal-wrapper .popup-content .input-group:not(.has-validation) > .input-group-append:not(:last-child) > button,
 .input-group:not(.has-validation) > .input-group-append:not(:last-child) > .input-group-text,
 .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .btn,
 .about-me-wrapper .resume .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > a,
 .contact-wrapper .form-wrapper form .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > button,
+.modal-wrapper .popup-content .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > button,
 .input-group.has-validation > .input-group-append:nth-last-child(n + 3) > .input-group-text,
 .input-group > .input-group-append:last-child > .btn:not(:last-child):not(.dropdown-toggle),
 .about-me-wrapper .resume .input-group > .input-group-append:last-child > a:not(:last-child):not(.dropdown-toggle),
 .contact-wrapper .form-wrapper form .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
+.modal-wrapper .popup-content .input-group > .input-group-append:last-child > button:not(:last-child):not(.dropdown-toggle),
 .input-group > .input-group-append:last-child > .input-group-text:not(:last-child) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0; }
 
-.input-group > .input-group-append > .btn, .about-me-wrapper .resume .input-group > .input-group-append > a, .contact-wrapper .form-wrapper form .input-group > .input-group-append > button,
+.input-group > .input-group-append > .btn, .about-me-wrapper .resume .input-group > .input-group-append > a, .contact-wrapper .form-wrapper form .input-group > .input-group-append > button, .modal-wrapper .popup-content .input-group > .input-group-append > button,
 .input-group > .input-group-append > .input-group-text,
 .input-group > .input-group-prepend:not(:first-child) > .btn,
 .about-me-wrapper .resume .input-group > .input-group-prepend:not(:first-child) > a,
 .contact-wrapper .form-wrapper form .input-group > .input-group-prepend:not(:first-child) > button,
+.modal-wrapper .popup-content .input-group > .input-group-prepend:not(:first-child) > button,
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .about-me-wrapper .resume .input-group > .input-group-prepend:first-child > a:not(:first-child),
 .contact-wrapper .form-wrapper form .input-group > .input-group-prepend:first-child > button:not(:first-child),
+.modal-wrapper .popup-content .input-group > .input-group-prepend:first-child > button:not(:first-child),
 .input-group > .input-group-prepend:first-child > .input-group-text:not(:first-child) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
@@ -3704,7 +3755,7 @@ input[type="button"].btn-block {
   .badge:empty {
     display: none; }
 
-.btn .badge, .about-me-wrapper .resume a .badge, .contact-wrapper .form-wrapper form button .badge {
+.btn .badge, .about-me-wrapper .resume a .badge, .contact-wrapper .form-wrapper form button .badge, .modal-wrapper .popup-content button .badge {
   position: relative;
   top: -1px; }
 
@@ -5768,7 +5819,7 @@ button.bg-dark:focus {
 .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content {
   margin-left: 0.5rem !important; }
 
-.m-3 {
+.m-3, .modal-wrapper .popup {
   margin: 1rem !important; }
 
 .mt-3, footer,
@@ -5797,7 +5848,7 @@ button.bg-dark:focus {
 .mx-3 {
   margin-left: 1rem !important; }
 
-.m-4 {
+.m-4, .modal-wrapper .popup-content .svg-wrapper svg {
   margin: 1.5rem !important; }
 
 .mt-4,
@@ -5920,7 +5971,8 @@ footer,
 footer,
 nav,
 .dropdown-menu-bar,
-#menu-drop {
+#menu-drop,
+.modal-wrapper .popup-content .message {
   padding-right: 1rem !important; }
 
 .pb-3,
@@ -5934,7 +5986,8 @@ nav,
 footer,
 nav,
 .dropdown-menu-bar,
-#menu-drop {
+#menu-drop,
+.modal-wrapper .popup-content .message {
   padding-left: 1rem !important; }
 
 .p-4 {
@@ -7690,10 +7743,103 @@ nav {
       border-bottom: 2px solid #0e0e0e;
       border-radius: 5px; }
     .contact-wrapper .form-wrapper form input {
-      height: 32.5px; }
+      height: 35px; }
     .contact-wrapper .form-wrapper form button {
       font-weight: bold;
       width: 75%; }
+
+.modal-wrapper {
+  z-index: 50;
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .modal-wrapper .hidden {
+    opacity: 0 !important;
+    transition: opacity 1s cubic-bezier(0.45, 0.05, 0.55, 0.95); }
+  .modal-wrapper .popup {
+    border-radius: 10px;
+    width: 500px;
+    min-height: 285px;
+    background-color: white;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 0px 30px 30px rgba(0, 0, 0, 0.3); }
+    .modal-wrapper .popup .width-shrink {
+      width: 0;
+      transition: width 5s linear; }
+    .modal-wrapper .popup-downbar {
+      background-color: #00b8ff;
+      width: calc(100% - 20px);
+      height: 5px;
+      overflow-x: hidden; }
+    .modal-wrapper .popup-content {
+      min-height: 275px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: column; }
+      .modal-wrapper .popup-content button {
+        min-width: 100px;
+        max-width: 150px; }
+      .modal-wrapper .popup-content .message {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 0; }
+      .modal-wrapper .popup-content .svg-wrapper svg {
+        width: 100px;
+        display: block; }
+      .modal-wrapper .popup-content .svg-wrapper .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 0; }
+        .modal-wrapper .popup-content .svg-wrapper .path.circle {
+          -webkit-animation: dash .9s ease-in-out;
+          animation: dash .9s ease-in-out; }
+        .modal-wrapper .popup-content .svg-wrapper .path.line {
+          stroke-dashoffset: 1000;
+          -webkit-animation: dash .9s .35s ease-in-out forwards;
+          animation: dash .9s .35s ease-in-out forwards; }
+        .modal-wrapper .popup-content .svg-wrapper .path.check {
+          stroke-dashoffset: -100;
+          -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+          animation: dash-check .9s .35s ease-in-out forwards; }
+      .modal-wrapper .popup-content .svg-wrapper p {
+        text-align: center;
+        margin: 20px 0 60px;
+        font-size: 1.25em; }
+        .modal-wrapper .popup-content .svg-wrapper p.success {
+          color: #73AF55; }
+        .modal-wrapper .popup-content .svg-wrapper p.error {
+          color: #D06079; }
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 1000; }
+  100% {
+    stroke-dashoffset: 0; } }
+
+@-webkit-keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100; }
+  100% {
+    stroke-dashoffset: 900; } }
+
+@keyframes dash-check {
+  0% {
+    stroke-dashoffset: -100; }
+  100% {
+    stroke-dashoffset: 900; } }
 
 @media screen and (max-width: 700px) {
   #menu-drop .list a {
@@ -7715,7 +7861,13 @@ nav {
   footer {
     flex-direction: column-reverse; }
     footer .footer-text {
-      font-size: 12.5px; } }
+      font-size: 12.5px; }
+  .contact-wrapper {
+    margin: 0 16px; }
+    .contact-wrapper .contact > .contact-text {
+      font-size: 2.5rem; }
+  #page-content {
+    min-height: calc(100vh - 120px); } }
 
 @media screen and (max-width: 992px) {
   nav {
@@ -7779,4 +7931,7 @@ nav {
       color: #00b8ff; }
     .darkmode .contact-wrapper .form-wrapper > form > input, .darkmode .contact-wrapper .form-wrapper > form > textarea {
       border-bottom-color: #00b8ff; }
+  .darkmode .modal-wrapper > .popup {
+    background-color: #000;
+    color: #00b8ff; }
 

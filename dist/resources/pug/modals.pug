@@ -1,0 +1,18 @@
+mixin modal(status, message, cross = true)
+	if modalType == status
+		.popup
+			.popup-content
+				.svg-wrapper
+					if cross
+						include ../html-svg/cross.html
+					else 
+						include ../html-svg/tick.html
+				.message= message
+
+				button#modal-button OK
+			.popup-downbar
+
++modal(200, "Message sent successfully!", false)
++modal(419, "Too many messages! Try again tomorrow.")
++modal(422, "Invalid data! Try again.")
++modal(500, "Something went wrong. Try again.")

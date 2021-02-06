@@ -44,13 +44,12 @@
 			}
 
 			input {
-				height: 32.5px;
+				height: 35px;
 			}
 
 			button {
 				@extend .my-2;
 				@extend .btn;
-				@extend .btn-lg;
 				@extend .btn-primary-darkened;
 
 				font-weight: bold;

@@ -97,4 +97,9 @@
 			border-bottom-color: $site-primary;
 		}
 	}
+
+	.modal-wrapper > .popup {
+		background-color: $site-tertiary;
+		color: $site-primary;
+	}
 }

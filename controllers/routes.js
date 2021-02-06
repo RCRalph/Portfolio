@@ -1,11 +1,15 @@
 const requireText = require("require-text");
 const { randomBytes } = require("crypto");
+const validator = require("validator");
 
 const markdownIt = require("markdown-it")({
 	html: true,
 	linkify: true,
 	typographer: true
 });
+
+const middleware = require("./middleware");
+const { sendMail } = require("./sendMail");
 
 module.exports = (app) => {
 	function addNoBreakSpaces(text) {
@@ -28,14 +32,14 @@ module.exports = (app) => {
 				requireText("../dist/resources/markdown/about-me.md", require)
 			));
 
-		res.render("../dist/resources/views/index.pug", {
+		res.render("../dist/resources/pug/index.pug", {
 			aboutMe: aboutMe
 		});
 	});
 
 	// Projects
 	app.get("/projects", (req, res) => {
-		res.render("../dist/resources/views/projects.pug");
+		res.render("../dist/resources/pug/projects.pug");
 	});
 
 	// Project view
@@ -44,7 +48,7 @@ module.exports = (app) => {
 			return res.sendStatus(404);
 		}
 
-		res.render("../dist/resources/views/project-view.pug");
+		res.render("../dist/resources/pug/project-view.pug");
 	});
 
 	// Contact me
@@ -54,15 +58,56 @@ module.exports = (app) => {
 				req.session.csrf = randomBytes(100).toString('base64');
 			}
 
-			res.render("../dist/resources/views/contact-me.pug", {
-				token: req.session.csrf
+			const modalType = req.session.modalType;
+			delete req.session.modalType;
+
+			return res.render("../dist/resources/pug/contact-me.pug", {
+				token: req.session.csrf,
+				modalType: modalType
 			});
 		})
-		.post((req, res) => {
-			if (req.body._token != req.session.csrf) {
-				return res.sendStatus(419);
-			}
+		.post(
+			middleware.validateToken,
+			middleware.checkIPAddress,
+			async (req, res) => {
+				if (res.locals.requestLimitHit) {
+					req.session.modalType = 419;
+					return res.redirect("/contact-me");
+				}
 
-			return res.send("dupa")
-		});
+				const body = req.body;
+				const validInput = [
+					validator.isByteLength(body.name, {
+						min: 1,
+						max: 64
+					}),
+					validator.isByteLength(body.email, {
+						min: 1,
+						max: 64
+					}),
+					validator.isByteLength(body.topic, {
+						min: 1,
+						max: 128
+					}),
+					!validator.isEmpty(body.body),
+					validator.isEmail(body.email),
+				].reduce((item1, item2) => item1 && item2);
+
+				if (!validInput) {
+					req.session.modalType = 422;
+					return res.redirect("/contact-me");
+				}
+
+				const message = {
+					from: `"${body.name.trim()}" <${body.email.trim()}>`,
+					to: process.env.TARGET_EMAIL.trim(),
+					subject: body.topic.trim(),
+					text: body.body.trim()
+				};
+
+				req.session.modalType = await sendMail(message);
+
+				return res.redirect("/contact-me");
+			}
+		);
 }

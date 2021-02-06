@@ -13,64 +13,71 @@ module.exports = {
 		path: __dirname + "/dist"
 	},
 	plugins: [
+		// Pug layouts
+		new HtmlWebpackPlugin({
+			filename: "./resources/pug/page-template.pug",
+			template: "./resources/pug/page-template.pug",
+			publicPath: "/",
+		}),
+
 		// Pug components
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/head.pug",
+			filename: "./resources/pug/head.pug",
 			template: "./resources/pug/head.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/footer.pug",
+			filename: "./resources/pug/footer.pug",
 			template: "./resources/pug/footer.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/navbar.pug",
+			filename: "./resources/pug/navbar.pug",
 			template: "./resources/pug/navbar.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/menu-drop.pug",
+			filename: "./resources/pug/menu-drop.pug",
 			template: "./resources/pug/menu-drop.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/social-media.pug",
+			filename: "./resources/pug/social-media.pug",
 			template: "./resources/pug/social-media.pug",
 			publicPath: "dist/public",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/page-template.pug",
-			template: "./resources/pug/page-template.pug",
-			publicPath: "/",
+			filename: "./resources/pug/modals.pug",
+			template: "./resources/pug/modals.pug",
+			inject: false
 		}),
 
 		// Pug pages
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/index.pug",
+			filename: "./resources/pug/index.pug",
 			template: "./resources/pug/index.pug",
 			publicPath: "",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/projects.pug",
+			filename: "./resources/pug/projects.pug",
 			template: "./resources/pug/projects.pug",
 			publicPath: "",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/project-view.pug",
+			filename: "./resources/pug/project-view.pug",
 			template: "./resources/pug/project-view.pug",
 			publicPath: "",
 			inject: false
 		}),
 		new HtmlWebpackPlugin({
-			filename: "./resources/views/contact-me.pug",
+			filename: "./resources/pug/contact-me.pug",
 			template: "./resources/pug/contact-me.pug",
 			publicPath: "",
 			inject: false
@@ -92,6 +99,10 @@ module.exports = {
 				{
 					from: "resources/markdown",
 					to: "resources/markdown"
+				},
+				{
+					from: "resources/html-svg",
+					to: "resources/html-svg"
 				}
 			]
 		})
@@ -116,7 +127,7 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.png$/,
+				test: /\.(png|svg)$/,
 				use: {
 					loader: "file-loader",
 					options: {

@@ -11,6 +11,10 @@ html
 		.container-fluid
 			include navbar.pug
 
+			if modalType
+				.modal-wrapper#modals
+					block modals
+
 			#page-content(class=noTop && "no-top")
 				block content
 
