@@ -1,8 +1,8 @@
 footer {
-	@extend .mt-3;
 	@extend .py-1;
 	@extend .px-3;
 
+	position: relative;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -11,6 +11,7 @@ footer {
 	background-color: $site-primary;
 
 	.footer-text {
+		padding-left: 22px;
 		font-size: 17.5px;
 		min-height: 48px;
 		line-height: 48px;

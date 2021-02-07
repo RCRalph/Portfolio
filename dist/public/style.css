@@ -294,12 +294,15 @@ template {
   display: none !important; }
 
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .modal-wrapper .popup-content .message, .h4, .h5, .h6 {
+.h1,
+.contact-wrapper .social-media-text, .h2, .h3, .modal-wrapper .popup-content .message, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2; }
 
-h1, .h1 {
+h1,
+.h1,
+.contact-wrapper .social-media-text {
   font-size: 2.5rem; }
 
 h2, .h2 {
@@ -336,7 +339,7 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2; }
 
-.display-4, .contact-wrapper .contact .contact-text {
+.display-4, .contact-wrapper .contact-text {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2; }
@@ -476,13 +479,13 @@ pre {
 .no-gutters, nav {
   margin-right: 0;
   margin-left: 0; }
-  .no-gutters > .col, nav > .col, .contact-wrapper .contact .no-gutters > .contact-text, .contact-wrapper .contact nav > .contact-text,
+  .no-gutters > .col, nav > .col, .contact-wrapper .no-gutters > .contact-text, .contact-wrapper nav > .contact-text,
   .no-gutters > [class*="col-"],
   nav > [class*="col-"] {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, nav, .col, .contact-wrapper .contact .contact-text,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, nav, .col, .contact-wrapper .contact-text,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .contact-wrapper .form-wrapper form, .col-md-9, .col-md-10, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .contact-wrapper, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
@@ -493,7 +496,7 @@ pre {
   padding-right: 15px;
   padding-left: 15px; }
 
-.col, .contact-wrapper .contact .contact-text {
+.col, .contact-wrapper .contact-text {
   flex-basis: 0;
   flex-grow: 1;
   max-width: 100%; }
@@ -1499,7 +1502,7 @@ textarea.form-control {
   flex-wrap: wrap;
   margin-right: -5px;
   margin-left: -5px; }
-  .form-row > .col, .contact-wrapper .contact .form-row > .contact-text,
+  .form-row > .col, .contact-wrapper .form-row > .contact-text,
   .form-row > [class*="col-"] {
     padding-right: 5px;
     padding-left: 5px; }
@@ -1552,7 +1555,7 @@ textarea.form-control {
   color: #fff;
   background-color: rgba(40, 167, 69, 0.9);
   border-radius: 0.25rem; }
-  .form-row > .col > .valid-tooltip, .contact-wrapper .contact .form-row > .contact-text > .valid-tooltip,
+  .form-row > .col > .valid-tooltip, .contact-wrapper .form-row > .contact-text > .valid-tooltip,
   .form-row > [class*="col-"] > .valid-tooltip {
     left: 5px; }
 
@@ -1636,7 +1639,7 @@ textarea.form-control {
   color: #fff;
   background-color: rgba(220, 53, 69, 0.9);
   border-radius: 0.25rem; }
-  .form-row > .col > .invalid-tooltip, .contact-wrapper .contact .form-row > .contact-text > .invalid-tooltip,
+  .form-row > .col > .invalid-tooltip, .contact-wrapper .form-row > .contact-text > .invalid-tooltip,
   .form-row > [class*="col-"] > .invalid-tooltip {
     left: 5px; }
 
@@ -5822,26 +5825,28 @@ button.bg-dark:focus {
 .m-3, .modal-wrapper .popup {
   margin: 1rem !important; }
 
-.mt-3, footer,
+.mt-3,
 .my-3,
 .about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
-.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content {
+.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
+.contact-wrapper .social-media-text {
   margin-top: 1rem !important; }
 
 .mr-3,
 .mx-3 {
   margin-right: 1rem !important; }
 
-.mb-3, .contact-wrapper .form-wrapper,
+.mb-3, .contact-wrapper .form-wrapper, .contact-wrapper .social-media-content,
 .my-3,
 .about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
-.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content {
+.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
+.contact-wrapper .social-media-text {
   margin-bottom: 1rem !important; }
 
 .ml-3,
@@ -5853,7 +5858,7 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4,
-.contact-wrapper .contact .contact-text {
+.contact-wrapper .contact-text {
   margin-top: 1.5rem !important; }
 
 .mr-4,
@@ -5863,7 +5868,7 @@ nav #darkmode-switcher {
 
 .mb-4,
 .my-4,
-.contact-wrapper .contact .contact-text {
+.contact-wrapper .contact-text {
   margin-bottom: 1.5rem !important; }
 
 .ml-4, nav a img,
@@ -7426,9 +7431,13 @@ html {
 
 #page-content {
   padding-top: calc(95px + 25px);
-  min-height: calc(100vh - 60px - 16px); }
+  padding-bottom: 25px;
+  min-height: calc(100vh - 60px); }
   #page-content.no-top {
     padding-top: 95px; }
+  #page-content.no-bottom {
+    padding-bottom: 0;
+    min-height: calc(100vh - 60px); }
 
 .btn-primary-darkened, .contact-wrapper .form-wrapper form button {
   color: #fff;
@@ -7458,7 +7467,20 @@ html {
     .contact-wrapper .form-wrapper form .show > button.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(38, 154, 199, 0.5); }
 
+hr {
+  border-top-color: #0e0e0e;
+  border-top-width: 2px;
+  border-radius: 5px; }
+
+#particles-js {
+  width: 100%;
+  height: 100%; }
+  #particles-js.particles-full-page {
+    position: fixed;
+    z-index: 0; }
+
 footer {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -7466,6 +7488,7 @@ footer {
   min-height: 60px;
   background-color: #00b8ff; }
   footer .footer-text {
+    padding-left: 22px;
     font-size: 17.5px;
     min-height: 48px;
     line-height: 48px;
@@ -7688,10 +7711,8 @@ nav {
     .welcome-page-screen .welcome-bar .text-second {
       font-size: 50px; }
     .welcome-page-screen .welcome-bar hr {
-      width: calc(920px / 2); }
-  .welcome-page-screen #particles-js {
-    width: 100%;
-    height: 100%; }
+      width: calc(920px / 2);
+      border-top-color: #0e0e0e; }
 
 #about-me {
   text-align: center;
@@ -7728,7 +7749,7 @@ nav {
 .contact-wrapper {
   background-color: #00b8ff;
   border-radius: 10px; }
-  .contact-wrapper .contact .contact-text {
+  .contact-wrapper .contact-text {
     font-weight: bold;
     text-align: center; }
   .contact-wrapper .form-wrapper form {
@@ -7740,13 +7761,41 @@ nav {
       background-color: transparent;
       background-color: white;
       border-style: none;
-      border-bottom: 2px solid #0e0e0e;
+      border-bottom: 3px solid #0e0e0e;
       border-radius: 5px; }
     .contact-wrapper .form-wrapper form input {
       height: 35px; }
     .contact-wrapper .form-wrapper form button {
       font-weight: bold;
-      width: 75%; }
+      width: 50%; }
+  .contact-wrapper .social-media {
+    display: flex;
+    flex-direction: column; }
+    .contact-wrapper .social-media-text {
+      font-weight: bold;
+      text-align: center; }
+    .contact-wrapper .social-media-content {
+      display: flex;
+      justify-content: center;
+      height: 70px; }
+      .contact-wrapper .social-media-content .icons {
+        display: flex; }
+        .contact-wrapper .social-media-content .icons a {
+          margin: 0 10px;
+          margin-top: 10px;
+          background-color: #0093cc;
+          border-radius: 5px;
+          color: white;
+          font-size: 40px;
+          height: 60px;
+          width: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out; }
+          .contact-wrapper .social-media-content .icons a:hover {
+            margin-top: 0;
+            transition: margin-top 0.25s ease-in-out; }
 
 .modal-wrapper {
   z-index: 50;
@@ -7855,7 +7904,11 @@ nav {
     width: 100%;
     max-width: 300px; }
   #about-me {
-    font-size: 1.5rem !important; } }
+    font-size: 1.5rem !important; }
+  .contact-wrapper > .social-media > .social-media-content > .icons > a {
+    width: 50px;
+    height: 50px;
+    font-size: 35px; } }
 
 @media screen and (max-width: 768px) {
   footer {
@@ -7931,7 +7984,11 @@ nav {
       color: #00b8ff; }
     .darkmode .contact-wrapper .form-wrapper > form > input, .darkmode .contact-wrapper .form-wrapper > form > textarea {
       border-bottom-color: #00b8ff; }
+    .darkmode .contact-wrapper .social-media > .social-media-text {
+      color: #00b8ff; }
   .darkmode .modal-wrapper > .popup {
     background-color: #000;
     color: #00b8ff; }
+  .darkmode hr {
+    border-top-color: #00b8ff; }
 

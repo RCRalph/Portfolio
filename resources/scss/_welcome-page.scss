@@ -31,12 +31,8 @@
 
 		hr {
 			width: calc(920px / 2);
+			border-top-color: $site-secondary;
 		}
-	}
-
-	#particles-js {
-		width: 100%;
-		height: 100%;
 	}
 }
 

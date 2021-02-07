@@ -9,13 +9,15 @@ html
 		include menu-drop.pug
 		
 		.container-fluid
+			if particlesFullPage 
+				#particles-js.particles-full-page
 			include navbar.pug
 
 			if modalType
 				.modal-wrapper#modals
 					block modals
 
-			#page-content(class=noTop && "no-top")
+			#page-content(class=noTop && "no-top", class=noBottom && "no-bottom")
 				block content
 
 			include footer.pug

@@ -68,6 +68,12 @@
 	#about-me {
 		font-size: 1.5rem !important;
 	}
+
+	.contact-wrapper > .social-media > .social-media-content > .icons > a {
+		width: 50px;
+		height: 50px;
+		font-size: 35px;
+	}
 }
 
 @include media-sm {

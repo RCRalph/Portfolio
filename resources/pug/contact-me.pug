@@ -2,6 +2,7 @@ extends page-template.pug
 
 block js
 	- const title = "Contact me";
+	- const particlesFullPage = true;
 
 block modals
 	include modals.pug
@@ -58,3 +59,10 @@ block content
 						button(
 							type="submit"
 						) Submit
+				hr
+
+				.social-media
+					.social-media-text Also check out:
+					.social-media-content
+						.icons
+							include social-media.pug

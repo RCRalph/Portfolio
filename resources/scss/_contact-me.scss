@@ -7,7 +7,7 @@
 	.contact {
 		@extend .row;
 
-		.contact-text {
+		&-text {
 			@extend .col;
 			@extend .display-4;
 			@extend .my-4;
@@ -39,7 +39,7 @@
 				background-color: transparent;
 				background-color: white;
 				border-style: none;
-				border-bottom: 2px solid $site-secondary;
+				border-bottom: 3px solid $site-secondary;
 				border-radius: 5px;
 			}
 
@@ -53,7 +53,52 @@
 				@extend .btn-primary-darkened;
 
 				font-weight: bold;
-				width: 75%;
+				width: 50%;
+			}
+		}
+	}
+
+	.social-media {
+		display: flex;
+		flex-direction: column;
+
+		&-text {
+			@extend .h1;
+			@extend .my-3;
+
+			font-weight: bold;
+			text-align: center;
+		}
+
+		&-content {
+			@extend .mb-3;
+
+			display: flex;
+			justify-content: center;
+			height: 70px;
+
+			.icons {
+				display: flex;
+
+				a {
+					margin: 0 10px;
+					margin-top: 10px;
+					background-color: $site-primary-darkened;
+					border-radius: 5px;
+					color: white;
+					font-size: 40px;
+					height: 60px;
+					width: 60px;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+	
+					&:hover {
+						margin-top: 0;
+						transition: margin-top 0.25s ease-in-out
+					}
+				}	
 			}
 		}
 	}

@@ -96,10 +96,18 @@
 		.form-wrapper > form > input, .form-wrapper > form > textarea {
 			border-bottom-color: $site-primary;
 		}
+
+		.social-media > .social-media-text {
+			color: $site-primary;
+		}
 	}
 
 	.modal-wrapper > .popup {
 		background-color: $site-tertiary;
 		color: $site-primary;
+	}
+
+	hr {
+		border-top-color: $site-primary;
 	}
 }
