@@ -20,6 +20,9 @@ html {
 }
 
 #page-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	padding-top: calc(#{$navbar-height} + 25px);
 	padding-bottom: 25px;
 	min-height: calc(100vh - #{$footer-height});

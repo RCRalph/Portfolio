@@ -14,7 +14,7 @@ app.use(requestIp.mw());
 app.use(cookieParser());
 app.use(cookieSession({
 	name: "session",                              
-	secret: "EA1BDF6BD4D3B86D67D6DAF89E5D3",
+	secret: process.env.COOKIE_SESSION_SECRET,
 	maxAge: 24 * 60 * 60 * 1000,
 	sameSite: "lax",
 	path: "/contact-me",
@@ -23,11 +23,10 @@ app.use(cookieSession({
 }));
 
 // Add routes
-const routes = require("./controllers/routes");
-const darkmode = require("./controllers/darkmode");
+require("./controllers/darkmode")(app);
+require("./controllers/routes")(app);
+require("./controllers/api")(app);
 
-darkmode(app);
-routes(app);
 // Error 404
 app.use(function (req, res) {
 	return res.sendStatus(404);

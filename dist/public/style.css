@@ -295,7 +295,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
-.contact-wrapper .social-media-text, .h2, .h3, .modal-wrapper .popup-content .message, .h4, .h5, .h6 {
+.contact-wrapper .social-media-text, .h2, .projects-wrapper .select-tags-text, .h3, .modal-wrapper .popup-content .message, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2; }
@@ -305,7 +305,7 @@ h1,
 .contact-wrapper .social-media-text {
   font-size: 2.5rem; }
 
-h2, .h2 {
+h2, .h2, .projects-wrapper .select-tags-text {
   font-size: 2rem; }
 
 h3, .h3, .modal-wrapper .popup-content .message {
@@ -339,7 +339,7 @@ h6, .h6 {
   font-weight: 300;
   line-height: 1.2; }
 
-.display-4, .contact-wrapper .contact-text {
+.display-4, .contact-wrapper .contact-text, .projects-wrapper .title {
   font-size: 3.5rem;
   font-weight: 300;
   line-height: 1.2; }
@@ -470,7 +470,7 @@ pre {
   .container, .container-sm, .container-md, .container-lg, .container-xl {
     max-width: 1140px; } }
 
-.row, .contact-wrapper .contact, .contact-wrapper .form-wrapper {
+.row, .contact-wrapper .contact, .contact-wrapper .form-wrapper, .projects-wrapper .select-tags {
   display: flex;
   flex-wrap: wrap;
   margin-right: -15px;
@@ -485,9 +485,9 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
-.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, nav, .col, .contact-wrapper .contact-text,
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, nav, .projects-wrapper, .col, .contact-wrapper .contact-text,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
-.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .contact-wrapper .form-wrapper form, .col-md-9, .col-md-10, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .col-md-11, .col-md-12, .col-md,
+.col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .projects-wrapper .select-tags-text, .projects-wrapper .select-tags-select, .col-md-6, .col-md-7, .col-md-8, .contact-wrapper .form-wrapper form, .col-md-9, .col-md-10, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper, .col-md-11, .col-md-12, .col-md,
 .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .contact-wrapper, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
 .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
 .col-xl-auto {
@@ -574,7 +574,7 @@ pre {
   flex: 0 0 91.66667%;
   max-width: 91.66667%; }
 
-.col-12, nav {
+.col-12, nav, .projects-wrapper {
   flex: 0 0 100%;
   max-width: 100%; }
 
@@ -813,7 +813,7 @@ pre {
   .col-md-4 {
     flex: 0 0 33.33333%;
     max-width: 33.33333%; }
-  .col-md-5 {
+  .col-md-5, .projects-wrapper .select-tags-text, .projects-wrapper .select-tags-select {
     flex: 0 0 41.66667%;
     max-width: 41.66667%; }
   .col-md-6 {
@@ -828,7 +828,7 @@ pre {
   .col-md-9 {
     flex: 0 0 75%;
     max-width: 75%; }
-  .col-md-10, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper {
+  .col-md-10, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper {
     flex: 0 0 83.33333%;
     max-width: 83.33333%; }
   .col-md-11 {
@@ -869,7 +869,7 @@ pre {
     order: 12; }
   .offset-md-0 {
     margin-left: 0; }
-  .offset-md-1, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper {
+  .offset-md-1, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper {
     margin-left: 8.33333%; }
   .offset-md-2, .contact-wrapper .form-wrapper form {
     margin-left: 16.66667%; }
@@ -940,7 +940,7 @@ pre {
   .col-lg-7 {
     flex: 0 0 58.33333%;
     max-width: 58.33333%; }
-  .col-lg-8, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper {
+  .col-lg-8, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper, .contact-wrapper {
     flex: 0 0 66.66667%;
     max-width: 66.66667%; }
   .col-lg-9 {
@@ -989,7 +989,7 @@ pre {
     margin-left: 0; }
   .offset-lg-1 {
     margin-left: 8.33333%; }
-  .offset-lg-2, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper {
+  .offset-lg-2, .about-me-wrapper .container > .row > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper, .contact-wrapper {
     margin-left: 16.66667%; }
   .offset-lg-3 {
     margin-left: 25%; }
@@ -5787,9 +5787,13 @@ button.bg-dark:focus {
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img,
 .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img,
+.about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content img,
+.projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content img,
 .contact-wrapper .form-wrapper form input,
 .contact-wrapper .form-wrapper form textarea,
-.contact-wrapper .form-wrapper form button {
+.contact-wrapper .form-wrapper form button,
+.projects-wrapper .select-tags-text,
+.projects-wrapper .select-tags-select {
   margin-top: 0.5rem !important; }
 
 .mr-2,
@@ -5798,19 +5802,25 @@ button.bg-dark:focus {
 .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
-.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content {
+.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
+.about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content,
+.projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content {
   margin-right: 0.5rem !important; }
 
-.mb-2,
+.mb-2, .projects-wrapper .select-tags,
 .my-2,
 .about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content img,
 .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img,
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img,
 .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img,
+.about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content img,
+.projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content img,
 .contact-wrapper .form-wrapper form input,
 .contact-wrapper .form-wrapper form textarea,
-.contact-wrapper .form-wrapper form button {
+.contact-wrapper .form-wrapper form button,
+.projects-wrapper .select-tags-text,
+.projects-wrapper .select-tags-select {
   margin-bottom: 0.5rem !important; }
 
 .ml-2,
@@ -5819,7 +5829,9 @@ button.bg-dark:focus {
 .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
-.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content {
+.contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
+.about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content,
+.projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content {
   margin-left: 0.5rem !important; }
 
 .m-3, .modal-wrapper .popup {
@@ -5832,6 +5844,8 @@ button.bg-dark:focus {
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
+.about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content,
+.projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .social-media-text {
   margin-top: 1rem !important; }
 
@@ -5846,6 +5860,8 @@ button.bg-dark:focus {
 .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content,
 .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content,
+.about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content,
+.projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content,
 .contact-wrapper .social-media-text {
   margin-bottom: 1rem !important; }
 
@@ -5858,7 +5874,8 @@ button.bg-dark:focus {
 
 .mt-4,
 .my-4,
-.contact-wrapper .contact-text {
+.contact-wrapper .contact-text,
+.projects-wrapper .title {
   margin-top: 1.5rem !important; }
 
 .mr-4,
@@ -5868,7 +5885,8 @@ nav #darkmode-switcher {
 
 .mb-4,
 .my-4,
-.contact-wrapper .contact-text {
+.contact-wrapper .contact-text,
+.projects-wrapper .title {
   margin-bottom: 1.5rem !important; }
 
 .ml-4, nav a img,
@@ -7430,6 +7448,9 @@ html {
   min-height: calc(100vh - 60px); }
 
 #page-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding-top: calc(95px + 25px);
   padding-bottom: 25px;
   min-height: calc(100vh - 60px); }
@@ -7729,20 +7750,20 @@ nav {
   .about-me-wrapper .resume a {
     font-weight: bold; }
 
-.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content p, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content p, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content p, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content p, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content p {
+.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content p, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content p, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content p, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content p, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content p, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content p, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content p {
   font-size: 17.5px;
   text-align: justify; }
 
-.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content h1, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h1, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h1, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h1, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h1 {
+.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content h1, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h1, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h1, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h1, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h1, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content h1, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content h1 {
   font-weight: bold; }
 
-.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content h2, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h2, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h2, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h2, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h2 {
+.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content h2, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h2, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h2, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h2, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h2, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content h2, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content h2 {
   font-weight: bold; }
 
-.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content h3, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h3, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h3, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h3, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h3 {
+.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content h3, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h3, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content h3, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h3, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content h3, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content h3, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content h3 {
   font-weight: bold; }
 
-.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content img, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img {
+.about-me-wrapper .container > .row > .about-me-content-wrapper .about-me-content img, .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img, .contact-wrapper .about-me-wrapper .container > .contact > .about-me-content-wrapper .about-me-content img, .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img, .contact-wrapper .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper .about-me-content img, .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content img, .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content img {
   border-radius: 10px;
   width: 100%; }
 
@@ -7796,6 +7817,18 @@ nav {
           .contact-wrapper .social-media-content .icons a:hover {
             margin-top: 0;
             transition: margin-top 0.25s ease-in-out; }
+
+.projects-wrapper {
+  background-color: #00b8ff;
+  border-radius: 10px; }
+  .projects-wrapper .title {
+    font-weight: bold;
+    text-align: center; }
+  .projects-wrapper .select-tags-text {
+    font-weight: bold;
+    text-align: right; }
+  .projects-wrapper .select-tags-select {
+    height: 43px; }
 
 .modal-wrapper {
   z-index: 50;
@@ -7912,15 +7945,25 @@ nav {
 
 @media screen and (max-width: 768px) {
   footer {
-    flex-direction: column-reverse; }
+    flex-direction: column-reverse;
+    justify-content: end;
+    height: 90px; }
     footer .footer-text {
-      font-size: 12.5px; }
+      font-size: 12.5px;
+      min-height: 30px;
+      line-height: 30px;
+      padding: 0; }
   .contact-wrapper {
     margin: 0 16px; }
     .contact-wrapper .contact > .contact-text {
       font-size: 2.5rem; }
+  .projects-wrapper .title {
+    font-size: 2.5rem; }
+  .projects-wrapper .select-tags-text {
+    text-align: center;
+    font-size: 2rem; }
   #page-content {
-    min-height: calc(100vh - 120px); } }
+    min-height: calc(100vh - 90px); } }
 
 @media screen and (max-width: 992px) {
   nav {
@@ -7970,11 +8013,11 @@ nav {
   .darkmode .about-me-wrapper {
     background-color: #000;
     color: white; }
-    .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h1, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h1, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h1 {
+    .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h1, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h1, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h1, .projects-wrapper .darkmode .about-me-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h1 {
       color: #00b8ff; }
-    .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h2, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h2, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h2 {
+    .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h2, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h2, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h2, .projects-wrapper .darkmode .about-me-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h2 {
       color: #00b8ff; }
-    .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h3, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h3, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h3, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h3, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h3 {
+    .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h3, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h3, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h3, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h3, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h3, .darkmode .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h3, .projects-wrapper .darkmode .about-me-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h3 {
       color: #00b8ff; }
   .darkmode #page-content {
     background-color: #000; }
@@ -7991,4 +8034,7 @@ nav {
     color: #00b8ff; }
   .darkmode hr {
     border-top-color: #00b8ff; }
+  .darkmode .projects-wrapper {
+    background-color: #0e0e0e;
+    color: #00b8ff; }
 

@@ -1,0 +1,14 @@
+[
+	{
+		"title": "Project 1",
+		"description": "Dupa",
+		"github": "rickroll.com",
+		"deployment": "rickroll2.com",
+		"thumbnail": "image1.png",
+		"gallery": [
+			"image2.png",
+			"image3.png"
+		],
+		"tags": ["PHP", "Laravel", "Vue.js"]
+	}
+]

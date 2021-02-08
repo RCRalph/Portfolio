@@ -5,23 +5,24 @@ block js
 	- const noTop = true;
 
 block content
-	.welcome-page-screen
-		#particles-js
-		.welcome-bar
-			.text-first Hi, I'm Ralph
-			hr
-			.text-second Software Developer
+	.index-wrapper.w-100
+		.welcome-page-screen
+			#particles-js
+			.welcome-bar
+				.text-first Hi, I'm Ralph
+				hr
+				.text-second Software Developer
 
-	#about-me Something about&nbsp;me...
+		#about-me Something about&nbsp;me...
 
-	.about-me-wrapper
-		.resume
-			a(
-				role="button"
-				href="/content/resume.pdf"
-				target="_blank"
-			) Download my resume
-		.container
-			.row
-				.about-me-content-wrapper
-					.about-me-content !{aboutMe}
+		.about-me-wrapper
+			.resume
+				a(
+					role="button"
+					href="/content/resume.pdf"
+					target="_blank"
+				) Download my resume
+			.container
+				.row
+					.about-me-content-wrapper
+						.about-me-content !{aboutMe}

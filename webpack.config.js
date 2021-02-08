@@ -3,11 +3,15 @@ const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const VueLoaderPlugin = require("vue-loader/lib/plugin");
+const { HtmlWebpackSkipAssetsPlugin } = require("html-webpack-skip-assets-plugin");
 
 module.exports = {
 	entry: {
 		vendor: "./resources/js/vendor.js",
-		main: "./resources/js/main.js"
+		main: "./resources/js/main.js",
+		projects: "./resources/js/projects.js",
+		"font-awesome": "./resources/js/font-awesome.js"
 	},
 	output: {
 		path: __dirname + "/dist"
@@ -18,6 +22,12 @@ module.exports = {
 			filename: "./resources/pug/page-template.pug",
 			template: "./resources/pug/page-template.pug",
 			publicPath: "/",
+			skipAssets: ["/projects.**.js", "/projects.js"]
+		}),
+		new HtmlWebpackPlugin({
+			filename: "./resources/pug/page-template-vue.pug",
+			template: "./resources/pug/page-template.pug",
+			publicPath: "/"
 		}),
 
 		// Pug components
@@ -85,6 +95,7 @@ module.exports = {
 
 		// Additional plugins
 		new HtmlWebpackPugPlugin(),
+		new VueLoaderPlugin(),
 		new WebpackShellPluginNext({
 			onAfterDone: {
 				scripts: ["node move-files.js"]
@@ -94,7 +105,12 @@ module.exports = {
 			patterns: [
 				{
 					from: "resources/json",
-					to: "public"
+					to: "public",
+					globOptions: {
+						ignore: [
+							"**/projects.json",
+						]
+					}
 				},
 				{
 					from: "resources/markdown",
@@ -105,7 +121,8 @@ module.exports = {
 					to: "resources/html-svg"
 				}
 			]
-		})
+		}),
+		new HtmlWebpackSkipAssetsPlugin()
 	],
 	module: {
 		rules: [
@@ -115,6 +132,18 @@ module.exports = {
 					MiniCssExtractPlugin.loader,
 					"css-loader",
 					"sass-loader"
+				]
+			},
+			{
+				test: /\.css$/,
+				use: [
+					"vue-style-loader",
+					{
+						loader: 'css-loader',
+						options: {
+						  	esModule: false
+						}
+					}
 				]
 			},
 			{
@@ -135,6 +164,10 @@ module.exports = {
 						outputPath: "public/img"
 					}
 				}
+			},
+			{
+				test: /\.vue$/,
+				loader: "vue-loader"
 			}
 		]
 	},
@@ -150,4 +183,9 @@ module.exports = {
 			},
 		},
 	},
+	resolve: {
+		alias: {
+		   	vue: 'vue/dist/vue.js'
+		}
+	}
 }

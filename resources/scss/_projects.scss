@@ -1,0 +1,33 @@
+.projects-wrapper {
+	@extend .col-12;
+	background-color: $site-primary;
+	border-radius: 10px;
+
+	.title {
+		@extend .my-4;
+		@extend .display-4;
+		
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.select-tags {
+		@extend .row;
+		@extend .mb-2;
+
+		&-text {
+			@extend .col-md-5;
+			@extend .h2;
+			@extend .my-2;
+
+			font-weight: bold;
+			text-align: right;
+		}
+
+		&-select {
+			@extend .col-md-5;
+			@extend .my-2;
+			height: 43px;
+		}
+	}
+}
