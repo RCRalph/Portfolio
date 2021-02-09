@@ -1,5 +1,5 @@
 .welcome-page-screen {
-	background: white;
+	background: $site-fourth;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -9,7 +9,7 @@
 		position: absolute;
 		z-index: 1;
 		padding: 10px;
-		background-color: $site-primary;
+		background-color: $site-first;
 		border-radius: 50px;
 		width: 900px;
 		min-height: calc((100vh - #{$footer-height + $navbar-height}) / 2);
@@ -31,7 +31,7 @@
 
 		hr {
 			width: calc(920px / 2);
-			border-top-color: $site-secondary;
+			border-top-color: $site-second;
 		}
 	}
 }
@@ -42,8 +42,8 @@
 	text-align: center;
 	font-size: 4rem;
 	font-weight: bold;
-	background-color: $site-primary;
-	color: $site-secondary;
+	background-color: $site-first;
+	color: $site-second;
 	scroll-margin-top: $navbar-height;
 }
 

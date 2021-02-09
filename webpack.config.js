@@ -119,6 +119,15 @@ module.exports = {
 				{
 					from: "resources/html-svg",
 					to: "resources/html-svg"
+				},
+				{
+					from: "resources/img",
+					to: "public/img",
+					globOptions: {
+						ignore: [
+							"**/favicon.ico"
+						]
+					}
 				}
 			]
 		}),
@@ -152,16 +161,6 @@ module.exports = {
 					loader: "file-loader",
 					options: {
 						name: "public/[name].[ext]"
-					}
-				}
-			},
-			{
-				test: /\.(png|svg)$/,
-				use: {
-					loader: "file-loader",
-					options: {
-						name: "[name].[ext]",
-						outputPath: "public/img"
 					}
 				}
 			},

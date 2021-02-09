@@ -1,10 +1,11 @@
-$site-primary: #00b8ff;
-$site-primary-darkened: darken($site-primary, 10%);
-$site-secondary: #0e0e0e;
-$site-tertiary: #000;
+$site-first: #00b8ff;
+$site-first-darkened: darken($site-first, 10%);
+$site-second: #0e0e0e;
+$site-third: #000;
+$site-fourth: #fff;
 
 $navbar-height: 95px;
 $footer-height: 60px;
 $footer-height-extended: 90px;
 
-$primary: $site-primary;
+$primary: $site-first;

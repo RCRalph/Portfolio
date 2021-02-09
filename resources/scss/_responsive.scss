@@ -74,6 +74,14 @@
 		height: 50px;
 		font-size: 35px;
 	}
+
+	.projects-wrapper {
+		.projects-list-wrapper > .projects-list-item {
+			a > .project-warapper > .project-thumbnail {
+				height: 175px !important;
+			}
+		}
+	}
 }
 
 @include media-sm {
@@ -114,6 +122,12 @@
 	#page-content {
 		min-height: calc(100vh - #{$footer-height-extended});
 	}
+
+	.projects-wrapper {
+		.projects-list-wrapper > .projects-list-item {
+			width: 95% !important;
+		}
+	}
 }
 
 @include media-md {
@@ -135,6 +149,16 @@
 
 	#about-me {
 		font-size: 3rem;
+	}
+
+	.projects-wrapper {
+		.projects-list-wrapper > .projects-list-item {
+			width: calc(95% / 2);
+
+			a > .project-wrapper > .project-thumbnail {
+				height: 225px;
+			}
+		}
 	}
 }
 

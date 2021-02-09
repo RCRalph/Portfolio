@@ -8,14 +8,14 @@ footer {
 	align-items: center;
 	width: 100%;
 	min-height: $footer-height;
-	background-color: $site-primary;
+	background-color: $site-first;
 
 	.footer-text {
 		padding-left: 22px;
 		font-size: 17.5px;
 		min-height: 48px;
 		line-height: 48px;
-		color: $site-secondary;
+		color: $site-second;
 	}
 
 	.footer-social-media {
@@ -25,9 +25,9 @@ footer {
 
 		a {
 			margin: 4px 6px;
-			background-color: $site-primary-darkened;
+			background-color: $site-first-darkened;
 			border-radius: 5px;
-			color: white;
+			color: $site-fourth;
 			font-size: 30px;
 			height: 40px;
 			width: 40px;

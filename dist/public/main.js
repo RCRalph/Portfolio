@@ -20,17 +20,6 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
-/***/ "./resources/img/logo.png":
-/*!********************************!*\
-  !*** ./resources/img/logo.png ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"public/img/logo.png\");\n\n//# sourceURL=webpack://portfolio/./resources/img/logo.png?");
-
-/***/ }),
-
 /***/ "./resources/scss/main.scss":
 /*!**********************************!*\
   !*** ./resources/scss/main.scss ***!
@@ -79,7 +68,7 @@ eval("function modal() {\r\n\tconst popupDownbar = document.getElementsByClassNa
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favicon_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favicon.ico */ \"./resources/img/favicon.ico\");\n/* harmony import */ var _img_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../img/logo.png */ \"./resources/img/logo.png\");\n/* harmony import */ var _json_particles_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../json/particles.json */ \"./resources/json/particles.json\");\n/* harmony import */ var _functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/dropdown-menu.js */ \"./resources/js/functions/dropdown-menu.js\");\n/* harmony import */ var _functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/darkmode-switcher.js */ \"./resources/js/functions/darkmode-switcher.js\");\n/* harmony import */ var _functions_modal_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./functions/modal.js */ \"./resources/js/functions/modal.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_4__.dropdownMenu)();\r\n(0,_functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_5__.darkmodeSwitcher)();\r\n\r\n// Particles.js\r\nif (document.getElementById(\"particles-js\")) {\r\n\tparticlesJS.load(\"particles-js\", \"particles.json\");\r\n}\r\n\r\n(0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_6__.modal)();\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_main_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/main.scss */ \"./resources/scss/main.scss\");\n/* harmony import */ var _img_favicon_ico__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../img/favicon.ico */ \"./resources/img/favicon.ico\");\n/* harmony import */ var _json_particles_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../json/particles.json */ \"./resources/json/particles.json\");\n/* harmony import */ var _functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./functions/dropdown-menu.js */ \"./resources/js/functions/dropdown-menu.js\");\n/* harmony import */ var _functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./functions/darkmode-switcher.js */ \"./resources/js/functions/darkmode-switcher.js\");\n/* harmony import */ var _functions_modal_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./functions/modal.js */ \"./resources/js/functions/modal.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n(0,_functions_dropdown_menu_js__WEBPACK_IMPORTED_MODULE_3__.dropdownMenu)();\r\n(0,_functions_darkmode_switcher_js__WEBPACK_IMPORTED_MODULE_4__.darkmodeSwitcher)();\r\n\r\n// Particles.js\r\nif (document.getElementById(\"particles-js\")) {\r\n\tparticlesJS.load(\"particles-js\", \"particles.json\");\r\n}\r\n\r\n(0,_functions_modal_js__WEBPACK_IMPORTED_MODULE_5__.modal)();\n\n//# sourceURL=webpack://portfolio/./resources/js/main.js?");
 
 /***/ }),
 

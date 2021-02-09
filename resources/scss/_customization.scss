@@ -1,6 +1,6 @@
 body {
 	font-family: 'Inter', sans-serif;
-	color: $site-tertiary;
+	color: $site-third;
 }
 
 html {
@@ -38,11 +38,11 @@ html {
 }
 
 .btn-primary-darkened {
-	@include button-variant($site-primary-darkened, darken($site-primary-darkened, 3%));
+	@include button-variant($site-first-darkened, darken($site-first-darkened, 3%));
 }
 
 hr {
-	border-top-color: $site-secondary;
+	border-top-color: $site-second;
 	border-top-width: 2px;
 	border-radius: 5px;
 }

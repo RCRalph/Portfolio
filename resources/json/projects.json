@@ -4,11 +4,23 @@
 		"description": "Dupa",
 		"github": "rickroll.com",
 		"deployment": "rickroll2.com",
-		"thumbnail": "image1.png",
+		"thumbnail": "stonks.png",
 		"gallery": [
 			"image2.png",
 			"image3.png"
 		],
-		"tags": ["PHP", "Laravel", "Vue.js"]
+		"tags": ["PHP", "Laravel", "Vue.js", "Javascript"]
+	},
+	{
+		"title": "Project 2",
+		"description": "Dupa 2",
+		"github": "rickroll1.com",
+		"deployment": "rickroll3.com",
+		"thumbnail": "stonks.png",
+		"gallery": [
+			"image2.png",
+			"image3.png"
+		],
+		"tags": ["Node.js", "Express", "React", "Javascript"]
 	}
 ]

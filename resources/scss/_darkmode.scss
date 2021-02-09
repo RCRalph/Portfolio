@@ -1,29 +1,29 @@
 .darkmode {
-	background-color: $site-tertiary;
+	background-color: $site-third;
 
 	nav {
-		background-color: $site-secondary;
+		background-color: $site-second;
 		ul > a {
-			color: $site-primary;
+			color: $site-first;
 
 			&:hover {
-				color: white;
+				color: $site-fourth;
 			}
 		}
 	}
 
 	.dropdown-menu-bar {
-		background-color: $site-secondary;
+		background-color: $site-second;
 
 		.burger-bars {
-			background-color: $site-primary;
+			background-color: $site-first;
 
 			&::before {
-				background-color: $site-primary;
+				background-color: $site-first;
 			}
 
 			&::after {
-				background-color: $site-primary;
+				background-color: $site-first;
 			}
 		}
 		
@@ -33,86 +33,99 @@
 	}
 
 	#menu-drop {
-		background-color: $site-secondary;
+		background-color: $site-second;
 		
 		.list {
 			a {
-				color: $site-primary;
+				color: $site-first;
 			}
 
 			hr {
-				border-top-color: $site-primary;
+				border-top-color: $site-first;
 			}
 		}
 	}
 
 	footer {
-		background-color: $site-secondary;
+		background-color: $site-second;
 		
 		.footer-text {
-			color: $site-primary;
+			color: $site-first;
 		}
 	}
 
 	.welcome-page-screen { 
-		background: $site-tertiary;
+		background: $site-third;
 	}
 
 	#about-me {
-		background-color: $site-secondary;
-		color: $site-primary;
+		background-color: $site-second;
+		color: $site-first;
 	}
 
 	.about-me-wrapper {
-		background-color: $site-tertiary;
-		color: white;
+		background-color: $site-third;
+		color: $site-fourth;
 
 		.container > .row > .about-me-content-wrapper > .about-me-content {
 			h1 {
-				color: $site-primary;
+				color: $site-first;
 			}
 
 			h2 {
-				color: $site-primary;
+				color: $site-first;
 			}
 
 			h3 {
-				color: $site-primary;
+				color: $site-first;
 			}
 		}
 	}
 
 	#page-content {
-		background-color: $site-tertiary;
+		background-color: $site-third;
 	}
 
 	.contact-wrapper {
-		background-color: $site-secondary;
+		background-color: $site-second;
 
 		.contact > .contact-text {
-			color: $site-primary;
+			color: $site-first;
 		}
 
 		.form-wrapper > form > input, .form-wrapper > form > textarea {
-			border-bottom-color: $site-primary;
+			border-bottom-color: $site-first;
 		}
 
 		.social-media > .social-media-text {
-			color: $site-primary;
+			color: $site-first;
 		}
 	}
 
 	.modal-wrapper > .popup {
-		background-color: $site-tertiary;
-		color: $site-primary;
+		background-color: $site-third;
+		color: $site-first;
 	}
 
 	hr {
-		border-top-color: $site-primary;
+		border-top-color: $site-first;
 	}
 
 	.projects-wrapper {
-		background-color: $site-secondary;
-		color: $site-primary;
+		background-color: $site-second;
+		color: $site-first;
+
+		.projects-list-wrapper > .projects-list-item > a > .project-wrapper {
+			background-color: $site-first;
+			color: $site-third;
+
+			&:hover {
+				box-shadow: 0 0 20px -5px $site-first;
+			}
+		}
+	}
+
+	.spinner {
+		color: $site-first;
 	}
 }

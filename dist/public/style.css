@@ -295,7 +295,7 @@ template {
 
 h1, h2, h3, h4, h5, h6,
 .h1,
-.contact-wrapper .social-media-text, .h2, .projects-wrapper .select-tags-text, .h3, .modal-wrapper .popup-content .message, .h4, .h5, .h6 {
+.contact-wrapper .social-media-text, .h2, .projects-wrapper .select-tags-text, .h3, .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text .project-title, .modal-wrapper .popup-content .message, .h4, .h5, .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text .project-tags, .h6 {
   margin-bottom: 0.5rem;
   font-weight: 500;
   line-height: 1.2; }
@@ -308,13 +308,13 @@ h1,
 h2, .h2, .projects-wrapper .select-tags-text {
   font-size: 2rem; }
 
-h3, .h3, .modal-wrapper .popup-content .message {
+h3, .h3, .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text .project-title, .modal-wrapper .popup-content .message {
   font-size: 1.75rem; }
 
 h4, .h4 {
   font-size: 1.5rem; }
 
-h5, .h5 {
+h5, .h5, .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text .project-tags {
   font-size: 1.25rem; }
 
 h6, .h6 {
@@ -5834,7 +5834,7 @@ button.bg-dark:focus {
 .projects-wrapper .about-me-wrapper .container > .select-tags > .about-me-content-wrapper .about-me-content {
   margin-left: 0.5rem !important; }
 
-.m-3, .modal-wrapper .popup {
+.m-3, .projects-wrapper .projects-list-wrapper, .modal-wrapper .popup {
   margin: 1rem !important; }
 
 .mt-3,
@@ -5957,7 +5957,7 @@ footer,
 .px-1 {
   padding-left: 0.25rem !important; }
 
-.p-2 {
+.p-2, .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text {
   padding: 0.5rem !important; }
 
 .pt-2,
@@ -7521,7 +7521,7 @@ footer {
       margin: 4px 6px;
       background-color: #0093cc;
       border-radius: 5px;
-      color: white;
+      color: #fff;
       font-size: 30px;
       height: 40px;
       width: 40px;
@@ -7546,7 +7546,7 @@ nav {
   nav a img {
     width: 75px;
     height: 75px;
-    background-color: white; }
+    background-color: #fff; }
   nav ul a {
     font-size: 30px;
     font-weight: bolder;
@@ -7556,7 +7556,7 @@ nav {
     transition: color 0.25s ease-in-out; }
     nav ul a:hover {
       text-decoration: none;
-      color: white;
+      color: #fff;
       transition: color 0.25s ease-in-out; }
   nav #darkmode-switcher {
     cursor: pointer;
@@ -7567,10 +7567,14 @@ nav {
     justify-content: center;
     align-items: center;
     font-size: 25px;
-    background: #000; }
+    background: #000;
+    transition: font-size 0.1s ease-in-out; }
     nav #darkmode-switcher.light {
       color: #000;
-      background-color: white; }
+      background-color: #fff; }
+    nav #darkmode-switcher:hover {
+      font-size: 30px;
+      transition: font-size 0.1s; }
 
 .dropdown-menu-bar {
   display: none;
@@ -7587,7 +7591,7 @@ nav {
     margin-left: 10px;
     width: 75px;
     height: 75px;
-    background-color: white; }
+    background-color: #fff; }
   .dropdown-menu-bar .burger {
     margin-right: 10px;
     width: 45px;
@@ -7654,7 +7658,7 @@ nav {
       margin-left: 10px;
       width: 75px;
       height: 75px;
-      background-color: white; }
+      background-color: #fff; }
   #menu-drop .list {
     height: calc(85vh - 95px - 75px);
     display: flex;
@@ -7685,10 +7689,14 @@ nav {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000; }
+      background: #000;
+      transition: font-size 0.1s; }
       #menu-drop .switcher #darkmode-switcher-dropdown.light {
         color: #000;
-        background-color: white; }
+        background-color: #fff; }
+      #menu-drop .switcher #darkmode-switcher-dropdown:hover {
+        font-size: 45px;
+        transition: font-size 0.1s; }
   #menu-drop .menu-icon-bar {
     display: flex;
     flex-direction: row;
@@ -7700,7 +7708,7 @@ nav {
       width: 48px;
       height: 48px;
       background-color: #0093cc;
-      color: white;
+      color: #fff;
       border-radius: 5px;
       margin: 0px 15px;
       font-size: 2rem; }
@@ -7709,7 +7717,7 @@ nav {
   transform: translateY(0) !important; }
 
 .welcome-page-screen {
-  background: white;
+  background: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7780,7 +7788,7 @@ nav {
     .contact-wrapper .form-wrapper form input, .contact-wrapper .form-wrapper form textarea {
       width: 100%;
       background-color: transparent;
-      background-color: white;
+      background-color: #fff;
       border-style: none;
       border-bottom: 3px solid #0e0e0e;
       border-radius: 5px; }
@@ -7806,7 +7814,7 @@ nav {
           margin-top: 10px;
           background-color: #0093cc;
           border-radius: 5px;
-          color: white;
+          color: #fff;
           font-size: 40px;
           height: 60px;
           width: 60px;
@@ -7829,6 +7837,49 @@ nav {
     text-align: right; }
   .projects-wrapper .select-tags-select {
     height: 43px; }
+  .projects-wrapper .projects-list-wrapper {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .projects-wrapper .projects-list-wrapper .projects-list-item {
+      width: calc(95% / 3);
+      margin: 10px 0; }
+      .projects-wrapper .projects-list-wrapper .projects-list-item a {
+        text-decoration: none;
+        height: 100%; }
+        .projects-wrapper .projects-list-wrapper .projects-list-item a:hover {
+          text-decoration: none; }
+        .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper {
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background-color: #fff;
+          color: #000;
+          display: flex;
+          flex-direction: column;
+          transition: box-shadow 0.25s ease-in-out; }
+          .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-thumbnail {
+            width: 100%;
+            height: 200px;
+            border-top-right-radius: 10px;
+            border-top-left-radius: 10px;
+            background-size: cover;
+            background-position: center; }
+          .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center; }
+            .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text .project-title {
+              font-weight: 800;
+              text-align: center; }
+            .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper .project-text .project-tags {
+              text-align: center; }
+          .projects-wrapper .projects-list-wrapper .projects-list-item a .project-wrapper:hover {
+            box-shadow: 0 0 20px -5px #000;
+            transition: box-shadow 0.25s ease-in-out; }
 
 .modal-wrapper {
   z-index: 50;
@@ -7845,7 +7896,7 @@ nav {
     border-radius: 10px;
     width: 500px;
     min-height: 285px;
-    background-color: white;
+    background-color: #fff;
     opacity: 1;
     display: flex;
     align-items: center;
@@ -7923,6 +7974,66 @@ nav {
   100% {
     stroke-dashoffset: 900; } }
 
+.spinner {
+  color: #000;
+  font-size: 90px;
+  text-indent: -9999em;
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  margin: 72px auto;
+  position: relative;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation: spinnerFrames 1.7s infinite ease, round 1.7s infinite ease;
+  animation: spinnerFrames 1.7s infinite ease, round 1.7s infinite ease; }
+
+@-webkit-keyframes spinnerFrames {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em; }
+  5%, 95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em; }
+  10%, 59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em; }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em; }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em; }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em; } }
+
+@keyframes spinnerFrames {
+  0% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em; }
+  5%, 95% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em; }
+  10%, 59% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em, -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em; }
+  20% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em, -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em, -0.749em -0.34em 0 -0.477em; }
+  38% {
+    box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em, -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em, -0.82em -0.09em 0 -0.477em; }
+  100% {
+    box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em; } }
+
+@-webkit-keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes round {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
 @media screen and (max-width: 700px) {
   #menu-drop .list a {
     font-size: 2.5rem;
@@ -7941,7 +8052,9 @@ nav {
   .contact-wrapper > .social-media > .social-media-content > .icons > a {
     width: 50px;
     height: 50px;
-    font-size: 35px; } }
+    font-size: 35px; }
+  .projects-wrapper .projects-list-wrapper > .projects-list-item a > .project-warapper > .project-thumbnail {
+    height: 175px !important; } }
 
 @media screen and (max-width: 768px) {
   footer {
@@ -7963,7 +8076,9 @@ nav {
     text-align: center;
     font-size: 2rem; }
   #page-content {
-    min-height: calc(100vh - 90px); } }
+    min-height: calc(100vh - 90px); }
+  .projects-wrapper .projects-list-wrapper > .projects-list-item {
+    width: 95% !important; } }
 
 @media screen and (max-width: 992px) {
   nav {
@@ -7975,7 +8090,11 @@ nav {
   .welcome-page-screen > .welcome-bar {
     width: calc(100vw - 60px); }
   #about-me {
-    font-size: 3rem; } }
+    font-size: 3rem; }
+  .projects-wrapper .projects-list-wrapper > .projects-list-item {
+    width: calc(95% / 2); }
+    .projects-wrapper .projects-list-wrapper > .projects-list-item a > .project-wrapper > .project-thumbnail {
+      height: 225px; } }
 
 .darkmode {
   background-color: #000; }
@@ -7984,7 +8103,7 @@ nav {
     .darkmode nav ul > a {
       color: #00b8ff; }
       .darkmode nav ul > a:hover {
-        color: white; }
+        color: #fff; }
   .darkmode .dropdown-menu-bar {
     background-color: #0e0e0e; }
     .darkmode .dropdown-menu-bar .burger-bars {
@@ -8012,7 +8131,7 @@ nav {
     color: #00b8ff; }
   .darkmode .about-me-wrapper {
     background-color: #000;
-    color: white; }
+    color: #fff; }
     .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h1, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h1, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h1, .darkmode .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h1, .projects-wrapper .darkmode .about-me-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h1 {
       color: #00b8ff; }
     .darkmode .about-me-wrapper .container > .row > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .contact-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h2, .contact-wrapper .darkmode .about-me-wrapper .container > .contact > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .contact-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h2, .contact-wrapper .darkmode .about-me-wrapper .container > .form-wrapper > .about-me-content-wrapper > .about-me-content h2, .darkmode .about-me-wrapper .projects-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h2, .projects-wrapper .darkmode .about-me-wrapper .container > .select-tags > .about-me-content-wrapper > .about-me-content h2 {
@@ -8036,5 +8155,12 @@ nav {
     border-top-color: #00b8ff; }
   .darkmode .projects-wrapper {
     background-color: #0e0e0e;
+    color: #00b8ff; }
+    .darkmode .projects-wrapper .projects-list-wrapper > .projects-list-item > a > .project-wrapper {
+      background-color: #00b8ff;
+      color: #000; }
+      .darkmode .projects-wrapper .projects-list-wrapper > .projects-list-item > a > .project-wrapper:hover {
+        box-shadow: 0 0 20px -5px #00b8ff; }
+  .darkmode .spinner {
     color: #00b8ff; }
 

@@ -3,6 +3,7 @@ module.exports = (app) => {
 		const projectsJson = require("../resources/json/projects.json")
 			.map((item, id) => {
 				const retObj = ({ title, thumbnail, tags } = item, { title, thumbnail, tags });
+				retObj.tags.sort();
 				retObj.id = id + 1;
 				return retObj;
 			});

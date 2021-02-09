@@ -1,6 +1,5 @@
 import "../scss/main.scss";
 import "../img/favicon.ico";
-import "../img/logo.png";
 
 import "../json/particles.json";
 

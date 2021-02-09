@@ -1,7 +1,7 @@
 .contact-wrapper {
 	@extend .col-lg-8;
 	@extend .offset-lg-2;
-	background-color: $site-primary;
+	background-color: $site-first;
 	border-radius: 10px;
 
 	.contact {
@@ -37,9 +37,9 @@
 
 				width: 100%;
 				background-color: transparent;
-				background-color: white;
+				background-color: $site-fourth;
 				border-style: none;
-				border-bottom: 3px solid $site-secondary;
+				border-bottom: 3px solid $site-second;
 				border-radius: 5px;
 			}
 
@@ -83,9 +83,9 @@
 				a {
 					margin: 0 10px;
 					margin-top: 10px;
-					background-color: $site-primary-darkened;
+					background-color: $site-first-darkened;
 					border-radius: 5px;
-					color: white;
+					color: $site-fourth;
 					font-size: 40px;
 					height: 60px;
 					width: 60px;
