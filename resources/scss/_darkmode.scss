@@ -128,4 +128,19 @@
 	.spinner {
 		color: $site-first;
 	}
+
+	.project-content-wrapper {
+		background-color: $site-second;
+		color: $site-first;
+
+		.project-content-gallery {
+			.flickity-page-dots > .dot {
+				background: $site-first;
+			}
+		}
+
+		.arrow {
+			fill: $site-fourth !important;
+		}
+	}
 }

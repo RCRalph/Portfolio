@@ -97,4 +97,12 @@
 			}
 		}
 	}
+
+	.projects-list-caption {
+		@extend .mb-3;
+		
+		font-size: 15px;
+		font-weight: lighter;
+		text-align: center;
+	}
 }

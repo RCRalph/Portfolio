@@ -2,8 +2,8 @@
 	{
 		"title": "Project 1",
 		"description": "Dupa",
-		"github": "rickroll.com",
-		"deployment": "rickroll2.com",
+		"github": "https://www.youtube.com/watch?v=DLzxrzFCyOs",
+		"deployment": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
 		"thumbnail": "stonks.png",
 		"gallery": [
 			"image2.png",
@@ -14,8 +14,8 @@
 	{
 		"title": "Project 2",
 		"description": "Dupa 2",
-		"github": "rickroll1.com",
-		"deployment": "rickroll3.com",
+		"github": "https://www.youtube.com/watch?v=DLzxrzFCyOs",
+		"deployment": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
 		"thumbnail": "stonks.png",
 		"gallery": [
 			"image2.png",

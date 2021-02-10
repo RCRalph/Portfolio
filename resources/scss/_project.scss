@@ -1,0 +1,133 @@
+.project-content-wrapper {
+	@extend .col-12;
+	@extend .p-3;
+
+	max-width: 100%;
+	background-color: $site-first;
+	border-radius: 10px;
+
+	.project-title {
+		@extend .display-4;
+		@extend .my-4;
+
+		font-weight: bold;
+		text-align: center;
+	}
+
+	.project-content-gallery {
+		@extend .mb-5;
+
+		.carousel-cell {
+			width: 70%;
+			height: 200px;
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: flex;
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			justify-content: center;
+			-webkit-align-items: center;
+			align-items: center;
+		}
+
+		.carousel-cell img {
+			display: block;
+			max-width: 100%;
+			max-height: 100%;
+			opacity: 0.7;
+			-webkit-transform: scale(0.85);
+			transform: scale(0.85);
+			-webkit-filter: blur(5px);
+			filter: blur(5px);
+			-webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+			transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+		}
+
+		.carousel-cell.is-selected img {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+			-webkit-filter: none;
+			filter: none;
+		}
+
+		@media screen and (min-width: 768px) {
+			.carousel-cell {
+				height: 400px;
+			}
+		}
+
+		@media screen and (min-width: 960px) {
+			.carousel-cell {
+				width: 60%;
+			}
+		}
+
+		.flickity-prev-next-button {
+			width: 60px;
+			height: 60px;
+			background: transparent;
+			opacity: 0.6;
+		}
+
+		.flickity-prev-next-button:hover {
+			background: transparent;
+			opacity: 1;
+		}
+
+		.flickity-prev-next-button .arrow {
+			fill: white;
+		}
+
+		.flickity-prev-next-button.no-svg {
+			color: white;
+		}
+
+		.flickity-prev-next-button.previous {
+			left: 0;
+		}
+
+		.flickity-prev-next-button.next {
+			right: 0;
+		}
+
+		.flickity-prev-next-button:disabled {
+			display: none;
+		}
+
+		.flickity-page-dots > .dot {
+			background: $site-second;
+		}
+
+		.arrow {
+			fill: $site-second !important;
+		}
+	}
+
+	.project-buttons {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+
+		a {
+			@extend .btn;
+			@extend .btn-dark;
+			@extend .btn-lg;
+			@extend .m-2;
+		}
+	}
+
+	.project-tags {
+		.project-tags-text {
+			@extend .h2;
+
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.project-tags-content {
+			@extend .h5;
+			text-align: center;
+		}
+	}
+}

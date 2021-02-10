@@ -1,1 +1,43 @@
-- const title = "Project - ";
+extends page-template.pug
+
+block js
+	- const title = `Project - ${project.title}`;
+	- const particlesFullPage = true;
+
+block content 
+	.container 
+		.row.px-3
+			.project-content-wrapper 
+				.project-title #{project.title}
+				
+				.project-content-gallery 
+					.carousel.js-flickity
+						each item, i in project.gallery 
+							.carousel-cell
+								img(
+									src=`/img/gallery/${item}`
+									alt=`Image #${i + 1}`
+								)
+				
+				.project-buttons 
+					a(
+						href=project.github
+						type="button"
+						target="_blank"
+					)
+						i.fab.fa-github
+						|  View on GitHub
+					
+					a(
+						href=project.deployment
+						type="button"
+						target="_blank"
+					)
+						i.fas.fa-rocket
+						|  View deployment
+				
+				hr
+
+				.project-tags
+					.project-tags-text Created using:
+					.project-tags-content !{project.tags}

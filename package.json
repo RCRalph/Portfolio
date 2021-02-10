@@ -23,6 +23,7 @@
     "css-loader": "^5.0.1",
     "directory-tree": "^2.2.6",
     "file-loader": "^6.2.0",
+    "flickity": "^2.2.2",
     "html-webpack-plugin": "^4.5.1",
     "html-webpack-pug-plugin": "^2.0.1",
     "html-webpack-skip-assets-plugin": "^1.0.0",

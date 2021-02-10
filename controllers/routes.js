@@ -33,7 +33,7 @@ module.exports = (app) => {
 			));
 
 		res.render("../dist/resources/pug/index.pug", {
-			aboutMe: aboutMe
+			aboutMe
 		});
 	});
 
@@ -44,11 +44,24 @@ module.exports = (app) => {
 
 	// Project view
 	app.get("/projects/:id", (req, res) => {
-		if (req.params.id > 5) {
+		const id = Number(req.params.id);
+		const projectsJson = require("../resources/json/projects.json");
+		if (!id || id > projectsJson.length) {
 			return res.sendStatus(404);
 		}
 
-		res.render("../dist/resources/pug/project-view.pug");
+		let project = (
+			{ title, description, tags, github, deployment, gallery } = projectsJson[id - 1],
+			{ title, description, tags, github, deployment, gallery }
+		);
+
+		project.tags = project.tags
+			.map(item => item.split(" ").join("&nbsp;"))
+			.join(", ");
+
+		res.render("../dist/resources/pug/project-view.pug", {
+			project
+		});
 	});
 
 	// Contact me
@@ -63,7 +76,7 @@ module.exports = (app) => {
 
 			return res.render("../dist/resources/pug/contact-me.pug", {
 				token: req.session.csrf,
-				modalType: modalType
+				modalType
 			});
 		})
 		.post(

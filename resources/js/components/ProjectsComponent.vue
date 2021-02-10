@@ -25,13 +25,20 @@
 
 						<hr class="mx-3">
 
-						<div class="projects-list-wrapper" v-if="projectsWithTags.length">
-							<div v-for="(item, index) in projectsWithTags" :key="index" class="projects-list-item">
-								<ProjectComponent
-									:data="item"
-								></ProjectComponent>
+						<div v-if="projectsWithTags.length">
+							<div class="projects-list-wrapper" v-if="projectsWithTags.length">
+								<div v-for="(item, index) in projectsWithTags" :key="index" class="projects-list-item">
+									<ProjectComponent
+										:data="item"
+									></ProjectComponent>
+								</div>
+							</div>
+
+							<div class="projects-list-caption">
+								Projects are ordered from the latest to the oldest.
 							</div>
 						</div>
+
 
 						<div v-else>
 							<div class="h2 font-weight-bold text-center my-4">Couldn't find any projects :(</div>
