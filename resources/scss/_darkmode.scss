@@ -143,4 +143,16 @@
 			fill: $site-fourth !important;
 		}
 	}
+
+	.project-description-wrapper {
+		background: $site-third;
+
+		.project-description {
+			color: $site-fourth;
+
+			h1, h2, h3, h4 {
+				color: $site-first;
+			}
+		}
+	}
 }

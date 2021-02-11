@@ -2,11 +2,13 @@ const requireText = require("require-text");
 const { randomBytes } = require("crypto");
 const validator = require("validator");
 
-const markdownIt = require("markdown-it")({
-	html: true,
-	linkify: true,
-	typographer: true
-});
+const markdownIt = require("markdown-it")
+	({
+		html: true,
+		linkify: true,
+		typographer: true
+	})
+	.use(require("markdown-it-sanitizer"));
 
 const middleware = require("./middleware");
 const { sendMail } = require("./sendMail");
@@ -59,6 +61,11 @@ module.exports = (app) => {
 			.map(item => item.split(" ").join("&nbsp;"))
 			.join(", ");
 
+		project.description = markdownIt
+			.render(addNoBreakSpaces(
+				requireText(`../dist/resources/markdown/descriptions/${project.description}.md`, require)
+			));
+
 		res.render("../dist/resources/pug/project-view.pug", {
 			project
 		});
@@ -68,7 +75,7 @@ module.exports = (app) => {
 	app.route("/contact-me")
 		.get((req, res) => {
 			if (req.session.csrf == undefined) {
-				req.session.csrf = randomBytes(100).toString('base64');
+				req.session.csrf = randomBytes(100).toString("base64");
 			}
 
 			const modalType = req.session.modalType;

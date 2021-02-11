@@ -17,7 +17,7 @@ app.use(cookieSession({
 	secret: process.env.COOKIE_SESSION_SECRET,
 	maxAge: 24 * 60 * 60 * 1000,
 	sameSite: "lax",
-	path: "/contact-me",
+	path: "/",
 	secure: process.env.APP_ENV == "production",
 	httpOnly: true
 }));

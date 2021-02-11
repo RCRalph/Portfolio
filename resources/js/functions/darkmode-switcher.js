@@ -16,7 +16,7 @@ function darkmodeSwitcher() {
 		
 		const expirationDate = new Date(new Date().getTime() + 365 * 24 * 60 * 60 * 1000);
 		const value = !document.body.classList.contains("darkmode");
-		document.cookie = `lightmode=${value};expires=${expirationDate};SameSite=Strict`
+		document.cookie = `lightmode=${value};expires=${expirationDate};SameSite=Strict;path=/`
 	};
 
 	document.getElementById("darkmode-switcher")

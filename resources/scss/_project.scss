@@ -1,14 +1,15 @@
 .project-content-wrapper {
 	@extend .col-12;
-	@extend .p-3;
 
 	max-width: 100%;
 	background-color: $site-first;
 	border-radius: 10px;
+	padding: 1rem;
 
 	.project-title {
 		@extend .display-4;
-		@extend .my-4;
+		@extend .mt-2;
+		@extend .mb-4;
 
 		font-weight: bold;
 		text-align: center;
@@ -118,6 +119,8 @@
 	}
 
 	.project-tags {
+		@extend .mb-3;
+
 		.project-tags-text {
 			@extend .h2;
 
@@ -128,6 +131,42 @@
 		.project-tags-content {
 			@extend .h5;
 			text-align: center;
+		}
+	}
+
+	.project-description-wrapper {
+		@extend .row;
+		@extend .m-3;
+
+		background: $site-fourth;
+		border-radius: 10px;
+
+		.project-description {
+			@extend .col-lg-8;
+			@extend .col-md-10;
+			@extend .offset-md-1;
+			@extend .offset-lg-2;
+
+			.project-description-content {
+				@extend .m-2;
+				@extend .mt-4;
+		
+				p {
+					font-size: 17.5px;
+					text-align: justify;
+				}
+
+				h1, h2, h3, h4 {
+					font-weight: bold;
+				}
+
+				img {
+					@extend .my-2;
+
+					border-radius: 10px;
+					width: 100%;
+				}
+			}
 		}
 	}
 }

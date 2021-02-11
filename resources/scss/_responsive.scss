@@ -128,6 +128,11 @@
 			width: 95% !important;
 		}
 	}
+
+	.project-content-wrapper {
+		padding-left: 0;
+		padding-right: 0;
+	}
 }
 
 @include media-md {
