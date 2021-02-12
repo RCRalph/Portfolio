@@ -1,14 +1,53 @@
-# Lorem ipsum dolor sit amet
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed tellus eu magna porttitor hendrerit. Donec eu odio vitae ante mattis scelerisque. Vivamus blandit elementum turpis, sit amet condimentum erat pellentesque ut. Sed dictum diam ipsum, sit amet feugiat nulla aliquet eget. Maecenas at erat neque. Nam a velit at metus rhoncus iaculis ultrices at enim. Nam fermentum est scelerisque, venenatis lacus eget, consectetur nisi. Morbi fermentum lacinia velit, in ullamcorper justo placerat ac. Vivamus ut urna nec leo mattis egestas et nec lacus. Phasellus pellentesque orci justo, eget gravida leo mattis vitae. Praesent id fermentum tellus, in ornare nisl. Proin vehicula in ante sit amet scelerisque. Nam tempus placerat nunc in gravida. In pellentesque ultrices sagittis. Pellentesque vestibulum sapien ut tortor lacinia ultricies.
-## Quisque ex quam
-Quisque ex quam, tristique sit amet ornare sit amet, congue et elit. Mauris blandit mauris eu leo elementum pellentesque. Nunc turpis lectus, pretium at sapien a, auctor sodales neque. Morbi non rhoncus dui. Nulla facilisi. Integer eget felis vulputate, porta felis non, finibus nibh. Donec consequat nulla ut mauris vehicula, in suscipit turpis eleifend.
+# Introduction
+Hi, my name is Ralph. I live in Cracow, Poland. I've been programming since I was 14 and from that time it was my main passion and favourite thing to do in my free time. 
 
-![Some image](https://static.dw.com/image/55889403_401.jpg)
+**I am:** conscientious, economical, punctual, motivated, focused on self-improvement, flexible with my skillset, helpful to others around me and a perfectionist.
 
-Aenean condimentum erat eros, in efficitur sem condimentum vel. Duis massa elit, suscipit id odio sed, posuere malesuada enim. Cras vitae posuere lacus, vel viverra lacus. Fusce aliquam convallis pharetra.
-## Sed sagittis
-Sed sagittis nulla vitae tellus sodales auctor. Praesent sem tortor, cursus eu orci tempor, gravida vestibulum dolor. Praesent vulputate ligula a est tincidunt placerat. In sit amet interdum odio, eu porttitor ex. Sed consectetur libero eu dolor placerat placerat. Vivamus mattis sit amet nisl et finibus. Nam cursus odio vitae orci consectetur eleifend. Phasellus orci dui, consequat in ullamcorper in, auctor id felis.
-# In et tellus feguiat
-In et tellus feugiat ipsum commodo hendrerit et aliquet diam. Suspendisse ornare, magna elementum lobortis condimentum, libero purus tincidunt nunc, quis aliquam leo enim at enim. Sed nec erat nisl. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed maximus ipsum quis velit lacinia tincidunt. Ut tincidunt arcu volutpat fermentum mollis. Suspendisse at pellentesque orci. Etiam aliquam sodales metus ultrices pretium. Sed est urna, finibus eget facilisis mattis, vestibulum eget metus. Duis nisl diam, porttitor laoreet sem at, bibendum porta velit. Suspendisse id ligula venenatis, viverra nulla eu, elementum dolor. Aliquam hendrerit risus sed arcu posuere, vitae iaculis tortor semper. Donec sit amet efficitur sem. Mauris varius quam at nisl efficitur, a finibus felis sollicitudin. Etiam maximus, felis posuere gravida consectetur, sem arcu pulvinar tellus, sit amet ultricies est risus eget lacus. Suspendisse ex nulla, malesuada in mi a, interdum commodo libero.
-## Nulla placerat id dui id maximus
-Nulla placerat id dui id maximus. Aenean vel molestie turpis. Integer blandit faucibus purus non sagittis. Morbi ut eleifend lorem. Quisque bibendum tellus enim, at varius massa finibus a. Sed sed egestas quam. Nam tempor imperdiet ipsum non rhoncus. In porttitor felis metus, sed faucibus mi iaculis at. Aenean egestas sagittis luctus. Pellentesque lobortis leo non tellus sodales malesuada. Donec dapibus risus nec rhoncus interdum. Suspendisse vel lorem ut nisl condimentum vulputate et laoreet purus. 
+# My passions and interests
+## Programming
+As mentioned above, I've been writing code since I was 14. I started out with **C++** and **Python**, with which I've been learning the basics of how to make software and do it efficiently. After that I learned **HTML**, **CSS**, **JS** and **React**, which I used for **front-end** development. Later I switched to **back-end** development, for which I learned **PHP**, **Laravel**, **Node** and **Express**. While doing projects with Laravel, I felt the need to learn **Webpack** and **Vue**, which in my opinion is the best front-end framework I've ever worked with.
+
+In my spare time I also like doing competitive programming, which I think helps me think about problems that I encounter in the *out-of-the-box* way. I've also learned about things connected to **Dev-Ops**, like **IBM Cloud** or setting up my own **VPS**. I am really excited about how many things I can do in the future, such as learning **Go** and **Django** as well as mastering the skills that I already have by doing more and more projects with them.
+
+Writing clean code is my priotity and that's why I want to learn how to write code so it can be understood by other programmers. The more projects I make, the better my code gets and I take advantage of more and more features of frameworks or libraries.
+## Computer hardware
+I've been passionate about computer hardware since I can remember. I love fixing things as well as disassembling them into parts and assembling them again, because my goal is to understand how things are made. I do most of the maintenance of my computer myself. It not only helps me save money, but also I think this is a great way to have fun.
+
+![Caption below](/img/about-me/computer-hardware.jpg)
+Taking apart my laptop for basic dust cleaning was really enjoyable :){.small}
+
+You can talk with me about hardware all day long and you would never get bored. I am the person who you'll ask for recommendation about what computer parts / laptop you should buy in a given budget. I'm also the guy that will always help you with fixing your stuff, from moving an icon on the screen to much more advanced stuff.
+## Stock market and finances
+Stock market and finances have been my subject of interest for quite some time now. Understanding the mechanisms behind trading as well as being able to make good decisions within a short amount of time while earning some extra money in the process is something I want to learn and master. This has also been the inspiration behind many of my projects.
+
+My portfolio is very diversified, I own many different stock from different markets. I tend to not look at companies from their marketing standpoint, but rather how they are doing financially. I value dividence very much, and if a company pays more than 5% per year, it's enough to make me interested in it and after some market research, if I find out that it is in a good financial state, there is a good chance of me becoming it's shareholder.
+## Motorsport
+Alongside all that, I love motorsport, especially Formula 1, Formula 2, Formula E. I like Formula 1 because the quality of racing there is the highest in my opinion, as well as the element of strategy makes the show exciting for me. 
+
+![Caption below](/img/about-me/motorsport.jpg)
+One of my favourite overtakes - Brazilian GP 2019 <3{.small}
+
+I like both Formula 2 and Formula E for the excitement that it brings to the viewer. The competition in these series is amazing and any team can not only score points, but win as well. I don't remember a single boring race where F2 or FE cars were racing.
+
+![Caption below](/img/about-me/motorsport-2.jpg)
+And the cars look amazing too! :O{.small}
+## Other things I find interesting
+My interests also cover engineering, especially rocket science. I love learning how rockets and rocket engines work, what are the challenges of going to space, Moon, Mars and other planets. I'm closely following the Artemis program by NASA and the Starship project by SpaceX.
+
+![Caption below](/img/about-me/rocket-science.jpg)
+Starship SN8 going BOOM :exploding_head:{.small}
+
+I also like reading books, playing computer games (but not for too long and only in my free time) and looking at pictures of cute cats :cat: and dogs :dog:.
+# I can work with:
+## Front-end:
+JS, jQuery, Bootstrap, SCSS, Webpack, Vue, React, Chart.js and many more.
+## Back-end:
+Node, Express, Pug, PHP, Laravel and many more.
+## Dev-Ops:
+IBM Cloud Object Storage, Cloud Foundry, VPS, ElephantSQL.
+## DBMS:
+PostgreSQL, MongoDB.
+## Source Control:
+Git and GitHub.
+## Other skills:
+Great knowledge of Microsoft Office, LibreOffice and G-Suite.

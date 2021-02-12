@@ -8,7 +8,12 @@ const markdownIt = require("markdown-it")
 		linkify: true,
 		typographer: true
 	})
-	.use(require("markdown-it-sanitizer"));
+	.use(require("markdown-it-attrs"), {
+		leftDelimiter: "{",
+		rightDelimiter: "}",
+  		allowedAttributes: ["id", "class"]
+	})
+	.use(require("markdown-it-emoji"))
 
 const middleware = require("./middleware");
 const { sendMail } = require("./sendMail");
@@ -27,12 +32,16 @@ module.exports = (app) => {
 		return text.join(" ");
 	}
 
+	function getMarkdown(directory) {
+		return markdownIt
+			.render(addNoBreakSpaces(
+				requireText(directory, require)
+			));
+	}
+
 	// Main page
 	app.get("/", (req, res) => {
-		const aboutMe = markdownIt
-			.render(addNoBreakSpaces(
-				requireText("../dist/resources/markdown/about-me.md", require)
-			));
+		const aboutMe = getMarkdown("../dist/resources/markdown/about-me.md");
 
 		res.render("../dist/resources/pug/index.pug", {
 			aboutMe
@@ -61,10 +70,9 @@ module.exports = (app) => {
 			.map(item => item.split(" ").join("&nbsp;"))
 			.join(", ");
 
-		project.description = markdownIt
-			.render(addNoBreakSpaces(
-				requireText(`../dist/resources/markdown/descriptions/${project.description}.md`, require)
-			));
+		project.description = getMarkdown(
+			`../dist/resources/markdown/descriptions/${project.description}.md`
+		);
 
 		res.render("../dist/resources/pug/project-view.pug", {
 			project

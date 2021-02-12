@@ -72,9 +72,10 @@
 		.about-me-content {
 			@extend .mx-2;
 			@extend .my-3;
+
+			font-size: 17.5px;
 	
 			p {
-				font-size: 17.5px;
 				text-align: justify;
 			}
 
@@ -82,11 +83,20 @@
 				font-weight: bold;
 			}
 
+			h2 {
+				font-size: 1.625rem;
+			}
+
 			img {
 				@extend .my-2;
 
 				border-radius: 10px;
 				width: 100%;
+			}
+
+			.small {
+				font-size: 12.5px;
+				text-align: center;
 			}
 		}
 	}
