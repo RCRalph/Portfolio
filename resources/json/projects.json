@@ -15,7 +15,14 @@
 			"6.png",
 			"7.png"
 		],
-		"tags": ["Laravel", "React", "Fixer.io", "PHP",  "JS", "Bootstrap"]
+		"tags": [
+			"Laravel",
+			"React",
+			"Fixer.io",
+			"PHP",
+			"JS",
+			"Bootstrap"
+		]
 	},
 	{
 		"title": "SelfAccounting",
@@ -37,6 +44,38 @@
 			"8.png",
 			"9.png"
 		],
-		"tags": ["Laravel", "Vue", "Chart.js", "SCSS", "Laravel Mix", "Bootstrap", "jQuery", "PHP", "JS"]
+		"tags": [
+			"Laravel",
+			"Vue",
+			"Chart.js",
+			"SCSS",
+			"Laravel Mix",
+			"Bootstrap",
+			"jQuery",
+			"PHP",
+			"JS"
+		]
+	},
+	{
+		"title": "Portfolio page",
+		"description": "portfolio",
+		"github": "https://github.com/RCRalph/Portfolio",
+		"deployment": "#",
+		"thumbnail": "portfolio.png",
+		"directory": "portfolio",
+		"gallery": [
+			"1.png",
+			"2.png",
+			"3.png",
+			"4.png"
+		],
+		"tags": [
+			"Express",
+			"Vue",
+			"Webpack",
+			"Bootstrap",
+			"Pug",
+			"SCSS"
+		]
 	}
 ]

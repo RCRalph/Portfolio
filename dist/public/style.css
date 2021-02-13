@@ -8216,7 +8216,7 @@ nav {
     width: 50px;
     height: 50px;
     font-size: 35px; }
-  .projects-wrapper .projects-list-wrapper > .projects-list-item a > .project-warapper > .project-thumbnail {
+  .projects-wrapper .projects-list-wrapper > .projects-list-item a > .project-wrapper > .project-thumbnail {
     height: 175px !important; } }
 
 @media screen and (max-width: 768px) {

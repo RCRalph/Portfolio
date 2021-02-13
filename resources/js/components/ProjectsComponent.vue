@@ -88,7 +88,9 @@ export default {
 					item.tags.forEach(item => tags[item] = 1);
 				});
 				this.tags = Object.keys(tags);
-				this.tags.sort();
+				this.tags.sort(
+					(a, b) => a.toLowerCase().localeCompare(b.toLowerCase())
+				);
 			})
 			.catch(err => {
 				console.error(err);
