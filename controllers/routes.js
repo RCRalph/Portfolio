@@ -62,13 +62,16 @@ module.exports = (app) => {
 		}
 
 		let project = (
-			{ title, description, tags, github, deployment, gallery } = projectsJson[id - 1],
-			{ title, description, tags, github, deployment, gallery }
+			{ title, description, tags, github, deployment, gallery, directory } = projectsJson[id - 1],
+			{ title, description, tags, github, deployment, gallery, directory }
 		);
 
 		project.tags = project.tags
 			.map(item => item.split(" ").join("&nbsp;"))
 			.join(", ");
+
+		project.gallery = project.gallery
+			.map(item => `/img/gallery/${project.directory}/${item}`);
 
 		project.description = getMarkdown(
 			`../dist/resources/markdown/descriptions/${project.description}.md`

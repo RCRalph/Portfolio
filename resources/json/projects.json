@@ -1,26 +1,20 @@
 [
 	{
-		"title": "Project 1",
-		"description": "project-1",
-		"github": "https://www.youtube.com/watch?v=DLzxrzFCyOs",
-		"deployment": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-		"thumbnail": "stonks.png",
+		"title": "QuickPay",
+		"description": "quickpay",
+		"github": "https://github.com/RCRalph/QuickPay",
+		"deployment": "https://quickpayapp.herokuapp.com",
+		"thumbnail": "quickpay.png",
+		"directory": "quickpay",
 		"gallery": [
-			"image2.png",
-			"image3.png"
+			"1.png",
+			"2.png",
+			"3.png",
+			"4.png",
+			"5.png",
+			"6.png",
+			"7.png"
 		],
-		"tags": ["PHP", "Laravel", "Vue.js", "Javascript"]
-	},
-	{
-		"title": "Project 2",
-		"description": "project-1",
-		"github": "https://www.youtube.com/watch?v=DLzxrzFCyOs",
-		"deployment": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-		"thumbnail": "stonks.png",
-		"gallery": [
-			"image2.png",
-			"image3.png"
-		],
-		"tags": ["Node.js", "Express", "React", "Javascript"]
+		"tags": ["Laravel", "React", "Fixer.io", "PHP",  "JS", "Bootstrap"]
 	}
 ]
