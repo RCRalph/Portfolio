@@ -13,7 +13,7 @@ Writing clean code is my priotity and that's why I want to learn how to write co
 ## Computer hardware
 I've been passionate about computer hardware since I can remember. I love fixing things as well as disassembling them into parts and assembling them again, because my goal is to understand how things are made. I do most of the maintenance of my computer myself. It not only helps me save money, but also I think this is a great way to have fun.
 
-![Caption below](/img/about-me/computer-hardware.jpg)
+![The insides of my laptop](/img/about-me/computer-hardware.jpg)
 Taking apart my laptop for basic dust cleaning was really enjoyable :){.small}
 
 You can talk with me about hardware all day long and you would never get bored. I am the person who you'll ask for recommendation about what computer parts / laptop you should buy in a given budget. I'm also the guy that will always help you with fixing your stuff, from moving an icon on the screen to much more advanced stuff.
@@ -24,17 +24,17 @@ My portfolio is very diversified, I own many different stock from different mark
 ## Motorsport
 Alongside all that, I love motorsport, especially Formula 1, Formula 2, Formula E. I like Formula 1 because the quality of racing there is the highest in my opinion, as well as the element of strategy makes the show exciting for me. 
 
-![Caption below](/img/about-me/motorsport.jpg)
+![My favourite overtake](/img/about-me/motorsport.jpg)
 One of my favourite overtakes - Brazilian GP 2019 <3{.small}
 
 I like both Formula 2 and Formula E for the excitement that it brings to the viewer. The competition in these series is amazing and any team can not only score points, but win as well. I don't remember a single boring race where F2 or FE cars were racing.
 
-![Caption below](/img/about-me/motorsport-2.jpg)
+![FE Cars](/img/about-me/motorsport-2.jpg)
 And the cars look amazing too! :O{.small}
 ## Other things I find interesting
 My interests also cover engineering, especially rocket science. I love learning how rockets and rocket engines work, what are the challenges of going to space, Moon, Mars and other planets. I'm closely following the Artemis program by NASA and the Starship project by SpaceX.
 
-![Caption below](/img/about-me/rocket-science.jpg)
+![Starship SN8 explosion](/img/about-me/rocket-science.jpg)
 Starship SN8 going BOOM :exploding_head:{.small}
 
 I also like reading books, playing computer games (but not for too long and only in my free time) and looking at pictures of cute cats :cat: and dogs :dog:.
