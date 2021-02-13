@@ -16,5 +16,27 @@
 			"7.png"
 		],
 		"tags": ["Laravel", "React", "Fixer.io", "PHP",  "JS", "Bootstrap"]
+	},
+	{
+		"title": "SelfAccounting",
+		"description": "selfaccounting",
+		"github": "https://github.com/RCRalph/SelfAccounting",
+		"deployment": "https://selfaccounting.mybluemix.net",
+		"thumbnail": "selfaccounting.png",
+		"directory": "selfaccounting",
+		"gallery": [
+			"10.png",
+			"1.png",
+			"2.png",
+			"3.png",
+			"4.png",
+			"5.png",
+			"6.png",
+			"7.png",
+			"11.png",
+			"8.png",
+			"9.png"
+		],
+		"tags": ["Laravel", "Vue", "Chart.js", "SCSS", "Laravel Mix", "Bootstrap", "jQuery", "PHP", "JS"]
 	}
 ]

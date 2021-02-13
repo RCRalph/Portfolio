@@ -1,0 +1,5 @@
+These days people very often lead a consumerist lifestyle. It's more and more common to borrow money only to be able to afford a whim. Because of this, society runs into debt and struggles with having enough money to live a comfortable life.
+
+My solution to this problem is this web-app. It allows the user to save their income and outcome, divide them into categories and means of payment and check how much money they have at the current moment. Users can personalize the app by changing their profile picture and buying specific bundles, which add more functionality to the app. It's also possible to buy premium, which allows users to use all available bundles and suggest new ones, specified to their needs.
+
+As a creator of this app, I personally use it everyday. I find it very useful for my self-accounting and whenever I need a way to handle specific thing, I can always develop it for myself.
