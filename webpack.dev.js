@@ -11,5 +11,5 @@ module.exports = merge(config, {
 		new MiniCssExtractPlugin({
 			filename: "[name].css"
 		})
-	],
+	]
 });
