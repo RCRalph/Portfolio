@@ -22,6 +22,7 @@ footer {
 		display: flex;
 		flex-direction: row;
 		@extend .px-md-3;
+		height: 50px;
 
 		a {
 			margin: 4px 6px;
@@ -31,16 +32,16 @@ footer {
 			font-size: 30px;
 			height: 40px;
 			width: 40px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+			text-align: center;
+			line-height: 40px;
+			transition: margin 0.25s linear, width 0.25s linear, height 0.25s linear, line-height 0.25s linear;
 
 			&:hover {
 				margin: 0 2px;
 				width: 48px;
 				height: 48px;
-				transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
+				line-height: 48px;
+				transition: margin 0.25s linear, width 0.25s linear, height 0.25s linear, line-height 0.25s linear;
 			}
 		}
 	}

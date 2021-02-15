@@ -1,0 +1,1 @@
+Google Finance Stock Scraper Microservice is a service which takes data from Google Finance and converts them into JSON format. It allows value caching, which can be very handy for applications which need only illustrative data, not actual values in real-time.
