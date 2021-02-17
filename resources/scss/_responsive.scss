@@ -118,21 +118,23 @@
 				font-size: 2rem;
 			}
 		}
+
+		.projects-list-wrapper > .projects-list-item {
+			width: 95% !important;
+		}
 	}
 
 	#page-content {
 		min-height: calc(100vh - #{$footer-height-extended});
 	}
 
-	.projects-wrapper {
-		.projects-list-wrapper > .projects-list-item {
-			width: 95% !important;
-		}
-	}
-
 	.project-content-wrapper {
 		padding-left: 0;
 		padding-right: 0;
+
+		.project-title {
+			font-size: 2.5rem;
+		}
 	}
 }
 
