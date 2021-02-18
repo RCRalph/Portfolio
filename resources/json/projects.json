@@ -95,5 +95,23 @@
 			"Express",
 			"JS"
 		]
+	},
+	{
+		"title": "Calculator Microservice",
+		"description": "calculator-microservice",
+		"github": "https://github.com/RCRalph/Calculator-Microservice",
+		"deployment": "#",
+		"thumbnail": "calculator-microservice.png",
+		"directory": "calculator-microservice",
+		"gallery": [
+			"1.png",
+			"2.png",
+			"3.png"
+		],
+		"tags": [
+			"Express",
+			"Chai",
+			"JS"
+		]
 	}
 ]
