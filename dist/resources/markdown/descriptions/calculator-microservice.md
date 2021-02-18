@@ -1,0 +1,1 @@
+This microservice allows to convert a string of numbers and operations to the result of these operations. It supports addition, subtraction, multiplication, division, exponention and the use of brackets. It's behaviour is in accordance with the sequence of operations.
