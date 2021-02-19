@@ -1,7 +1,7 @@
 # Introduction
 Hi, my name is Ralph. I live in Cracow, Poland. I've been programming since I was 14 and from that time it was my main passion and favourite thing to do in my free time. 
 
-**I am:** conscientious, economical, punctual, motivated, focused on self-improvement, flexible with my skillset, helpful to others around me and a perfectionist.
+**I am:** conscientious, thrifty, punctual, motivated, focused on self-improvement, flexible with my skillset, helpful to others around me and a perfectionist.
 
 # My passions and interests
 ## Programming
