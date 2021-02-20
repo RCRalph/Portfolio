@@ -128,6 +128,10 @@ module.exports = {
 							"**/favicon.ico"
 						]
 					}
+				}, 
+				{
+					from: "resources/content",
+					to: "public/content"
 				}
 			]
 		}),
