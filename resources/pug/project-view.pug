@@ -10,14 +10,15 @@ block content
 			.project-content-wrapper 
 				.project-title #{project.title}
 				
-				.project-content-gallery 
-					.carousel.js-flickity
-						each item, i in project.gallery 
-							.carousel-cell
-								img(
-									src=item
-									alt=`Image #${i + 1}`
-								)
+				if (project.gallery.length)
+					.project-content-gallery 
+						.carousel.js-flickity
+							each item, i in project.gallery 
+								.carousel-cell
+									img(
+										src=item
+										alt=`Image #${i + 1}`
+									)
 				
 				.project-buttons 
 					a(
