@@ -85,12 +85,8 @@
 		"github": "https://github.com/RCRalph/Google-Finance-Stock-Scraper-Microservice",
 		"deployment": "#",
 		"thumbnail": "gfssm.png",
-		"directory": "gfssm",
-		"gallery": [
-			"1.png",
-			"2.png",
-			"3.png"
-		],
+		"directory": null,
+		"gallery": [],
 		"tags": [
 			"Express",
 			"JS"
@@ -102,16 +98,28 @@
 		"github": "https://github.com/RCRalph/Calculator-Microservice",
 		"deployment": "#",
 		"thumbnail": "calculator-microservice.png",
-		"directory": "calculator-microservice",
-		"gallery": [
-			"1.png",
-			"2.png",
-			"3.png"
-		],
+		"directory": null,
+		"gallery": [],
 		"tags": [
 			"Express",
 			"Chai",
 			"JS"
+		]
+	},
+	{
+		"title": "Note API",
+		"description": "note-api",
+		"github": "https://github.com/RCRalph/Note-API",
+		"deployment": "#",
+		"thumbnail": "note-api.png",
+		"directory": null,
+		"gallery": [],
+		"tags": [
+			"Express",
+			"MongoDB",
+			"HATEOAS",
+			"Mongoose",
+			"JS"			
 		]
 	}
 ]

@@ -1,0 +1,1 @@
+This API allows you to store, update and delete your notes. To start using it, you have to create an account, which will give you your API token. The API supports HATEOAS for notes. All the routes of the API are listed and described in the repository's **README** file.
