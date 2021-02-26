@@ -35,7 +35,7 @@
 							</div>
 
 							<div class="projects-list-caption">
-								Projects are ordered from the latest to the oldest.
+								Projects are ordered from the most to the least complex.
 							</div>
 						</div>
 

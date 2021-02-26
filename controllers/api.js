@@ -2,11 +2,13 @@ module.exports = (app) => {
 	app.get("/api/projects", (req, res) => {
 		const projectsJson = require("../resources/json/projects.json")
 			.map((item, id) => {
-				const retObj = ({ title, thumbnail, tags } = item, { title, thumbnail, tags });
+				const retObj = ({ title, thumbnail, tags, complexity } = item, { title, thumbnail, tags, complexity });
 				retObj.id = id + 1;
 				return retObj;
 			})
-			.reverse();
+			.sort((a, b) => b.complexity - a.complexity);
+
+		console.log(projectsJson);
 
 		return res.json(projectsJson);
 	});
