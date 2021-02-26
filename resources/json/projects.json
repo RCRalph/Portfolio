@@ -22,7 +22,8 @@
 			"PHP",
 			"JS",
 			"Bootstrap"
-		]
+		],
+		"complexity": 70
 	},
 	{
 		"title": "SelfAccounting",
@@ -54,7 +55,8 @@
 			"jQuery",
 			"PHP",
 			"JS"
-		]
+		],
+		"complexity": 100
 	},
 	{
 		"title": "Portfolio page",
@@ -77,7 +79,8 @@
 			"Pug",
 			"SCSS",
 			"JS"
-		]
+		],
+		"complexity": 50
 	},
 	{
 		"title": "Google Finance Stock Scraper Microservice",
@@ -90,7 +93,8 @@
 		"tags": [
 			"Express",
 			"JS"
-		]
+		],
+		"complexity": 5
 	},
 	{
 		"title": "Calculator Microservice",
@@ -104,7 +108,8 @@
 			"Express",
 			"Chai",
 			"JS"
-		]
+		],
+		"complexity": 8
 	},
 	{
 		"title": "Note API",
@@ -120,6 +125,7 @@
 			"HATEOAS",
 			"Mongoose",
 			"JS"			
-		]
+		],
+		"complexity": 20
 	}
 ]
