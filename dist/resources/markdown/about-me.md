@@ -1,7 +1,7 @@
 # Introduction
 Hi, my name is Ralph. I live in Cracow, Poland. I've been programming since I was 14 and from that time it was my main passion and favourite thing to do in my free time. 
 
-**I am:** conscientious, thrifty, punctual, motivated, focused on self-improvement, flexible with my skillset, helpful to others around me and a perfectionist.
+**I am:** conscientious, thrifty, punctual, motivated, focused on self-improvement, helpful to others around me and a perfectionist.
 
 # My passions and interests
 ## Programming
@@ -27,7 +27,7 @@ Alongside all that, I love motorsport, especially Formula 1, Formula 2, Formula 
 ![My favourite overtake](/img/about-me/motorsport.jpg)
 One of my favourite overtakes - Brazilian GP 2019 <3{.small}
 
-I like both Formula 2 and Formula E for the excitement that it brings to the viewer. The competition in these series is amazing and any team can not only score points, but win as well. I don't remember a single boring race where F2 or FE cars were racing.
+I like both Formula 2 and Formula E for the excitement that they bring to the viewer. The competition in these series is amazing and any team can not only score points, but win as well. I don't remember a single boring race where F2 or FE cars were racing.
 
 ![FE Cars](/img/about-me/motorsport-2.jpg)
 And the cars look amazing too! :O{.small}
