@@ -8,8 +8,6 @@ module.exports = (app) => {
 			})
 			.sort((a, b) => b.complexity - a.complexity);
 
-		console.log(projectsJson);
-
 		return res.json(projectsJson);
 	});
 }
