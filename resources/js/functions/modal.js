@@ -23,9 +23,12 @@ function modal() {
 
 				setTimeout(() => {
 					popup.parentNode.removeChild(popup);
+					document.getElementById("modals").style.display = "none";
 				}, 1000);
 			}
 		}, 5000);
+
+
 	}
 }
 
