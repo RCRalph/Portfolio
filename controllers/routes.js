@@ -133,7 +133,7 @@ module.exports = (app) => {
 					from: process.env.TARGET_EMAIL.trim(),
 					to: process.env.TARGET_EMAIL.trim(),
 					subject: body.topic.trim(),
-					text: `"${body.name.trim()}" <${body.email.trim()}>\n${body.body.trim()}`
+					text: `Portfolio contact form message from ${body.name.trim()} <${body.email.trim()}>:\n${body.body.trim()}`
 				};
 
 				req.session.modalType = await sendMail(message);
