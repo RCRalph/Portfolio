@@ -8,17 +8,25 @@ async function sendMail(message)  {
 		auth: {
 			user: process.env.TRANSPORTER_USER,
 			pass: process.env.TRANSPORTER_PASS
+		},
+		tls: {
+			rejectUnauthorized: false
 		}
 	});
 
 	let status = 200;
-	await transporter.sendMail(message, err => {
-		if (err) {
-			console.error(err);
-			status = 500;
-		}
-	});
-
+	try {
+		await transporter.sendMail(message, err => {
+			if (err) {
+				console.error(err);
+				status = 500;
+			}
+		});
+	}
+	catch {
+		status = 500;
+	}	
+	
 	return status;
 };
 
