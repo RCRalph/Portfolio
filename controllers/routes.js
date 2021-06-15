@@ -130,10 +130,10 @@ module.exports = (app) => {
 				}
 
 				const message = {
-					from: `"${body.name.trim()}" <${body.email.trim()}>`,
+					from: process.env.TARGET_EMAIL.trim(),
 					to: process.env.TARGET_EMAIL.trim(),
 					subject: body.topic.trim(),
-					text: body.body.trim()
+					text: `"${body.name.trim()}" <${body.email.trim()}>\n${body.body.trim()}`
 				};
 
 				req.session.modalType = await sendMail(message);
