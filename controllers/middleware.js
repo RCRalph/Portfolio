@@ -2,7 +2,7 @@ const cache = require("memory-cache");
 
 const validateToken = (req, res, next) => {
 	if (req.body._token != req.session.csrf) {
-		return res.sendStatus(419);
+		res.locals.invalidToken = true;
 	}
 
 	next();

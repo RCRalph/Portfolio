@@ -101,7 +101,7 @@ module.exports = (app) => {
 			middleware.validateToken,
 			middleware.checkIPAddress,
 			async (req, res) => {
-				if (res.locals.requestLimitHit) {
+				if (res.locals.requestLimitHit || res.locals.invalidToken) {
 					req.session.modalType = 419;
 					return res.redirect("/contact-me");
 				}
