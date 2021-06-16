@@ -1,1 +1,1 @@
-Well, what else can I say? That's literally this webpage. I'm really proud of the design work, I think it looks really good for my standards.
+Well, what else can I say? That's this webpage. I'm proud of the design work, I think it looks good to my standards.
