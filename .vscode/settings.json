@@ -1,0 +1,16 @@
+{
+	"grammarly.overrides": [
+		{
+			"files": [
+				"**/resources/markdown/descriptions/calculator-microservice.md"
+			],
+			"config": {
+				"audience": "general",
+				"dialect": "british",
+				"domain": "general",
+				"emotions": [],
+				"goals": []
+			}
+		}
+	]
+}
