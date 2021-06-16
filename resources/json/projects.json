@@ -115,7 +115,7 @@
 		"title": "Note API",
 		"description": "note-api",
 		"github": "https://github.com/RCRalph/Note-API",
-		"deployment": "note-api.rcralph.me",
+		"deployment": "https://note-api.rcralph.me",
 		"thumbnail": "note-api.png",
 		"directory": null,
 		"gallery": [],
