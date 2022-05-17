@@ -3,20 +3,22 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: calc(100vh - #{$navbar-height});
+	height: calc(100vh - #{$navbar-height + $footer-height});
 
 	.welcome-bar {
 		position: absolute;
 		z-index: 1;
-		padding: 10px;
+		padding: 20px 10px;
+		padding-bottom: 30px;
 		background-color: $site-first;
 		border-radius: 50px;
-		width: 900px;
+		width: 800px;
 		min-height: calc((100vh - #{$footer-height + $navbar-height}) / 2);
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		color: $site-fourth;
 
 		.text {
 			&-first {
@@ -25,78 +27,24 @@
 			}
 
 			&-second {
-				font-size: 50px;
+				margin-top: -10px;
+				font-size: 30px;
 			}
 		}
 
 		hr {
 			width: calc(920px / 2);
-			border-top-color: $site-second;
+			border-top-color: $site-fourth;
+			margin-top: 25px;
+			margin-bottom: 30px
 		}
-	}
-}
 
-#about-me {
-	@extend .py-5;
-
-	text-align: center;
-	font-size: 4rem;
-	font-weight: bold;
-	background-color: $site-first;
-	color: $site-second;
-	scroll-margin-top: $navbar-height;
-}
-
-.about-me-wrapper {
-	.resume {
-		@extend .py-3;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-
-		a {
-			@extend .btn;
-			@extend .btn-lg;
-			@extend .btn-primary;
-
-			font-weight: bold;
-		}
-	}
-
-	.container > .row > .about-me-content-wrapper {
-		@extend .col-lg-8;
-		@extend .col-md-10;
-		@extend .offset-md-1;
-		@extend .offset-lg-2;
-
-		.about-me-content {
-			@extend .mx-2;
-			@extend .my-3;
-
-			font-size: 17.5px;
-	
-			p {
-				text-align: justify;
-			}
-
-			h1, h2, h3, h4 {
+		.resume {
+			a {
+				@extend .btn;
+				@extend .btn-lg;
+				@extend .btn-info;
 				font-weight: bold;
-			}
-
-			h2 {
-				font-size: 1.625rem;
-			}
-
-			img {
-				@extend .my-2;
-
-				border-radius: 10px;
-				width: 100%;
-			}
-
-			.small {
-				font-size: 12.5px;
-				text-align: center;
 			}
 		}
 	}

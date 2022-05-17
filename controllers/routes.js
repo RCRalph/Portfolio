@@ -41,11 +41,7 @@ module.exports = (app) => {
 
 	// Main page
 	app.get("/", (req, res) => {
-		const aboutMe = getMarkdown("../dist/resources/markdown/about-me.md");
-
-		res.render("../dist/resources/pug/index.pug", {
-			aboutMe
-		});
+		res.render("../dist/resources/pug/index.pug");
 	});
 
 	// Projects

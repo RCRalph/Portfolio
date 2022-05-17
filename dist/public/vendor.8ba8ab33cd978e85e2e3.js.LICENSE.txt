@@ -1,11 +1,11 @@
 /*!
-  * Bootstrap v4.6.0 (https://getbootstrap.com/)
+  * Bootstrap v4.6.1 (https://getbootstrap.com/)
   * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
 
 /*!
- * Flickity v2.2.2
+ * Flickity v2.3.0
  * Touch, responsive, flickable carousels
  *
  * Licensed GPLv3 for open source use
@@ -27,13 +27,13 @@
  */
 
 /*!
- * Unidragger v2.3.1
+ * Unidragger v2.4.0
  * Draggable base class
  * MIT license
  */
 
 /*!
- * Unipointer v2.3.0
+ * Unipointer v2.4.0
  * base class for doing one thing with pointer event
  * MIT license
  */

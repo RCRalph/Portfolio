@@ -1,5 +1,4 @@
 import "../scss/main.scss";
-import "../img/favicon.ico";
 import "../json/particles.json";
 import "flickity/dist/flickity.min.css"
 

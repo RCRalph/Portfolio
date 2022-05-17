@@ -122,16 +122,7 @@ module.exports = {
 				},
 				{
 					from: "resources/img",
-					to: "public/img",
-					globOptions: {
-						ignore: [
-							"**/favicon.ico"
-						]
-					}
-				}, 
-				{
-					from: "resources/content",
-					to: "public/content"
+					to: "public/img"
 				}
 			]
 		}),

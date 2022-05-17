@@ -3,6 +3,7 @@
 	@extend .offset-lg-2;
 	background-color: $site-first;
 	border-radius: 10px;
+	margin-bottom: 25px;
 
 	.contact {
 		@extend .row;
@@ -14,6 +15,7 @@
 
 			font-weight: bold;
 			text-align: center;
+			color: $site-fourth;
 		}
 	}
 
@@ -39,7 +41,7 @@
 				background-color: transparent;
 				background-color: $site-fourth;
 				border-style: none;
-				border-bottom: 3px solid $site-second;
+				border-bottom: 3px solid $site-first-darkened;
 				border-radius: 5px;
 			}
 
@@ -50,12 +52,17 @@
 			button {
 				@extend .my-2;
 				@extend .btn;
-				@extend .btn-primary-darkened;
+				@extend .btn-lg;
+				@extend .btn-info;
 
 				font-weight: bold;
 				width: 50%;
 			}
 		}
+	}
+
+	hr {
+		border-top-color: $site-fourth;
 	}
 
 	.social-media {
@@ -68,6 +75,7 @@
 
 			font-weight: bold;
 			text-align: center;
+			color: $site-fourth
 		}
 
 		&-content {

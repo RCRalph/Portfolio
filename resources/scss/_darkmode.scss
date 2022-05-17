@@ -56,6 +56,21 @@
 
 	.welcome-page-screen { 
 		background: $site-third;
+
+		.welcome-bar {
+			background-color: $site-second;
+			color: $site-first;
+
+			hr {
+				border-top-color: $site-first;
+			}
+
+			.resume {
+				a {
+					@extend .btn-primary;
+				}
+			}
+		}
 	}
 
 	#about-me {
@@ -97,6 +112,10 @@
 			border-bottom-color: $site-first;
 		}
 
+		.form-wrapper > form > button {
+			@extend .btn-primary;
+		}
+
 		.social-media > .social-media-text {
 			color: $site-first;
 		}
@@ -115,6 +134,14 @@
 		background-color: $site-second;
 		color: $site-first;
 
+		.title {
+			color: $site-first;
+		}
+
+		.select-tags-text { 
+			color: $site-first;
+		}
+
 		.projects-list-wrapper > .projects-list-item > a > .project-wrapper {
 			background-color: $site-first;
 			color: $site-third;
@@ -122,6 +149,10 @@
 			&:hover {
 				box-shadow: 0 0 20px -5px $site-first;
 			}
+		}
+
+		.projects-list-caption {
+			color: $site-first;
 		}
 	}
 
@@ -133,6 +164,10 @@
 		background-color: $site-second;
 		color: $site-first;
 
+		.project-title {
+			color: $site-first;
+		}
+
 		.project-content-gallery {
 			.flickity-page-dots > .dot {
 				background: $site-first;
@@ -142,13 +177,15 @@
 		.arrow {
 			fill: $site-fourth !important;
 		}
+
+		.project-tags {
+			color: $site-first;
+		}
 	}
 
 	.project-description-wrapper {
-		background: $site-third;
-
 		.project-description {
-			color: $site-fourth;
+			color: $site-third;
 
 			h1, h2, h3, h4 {
 				color: $site-first;

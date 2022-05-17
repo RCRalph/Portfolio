@@ -18,10 +18,9 @@
 		"tags": [
 			"Laravel",
 			"React",
-			"Fixer.io",
+			"Bootstrap",
 			"PHP",
-			"JS",
-			"Bootstrap"
+			"JS"
 		],
 		"complexity": 70
 	},
@@ -48,84 +47,11 @@
 		"tags": [
 			"Laravel",
 			"Vue",
-			"Chart.js",
 			"SCSS",
-			"Laravel Mix",
 			"Bootstrap",
-			"jQuery",
 			"PHP",
 			"JS"
 		],
 		"complexity": 100
-	},
-	{
-		"title": "Portfolio page",
-		"description": "portfolio",
-		"github": "https://github.com/RCRalph/Portfolio",
-		"deployment": "https://rcralph.me/",
-		"thumbnail": "portfolio.png",
-		"directory": "portfolio",
-		"gallery": [
-			"1.png",
-			"2.png",
-			"3.png",
-			"4.png"
-		],
-		"tags": [
-			"Express",
-			"Vue",
-			"Webpack",
-			"Bootstrap",
-			"Pug",
-			"SCSS",
-			"JS"
-		],
-		"complexity": 50
-	},
-	{
-		"title": "Google Finance Stock Scraper Microservice",
-		"description": "gfssm",
-		"github": "https://github.com/RCRalph/Google-Finance-Stock-Scraper-Microservice",
-		"deployment": "https://gfssm.rcralph.me",
-		"thumbnail": "gfssm.png",
-		"directory": null,
-		"gallery": [],
-		"tags": [
-			"Express",
-			"JS"
-		],
-		"complexity": 5
-	},
-	{
-		"title": "Calculator Microservice",
-		"description": "calculator-microservice",
-		"github": "https://github.com/RCRalph/Calculator-Microservice",
-		"deployment": "https://calculator-microservice.rcralph.me",
-		"thumbnail": "calculator-microservice.png",
-		"directory": null,
-		"gallery": [],
-		"tags": [
-			"Express",
-			"Chai",
-			"JS"
-		],
-		"complexity": 8
-	},
-	{
-		"title": "Note API",
-		"description": "note-api",
-		"github": "https://github.com/RCRalph/Note-API",
-		"deployment": "https://note-api.rcralph.me",
-		"thumbnail": "note-api.png",
-		"directory": null,
-		"gallery": [],
-		"tags": [
-			"Express",
-			"MongoDB",
-			"HATEOAS",
-			"Mongoose",
-			"JS"			
-		],
-		"complexity": 20
 	}
 ]
