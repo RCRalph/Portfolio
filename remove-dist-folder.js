@@ -1,3 +1,5 @@
 const fs = require("fs");
 
-fs.rmdirSync("./dist", { recursive: true });
+if (fs.existsSync("./dist")) {
+    fs.rmSync("./dist", { recursive: true });
+}

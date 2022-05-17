@@ -1,1 +1,0 @@
-Well, what else can I say? That's this webpage. I'm proud of the design work, I think it looks good to my standards.

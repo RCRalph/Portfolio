@@ -27,10 +27,10 @@ nav {
 
 		a {
 			font-size: 30px;
-			font-weight: bolder;
+			font-weight: bold;
 			margin: 4px 12px;
 			text-decoration: none;
-			color: $site-second;
+			color: $site-fourth;
 			transition: color 0.25s ease-in-out;
 
 			&:hover {
@@ -57,7 +57,7 @@ nav {
 		transition: font-size 0.1s ease-in-out;
 
 		&.light {
-			color: $site-third;
+			color: $site-first;
 			background-color: $site-fourth;
 		}
 

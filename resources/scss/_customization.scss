@@ -1,5 +1,5 @@
 body {
-	font-family: 'Inter', sans-serif;
+	font-family: 'Cabin', sans-serif;
 	color: $site-third;
 }
 
@@ -24,7 +24,6 @@ html {
 	justify-content: center;
 	align-items: center;
 	padding-top: calc(#{$navbar-height} + 25px);
-	padding-bottom: 25px;
 	min-height: calc(100vh - #{$footer-height});
 
 	&.no-top {
@@ -33,12 +32,7 @@ html {
 
 	&.no-bottom {
 		padding-bottom: 0;
-		min-height: calc(100vh - #{$footer-height});
 	}
-}
-
-.btn-primary-darkened {
-	@include button-variant($site-first-darkened, darken($site-first-darkened, 3%));
 }
 
 hr {

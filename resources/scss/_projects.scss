@@ -2,6 +2,7 @@
 	@extend .col-12;
 	background-color: $site-first;
 	border-radius: 10px;
+	margin-bottom: 25px;
 
 	.title {
 		@extend .my-4;
@@ -9,6 +10,7 @@
 		
 		font-weight: bold;
 		text-align: center;
+		color: $site-fourth;
 	}
 
 	.select-tags {
@@ -22,6 +24,7 @@
 
 			font-weight: bold;
 			text-align: right;
+			color: $site-fourth;
 		}
 
 		&-select {
@@ -29,6 +32,10 @@
 			@extend .my-2;
 			height: 43px;
 		}
+	}
+
+	hr {
+		border-top-color: $site-fourth;
 	}
 
 	.projects-list-wrapper {
@@ -57,7 +64,7 @@
 					border-radius: 10px;
 					border-top-left-radius: 11px;
 					border-top-right-radius: 11px;
-					background-color: $site-fourth;
+					background-color: $site-first-darkened;
 					color: $site-third;
 					display: flex;
 					flex-direction: column;
@@ -79,6 +86,7 @@
 						flex-direction: column;
 						justify-content: center;
 						align-items: center;
+						color: $site-fourth;
 			
 						.project-title {
 							@extend .h3;
@@ -107,5 +115,6 @@
 		font-size: 15px;
 		font-weight: 400;
 		text-align: center;
+		color: $site-fourth;
 	}
 }
