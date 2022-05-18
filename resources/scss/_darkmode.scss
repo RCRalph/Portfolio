@@ -147,7 +147,11 @@
 			color: $site-third;
 
 			&:hover {
-				box-shadow: 0 0 20px -5px $site-first;
+				box-shadow: 0 0 20px -5px $site-fourth;
+			}
+
+			.project-text {
+				color: $site-third;
 			}
 		}
 
@@ -185,7 +189,8 @@
 
 	.project-description-wrapper {
 		.project-description {
-			color: $site-third;
+			background-color: $site-second;
+			color: $site-fourth;
 
 			h1, h2, h3, h4 {
 				color: $site-first;
