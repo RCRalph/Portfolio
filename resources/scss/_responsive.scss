@@ -47,10 +47,17 @@
 	}
 
 	.welcome-page-screen {
+		height: calc(100vh - #{$navbar-height + $footer-height-extended});
+
 		.welcome-bar {
+			padding: 30px 10px;
+			padding-bottom: 40px;
+			min-height: unset !important;
+
 			.text {
 				&-first {
-					font-size: 40px;
+					font-size: 60px;
+					margin-bottom: 10px;
 				}
 
 				&-second {
@@ -59,7 +66,7 @@
 			}
 
 			hr {
-				width: 100%;
+				width: 90%;
 				max-width: 300px;
 			}
 		}
@@ -101,6 +108,7 @@
 
 	.contact-wrapper {
 		margin: 0 16px;
+		margin-bottom: 25px;
 
 		.contact > .contact-text {
 			font-size: 2.5rem;
