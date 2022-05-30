@@ -105,7 +105,7 @@ nav {
 			transform: translateX(-50%);
 			width: 24px;
 			height: 3px;
-			background-color: $site-second;
+			background-color: $site-fourth;
 			transition: transform 1s ease-in-out, background-color 1s ease-in-out;
 
 			&::before {
@@ -114,7 +114,7 @@ nav {
 				top: -8px;
 				width: 28px;
 				height: 3px;
-				background-color: $site-second;
+				background-color: $site-fourth;
 				transition: transform 1s ease-in-out, background-color 1s ease-in-out;
 			}
 
@@ -124,7 +124,7 @@ nav {
 				top: 8px;
 				width: 20px;
 				height: 3px;
-				background-color: $site-second;
+				background-color: $site-fourth;
 				transition: transform 1s ease-in-out, background-color 1s ease-in-out, width 1s ease-in-out;
 			}
 		}
@@ -189,7 +189,7 @@ nav {
         a {
 			font-size: 3rem;
 			font-weight: bold;
-            color: $site-second;
+            color: $site-fourth;
 			margin: 1rem;
             text-decoration: none;
 		}
@@ -197,7 +197,7 @@ nav {
 		hr {
 			margin: 2px;
 			width: 300px;
-			border-top-color: $site-second;
+			border-top-color: $site-fourth;
 		}
 	}
 	
@@ -222,7 +222,7 @@ nav {
 			transition: font-size 0.1s;
 
 			&.light {
-				color: $site-third;
+				color: $site-first;
 				background-color: $site-fourth;
 			}
 
