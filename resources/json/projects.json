@@ -22,7 +22,7 @@
 			"PHP",
 			"JS"
 		],
-		"complexity": 70
+		"complexity": 40
 	},
 	{
 		"title": "SelfAccounting",
@@ -32,17 +32,18 @@
 		"thumbnail": "selfaccounting.png",
 		"directory": "selfaccounting",
 		"gallery": [
-			"10.png",
 			"1.png",
 			"2.png",
 			"3.png",
 			"4.png",
 			"5.png",
+			"5-1.png",
 			"6.png",
 			"7.png",
-			"11.png",
 			"8.png",
-			"9.png"
+			"9.png",
+			"10.png",
+			"11.png"
 		],
 		"tags": [
 			"Laravel",
