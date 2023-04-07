@@ -116,6 +116,10 @@ export default {
 				grecaptcha.execute(this.captcha, { action: "submit" }).then(token => {
 					axios.post("/api/contact-me", {...this.data, _token: this.token, captcha: token})
 						.then(response => this.$emit("status", response.status))
+						.catch(err => {
+							console.error(err);
+							this.$emit("status", 500);
+						})
 				});
 			});
 		}
