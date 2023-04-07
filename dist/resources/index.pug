@@ -1,0 +1,29 @@
+doctype html
+
+head
+	meta(charset='utf-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1')
+
+	title RCRalph&apos;s Portfolio Page
+
+	link(rel='icon' href='/img/favicon.ico' sizes='any')
+	link(rel='icon' href='/img/icon.svg' type='image/svg+xml')
+
+	meta(property='og:title' content="RCRalph's Portfolio Page")
+	meta(property='og:description' content='Portfolio page of Rafal Chrzanowski')
+	meta(property='og:type' content='website')
+	meta(property='og:url' content='https://rcralph.me')
+	meta(property='og:image' content='/img/OpenGraph.png')
+	meta(property='og:image:width' content='1200')
+	meta(property='og:image:height' content='630')
+	meta(property='og:image:type' content='image/png')
+	meta(name='twitter:card' content='summary_large_image')
+
+link(href="/style.64d5348615c8c3e47de0.css" rel="stylesheet")
+body(class=darkmode && "darkmode")
+	#app
+		app-component(token=token, captcha=captcha)
+
+	script(src=`https://www.google.com/recaptcha/api.js?render=${captcha}`)
+script(src="/vendor.a0cfd8fe705a0d9c6000.js")
+script(src="/app.660ebc749038b6db2d06.js")

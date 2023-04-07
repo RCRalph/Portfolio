@@ -9,88 +9,16 @@ const { HtmlWebpackSkipAssetsPlugin } = require("html-webpack-skip-assets-plugin
 module.exports = {
 	entry: {
 		vendor: "./resources/js/vendor.js",
-		main: "./resources/js/main.js",
-		projects: "./resources/js/projects.js",
-		"font-awesome": "./resources/js/font-awesome.js"
+		app: "./resources/js/app.js"
 	},
 	output: {
 		path: __dirname + "/dist"
 	},
 	plugins: [
-		// Pug layouts
 		new HtmlWebpackPlugin({
-			filename: "./resources/pug/page-template.pug",
-			template: "./resources/pug/page-template.pug",
-			publicPath: "/",
-			skipAssets: ["/projects.**.js", "/projects.js"]
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/page-template-vue.pug",
-			template: "./resources/pug/page-template.pug",
+			filename: "./resources/index.pug",
+			template: "./resources/index.pug",
 			publicPath: "/"
-		}),
-
-		// Pug components
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/head.pug",
-			template: "./resources/pug/head.pug",
-			publicPath: "dist/public",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/footer.pug",
-			template: "./resources/pug/footer.pug",
-			publicPath: "dist/public",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/navbar.pug",
-			template: "./resources/pug/navbar.pug",
-			publicPath: "dist/public",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/menu-drop.pug",
-			template: "./resources/pug/menu-drop.pug",
-			publicPath: "dist/public",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/social-media.pug",
-			template: "./resources/pug/social-media.pug",
-			publicPath: "dist/public",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/modals.pug",
-			template: "./resources/pug/modals.pug",
-			inject: false
-		}),
-
-		// Pug pages
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/index.pug",
-			template: "./resources/pug/index.pug",
-			publicPath: "",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/projects.pug",
-			template: "./resources/pug/projects.pug",
-			publicPath: "",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/project-view.pug",
-			template: "./resources/pug/project-view.pug",
-			publicPath: "",
-			inject: false
-		}),
-		new HtmlWebpackPlugin({
-			filename: "./resources/pug/contact-me.pug",
-			template: "./resources/pug/contact-me.pug",
-			publicPath: "",
-			inject: false
 		}),
 
 		// Additional plugins
@@ -117,16 +45,12 @@ module.exports = {
 					to: "resources/markdown"
 				},
 				{
-					from: "resources/html-svg",
-					to: "resources/html-svg"
-				},
-				{
 					from: "resources/img",
 					to: "public/img"
 				}
 			]
 		}),
-		new HtmlWebpackSkipAssetsPlugin()
+		new HtmlWebpackSkipAssetsPlugin(),
 	],
 	module: {
 		rules: [
@@ -141,13 +65,8 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
-					"vue-style-loader",
-					{
-						loader: 'css-loader',
-						options: {
-						  	esModule: false
-						}
-					}
+					MiniCssExtractPlugin.loader,
+					"css-loader",
 				]
 			},
 			{
@@ -162,6 +81,16 @@ module.exports = {
 			{
 				test: /\.vue$/,
 				loader: "vue-loader"
+			},
+			{
+				test: /\.(woff|woff2|eot|ttf|svg)$/,
+				use: {
+					loader: "file-loader",
+					options: {
+						outputPath: "public/fonts",
+						publicPath: "fonts"
+					}
+				}
 			}
 		]
 	},
@@ -179,7 +108,7 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-		   	vue: 'vue/dist/vue.js'
+		   	vue: "vue/dist/vue.js"
 		}
 	}
 }

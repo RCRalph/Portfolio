@@ -1,3 +1,3 @@
 import "bootstrap";
 import "particles.js";
-import "flickity";
+window.axios = require("axios");

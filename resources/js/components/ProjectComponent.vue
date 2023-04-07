@@ -1,41 +1,77 @@
 <template>
-	<a :href="`/projects/${data.id}`">
-		<div class="project-wrapper">
-			<div
-				class="project-thumbnail"
-				:style="`background-image: url(/img/thumbnails/${data.thumbnail});`"
-			>
+	<div class="container">
+		<div class="row px-3">
+			<div v-if="ready" class="project-content-wrapper">
+				<div class="project-title">
+						{{ project.title || "test" }}
+				</div>
+
+				<div v-if="project.gallery.length" class="project-content-gallery">
+					<carousel :perPage="1" :autoplay="true" :autoplayHoverPause="true" :autoplayTimeout="5000">
+						<slide v-for="item, i in project.gallery" :key="i">
+							<img :src="item" :alt="`Image #${i + 1}`">
+						</slide>
+					</carousel>
+				</div>
+
+				<div class="project-buttons">
+					<a v-if="project.github" :href="project.github" target="_blank">
+						<i class="fab fa-github"></i> View on GitHub
+					</a>
+
+					<a v-if="project.deployment" :href="project.deployment" target="_blank">
+						<i class="fas fa-rocket"></i> View deployment
+					</a>
+				</div>
+
+				<hr>
+
+				<div class="project-tags">
+					<div class="project-tags-text">Created using:</div>
+
+					<div class="project-tags-content" v-html="project.tags"></div>
+				</div>
+
+				<div class="project-description-wrapper">
+					<div class="project-description">
+						<div class="project-description-content" v-html="project.description"></div>
+					</div>
+				</div>
 			</div>
 
-			<div class="project-text">
-				<div class="project-title">{{ data.title }}</div>
-				<div class="project-tags" v-html="joinWithCommas(data.tags)"></div>
+			<div v-else class="project-content-wrapper">
+				<div class="spinner"></div>
 			</div>
 		</div>
-	</a>
+	</div>
 </template>
 
 <script>
+import { Carousel, Slide } from "vue-carousel";
+
 export default {
-	props: {
-		data: {
-			type: Object,
-			required: true
+	components: {
+		Carousel,
+		Slide
+	},
+	data() {
+		return {
+			ready: false,
+			error: false,
+			project: {},
 		}
 	},
-	methods: {
-		joinWithCommas(input) {
-			let joined = input
-				.slice(0, 3)
-				.map(item => item.replaceAll(" ", "&nbsp;"))
-				.join(", ");
-			
-			if (input.length > 3) {
-				joined += " and&nbspmore";
-			}
-
-			return joined;
-		}
+	mounted() {
+		fetch(`/api/my-projects/${this.$route.params.id}`)
+			.then(response => response.json())
+			.then(response => this.project = response)
+			.catch(err => {
+				console.error(err);
+				this.error = true;
+			})
+			.finally(() => {
+				this.ready = true;
+			})
 	}
 }
 </script>

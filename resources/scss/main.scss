@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
 
+$fa-font-path: "/node_modules/@fortawesome/fontawesome-free/webfonts";
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
 @import "variables";
 @import "~bootstrap/scss/bootstrap";
 @import "customization";

@@ -1,9 +1,7 @@
 .contact-wrapper {
+	@extend .wrapper;
 	@extend .col-lg-8;
 	@extend .offset-lg-2;
-	background-color: $site-first;
-	border-radius: 10px;
-	margin-bottom: 25px;
 
 	.contact {
 		@extend .row;
@@ -27,7 +25,7 @@
 			@extend .col-md-8;
 			@extend .offset-md-2;
 			@extend .py-3;
-		
+
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -85,7 +83,7 @@
 			justify-content: center;
 			height: 70px;
 
-			.icons {
+			.icons > div {
 				display: flex;
 
 				a {
@@ -101,12 +99,12 @@
 					align-items: center;
 					justify-content: center;
 					transition: margin 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-	
+
 					&:hover {
 						margin-top: 0;
 						transition: margin-top 0.25s ease-in-out
 					}
-				}	
+				}
 			}
 		}
 	}
