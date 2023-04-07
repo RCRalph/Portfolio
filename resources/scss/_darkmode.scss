@@ -26,7 +26,7 @@
 				background-color: $site-first;
 			}
 		}
-		
+
 		.open {
 			background-color: transparent;
 		}
@@ -34,7 +34,7 @@
 
 	#menu-drop {
 		background-color: $site-second;
-		
+
 		.list {
 			a {
 				color: $site-first;
@@ -48,13 +48,13 @@
 
 	footer {
 		background-color: $site-second;
-		
+
 		.footer-text {
 			color: $site-first;
 		}
 	}
 
-	.welcome-page-screen { 
+	.welcome-page-screen {
 		background: $site-third;
 
 		.welcome-bar {
@@ -138,7 +138,7 @@
 			color: $site-first;
 		}
 
-		.select-tags-text { 
+		.select-tags-text {
 			color: $site-first;
 		}
 
@@ -173,8 +173,8 @@
 		}
 
 		.project-content-gallery {
-			.flickity-page-dots > .dot {
-				background: $site-first;
+			.VueCarousel-dot--active {
+				background-color: $site-first !important;
 			}
 		}
 

@@ -47,12 +47,13 @@
 	}
 
 	.welcome-page-screen {
-		height: calc(100vh - #{$navbar-height + $footer-height-extended});
+		min-height: #{$navbar-height + $footer-height-extended + 2 * 20px};
+		height: calc(100vh - #{$navbar-height + $footer-height-extended + 2 * 20px});
 
 		.welcome-bar {
 			padding: 30px 10px;
 			padding-bottom: 40px;
-			min-height: unset !important;
+			height: 310px;
 
 			.text {
 				&-first {
@@ -158,7 +159,7 @@
 	#menu-drop {
 		display: block;
 	}
-	
+
 	.welcome-page-screen > .welcome-bar {
 		width: calc(100vw - 60px);
 	}

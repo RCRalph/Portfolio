@@ -9,6 +9,7 @@ footer {
 	width: 100%;
 	min-height: $footer-height;
 	background-color: $site-first;
+	z-index: 5;
 
 	.footer-text {
 		padding-left: 22px;
@@ -18,7 +19,7 @@ footer {
 		color: $site-fourth;
 	}
 
-	.footer-social-media {
+	.footer-social-media > div {
 		display: flex;
 		flex-direction: row;
 		@extend .px-md-3;

@@ -1,13 +1,11 @@
 .projects-wrapper {
+	@extend .wrapper;
 	@extend .col-12;
-	background-color: $site-first;
-	border-radius: 10px;
-	margin-bottom: 25px;
 
 	.title {
 		@extend .my-4;
 		@extend .display-4;
-		
+
 		font-weight: bold;
 		text-align: center;
 		color: $site-fourth;
@@ -53,11 +51,11 @@
 			a {
 				text-decoration: none;
 				height: 100%;
-		
+
 				&:hover {
 					text-decoration: none;
 				}
-				
+
 				.project-wrapper {
 					width: 100%;
 					height: 100%;
@@ -69,7 +67,7 @@
 					display: flex;
 					flex-direction: column;
 					transition: box-shadow 0.25s ease-in-out;
-			
+
 					.project-thumbnail {
 						width: 100%;
 						height: 200px;
@@ -78,7 +76,7 @@
 						background-size: cover;
 						background-position: center;
 					}
-			
+
 					.project-text {
 						@extend .p-2;
 						flex-grow: 1;
@@ -87,13 +85,13 @@
 						justify-content: center;
 						align-items: center;
 						color: $site-fourth;
-			
+
 						.project-title {
 							@extend .h3;
 							font-weight: 800;
 							text-align: center;
 						}
-			
+
 						.project-tags {
 							@extend .h5;
 							text-align: center;
@@ -111,7 +109,7 @@
 
 	.projects-list-caption {
 		@extend .mb-3;
-		
+
 		font-size: 15px;
 		font-weight: 400;
 		text-align: center;

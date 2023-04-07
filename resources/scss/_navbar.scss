@@ -158,7 +158,7 @@ nav {
     right: 0;
     height: 100vh;
     transform: translateY(-100%);
-    z-index: 3;
+    z-index: 6;
     flex-direction: column;
 	background-color: $site-first;
 	transition: transform 1s ease-in-out;
@@ -171,7 +171,7 @@ nav {
 
         a > img {
 			@extend .rounded-circle;
-	
+
 			margin-left: 10px;
 			width: 75px;
 			height: 75px;
@@ -193,14 +193,14 @@ nav {
 			margin: 1rem;
             text-decoration: none;
 		}
-		
+
 		hr {
 			margin: 2px;
 			width: 300px;
 			border-top-color: $site-fourth;
 		}
 	}
-	
+
 	.switcher {
 		height: 75px;
 		display: flex;
@@ -233,7 +233,7 @@ nav {
 		}
 	}
 
-    .menu-icon-bar {
+    .menu-icon-bar > div {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;

@@ -10,7 +10,7 @@
 							<div class="select-tags-text">
 								Select tags:
 							</div>
-						
+
 							<div class="select-tags-select">
 								<multiselect
 									v-model="selected"
@@ -28,9 +28,20 @@
 						<div v-if="projectsWithTags.length">
 							<div class="projects-list-wrapper" v-if="projectsWithTags.length">
 								<div v-for="(item, index) in projectsWithTags" :key="index" class="projects-list-item">
-									<ProjectComponent
-										:data="item"
-									></ProjectComponent>
+									<router-link :to="`/my-projects/${item.id}`">
+										<div class="project-wrapper">
+											<div
+												class="project-thumbnail"
+												:style="`background-image: url(/img/thumbnails/${item.thumbnail});`"
+											>
+											</div>
+
+											<div class="project-text">
+												<div class="project-title">{{ item.title }}</div>
+												<div class="project-tags" v-html="joinWithCommas(item.tags)"></div>
+											</div>
+										</div>
+									</router-link>
 								</div>
 							</div>
 
@@ -76,8 +87,36 @@ export default {
 			ready: false
 		}
 	},
+	computed: {
+		projectsWithTags() {
+			if (!this.selected.length) {
+				return this.projects;
+			}
+
+			let retArr = this.projects;
+			this.selected.forEach(item => {
+				retArr = retArr.filter(item1 => item1.tags.includes(item));
+			});
+
+			return retArr;
+		}
+	},
+	methods: {
+		joinWithCommas(input) {
+			let joined = input
+				.slice(0, 3)
+				.map(item => item.replaceAll(" ", "&nbsp;"))
+				.join(", ");
+
+			if (input.length > 3) {
+				joined += " and&nbspmore";
+			}
+
+			return joined;
+		}
+	},
 	mounted() {
-		fetch("/api/projects")
+		fetch("/api/my-projects")
 			.then(response => response.json())
 			.then(response => {
 				this.projects = response;
@@ -99,20 +138,6 @@ export default {
 			.then(() => {
 				this.ready = true;
 			})
-	},
-	computed: {
-		projectsWithTags() {
-			if (!this.selected.length) {
-				return this.projects;
-			}
-
-			let retArr = this.projects;
-			this.selected.forEach(item => {
-				retArr = retArr.filter(item1 => item1.tags.includes(item));
-			});
-
-			return retArr;
-		}
 	}
 }
 </script>
