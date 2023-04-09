@@ -48,7 +48,18 @@
 						<button
 							type="submit"
 							:disabled="disableSubmit"
-						>Submit</button>
+							class="d-flex justify-content-center"
+						>
+							<span
+								v-if="disableSubmit"
+								class="spinner-border"
+								role="status"
+							>
+								<span class="sr-only">Loading...</span>
+							</span>
+
+							<span v-else>Submit</span>
+						</button>
 					</form>
 				</div>
 
@@ -120,6 +131,7 @@ export default {
 							console.error(err);
 							this.$emit("status", 500);
 						})
+						.finally(() => this.submitted = false)
 				});
 			});
 		}
