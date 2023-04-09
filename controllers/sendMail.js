@@ -25,8 +25,8 @@ async function sendMail(message)  {
 	}
 	catch {
 		status = 500;
-	}	
-	
+	}
+
 	return status;
 };
 
