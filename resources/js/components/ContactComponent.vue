@@ -51,7 +51,7 @@
 							class="d-flex justify-content-center"
 						>
 							<span
-								v-if="disableSubmit"
+								v-if="submitted"
 								class="spinner-border"
 								role="status"
 							>
