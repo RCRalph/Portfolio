@@ -104,7 +104,7 @@ module.exports = (app) => {
 			}
 
 			const message = {
-				from: process.env.TARGET_EMAIL.trim(),
+				from: process.env.TRANSPORTER_USER.trim(),
 				to: process.env.TARGET_EMAIL.trim(),
 				subject: body.topic.trim(),
 				text: `Portfolio contact form message from ${body.name.trim()} <${body.email.trim()}>:\n${body.body.trim()}`
