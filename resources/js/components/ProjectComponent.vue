@@ -3,7 +3,7 @@
 		<div class="row px-3">
 			<div v-if="ready" class="project-content-wrapper">
 				<div class="project-title">
-						{{ project.title || "test" }}
+					{{ project.title || "test" }}
 				</div>
 
 				<div v-if="project.gallery.length" class="project-content-gallery">
