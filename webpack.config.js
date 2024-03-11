@@ -3,8 +3,7 @@ const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const VueLoaderPlugin = require("vue-loader/lib/plugin");
-const { HtmlWebpackSkipAssetsPlugin } = require("html-webpack-skip-assets-plugin");
+const {VueLoaderPlugin} = require("vue-loader");
 
 module.exports = {
 	entry: {
@@ -50,7 +49,6 @@ module.exports = {
 				}
 			]
 		}),
-		new HtmlWebpackSkipAssetsPlugin(),
 	],
 	module: {
 		rules: [
