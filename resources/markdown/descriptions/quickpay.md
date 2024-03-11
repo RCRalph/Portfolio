@@ -1,1 +1,3 @@
-The idea behind QuickPay was to create a PayPal clone, but at the end of the day, it became a pretty unique project. The user can send to and receive money from other users, as well as create payment requests and send them to other users. On top of all that, the user can exchange currencies and set their profile picture.
+Originally conceived as a PayPal alternative, QuickPay evolved into a distinctive project with its own identity. Users are empowered to send and receive money from others seamlessly. Additionally, they can generate payment requests and conveniently forward them to fellow users.
+
+What sets QuickPay apart is its currency exchange feature, allowing users to effortlessly convert currencies as needed. Furthermore, users can personalize their experience by setting their profile picture, adding a touch of individuality to their transactions.
