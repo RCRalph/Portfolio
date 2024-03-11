@@ -10,7 +10,7 @@
 				<div class="resume">
 					<a
 						role="button"
-						href="https://storage.rcralph.me/rcralph/resume-en.pdf"
+						href="https://storage.rcralph.me/rcralph/resume-rafal-chrzanowski-en.pdf"
 						target="_blank"
 					>Download my resume</a>
 				</div>

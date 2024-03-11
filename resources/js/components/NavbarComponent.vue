@@ -8,7 +8,7 @@
 			</div>
 
 			<div class="list">
-				<a role="button" href="https://storage.rcralph.me/rcralph/resume-en.pdf" target="_blank">Resume</a>
+				<a role="button" href="https://storage.rcralph.me/rcralph/resume-rafal-chrzanowski-en.pdf" target="_blank">Resume</a>
 				<hr>
 				<router-link to="/my-projects">My projects</router-link>
 				<hr>
@@ -33,7 +33,7 @@
 
 			<div class="d-flex">
 				<ul>
-					<a role="button" href="https://storage.rcralph.me/rcralph/resume-en.pdf" target="_blank">Resume</a>
+					<a role="button" href="https://storage.rcralph.me/rcralph/resume-rafal-chrzanowski-en.pdf" target="_blank">Resume</a>
 					<router-link to="/my-projects">My projects</router-link>
 					<router-link to="/contact-me">Contact me</router-link>
 				</ul>
