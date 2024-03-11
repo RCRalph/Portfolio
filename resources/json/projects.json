@@ -48,11 +48,28 @@
 		"tags": [
 			"Laravel",
 			"Vue",
+			"Vuetify",
+			"TS",
 			"SCSS",
-			"Bootstrap",
-			"PHP",
-			"JS"
+			"PHP"
 		],
 		"complexity": 100
+	},
+	{
+		"title": "QuantumBot",
+		"description": "quantum-bot",
+		"github": "https://github.com/RCRalph/QuantumBot",
+		"thumbnail": "quantum-bot.png",
+		"directory": "quantum-bot",
+		"gallery": [
+			"1.png",
+			"2.png",
+			"3.png"
+		],
+		"tags": [
+			"Python",
+			"discord.py"
+		],
+		"complexity": 30
 	}
 ]
