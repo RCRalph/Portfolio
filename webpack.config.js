@@ -3,21 +3,21 @@ const HtmlWebpackPugPlugin = require("html-webpack-pug-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const WebpackShellPluginNext = require("webpack-shell-plugin-next");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
-const {VueLoaderPlugin} = require("vue-loader");
+const { VueLoaderPlugin } = require("vue-loader");
 
 module.exports = {
 	entry: {
 		vendor: "./resources/js/vendor.js",
-		app: "./resources/js/app.js"
+		app: "./resources/js/app.js",
 	},
 	output: {
-		path: __dirname + "/dist"
+		path: __dirname + "/dist",
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: "./resources/index.pug",
 			template: "./resources/index.pug",
-			publicPath: "/"
+			publicPath: "/",
 		}),
 
 		// Additional plugins
@@ -25,8 +25,8 @@ module.exports = {
 		new VueLoaderPlugin(),
 		new WebpackShellPluginNext({
 			onAfterDone: {
-				scripts: ["node move-files.js"]
-			}
+				scripts: ["node move-files.js"],
+			},
 		}),
 		new CopyWebpackPlugin({
 			patterns: [
@@ -34,51 +34,46 @@ module.exports = {
 					from: "resources/json",
 					to: "public",
 					globOptions: {
-						ignore: [
-							"**/projects.json",
-						]
-					}
+						ignore: ["**/projects.json"],
+					},
+				},
+				{
+					from: "resources/json/projects.json",
+					to: "resources/json/projects.json",
 				},
 				{
 					from: "resources/markdown",
-					to: "resources/markdown"
+					to: "resources/markdown",
 				},
 				{
 					from: "resources/img",
-					to: "public/img"
-				}
-			]
+					to: "public/img",
+				},
+			],
 		}),
 	],
 	module: {
 		rules: [
 			{
 				test: /\.scss$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader",
-					"sass-loader"
-				]
+				use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
 			},
 			{
 				test: /\.css$/,
-				use: [
-					MiniCssExtractPlugin.loader,
-					"css-loader",
-				]
+				use: [MiniCssExtractPlugin.loader, "css-loader"],
 			},
 			{
 				test: /\.ico$/,
 				use: {
 					loader: "file-loader",
 					options: {
-						name: "public/[name].[ext]"
-					}
-				}
+						name: "public/[name].[ext]",
+					},
+				},
 			},
 			{
 				test: /\.vue$/,
-				loader: "vue-loader"
+				loader: "vue-loader",
 			},
 			{
 				test: /\.(woff|woff2|eot|ttf|svg)$/,
@@ -86,11 +81,11 @@ module.exports = {
 					loader: "file-loader",
 					options: {
 						outputPath: "public/fonts",
-						publicPath: "fonts"
-					}
-				}
-			}
-		]
+						publicPath: "fonts",
+					},
+				},
+			},
+		],
 	},
 	optimization: {
 		splitChunks: {
@@ -99,14 +94,14 @@ module.exports = {
 					name: "style",
 					type: "css/mini-extract",
 					chunks: "all",
-					enforce: true
+					enforce: true,
 				},
 			},
 		},
 	},
 	resolve: {
 		alias: {
-		   	vue: "vue/dist/vue.js"
-		}
-	}
-}
+			vue: "vue/dist/vue.js",
+		},
+	},
+};
